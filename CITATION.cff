@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "Information-Region MPC: code for the numerical experiments"
+repository-code: "https://github.com/Tarard/Information-Region-MPC"
+license: MIT
+authors:
+  - family-names: Hu
+    given-names: Qiongdan
+    email: qiongdan.hu@tu-dresden.de
+    affiliation: "Technische Universität Dresden"
+  - family-names: Yang
+    given-names: Menglin
+    affiliation: "Technische Universität Dresden"
+  - family-names: Wang
+    given-names: Meng
+    affiliation: "Technische Universität Dresden"
+  - family-names: Tan
+    given-names: Chaopeng
+    affiliation: "Technische Universität Dresden"
+preferred-citation:
+  type: unpublished
+  title: "Information-Region MPC: Non-Iterative Distributed Control of Urban Traffic Signals"
+  authors:
+    - family-names: Hu
+      given-names: Qiongdan
+    - family-names: Yang
+      given-names: Menglin
+    - family-names: Wang
+      given-names: Meng
+    - family-names: Tan
+      given-names: Chaopeng
+  year: 2026
+  notes: "Manuscript submitted to the 2027 European Control Conference (ECC)"

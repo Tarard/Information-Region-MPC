@@ -1,0 +1,125 @@
+{
+  "valid": false,
+  "status": "INVALID",
+  "seed": 103,
+  "error": null,
+  "failed_gates": [
+    "no_collision"
+  ],
+  "gates": {
+    "no_process_error": true,
+    "required_outputs_parse": true,
+    "no_collision": false,
+    "signal_states_match_plan": true,
+    "edge_vehicle_counts_match": true,
+    "ledger_closes": true,
+    "exit_audit": true,
+    "fixed_route_audit": true,
+    "all_trips_completed": true,
+    "limit_not_reached": true,
+    "cycle_audit": true,
+    "rounding_below_1s": true,
+    "solver_repair_below_0.01s": true
+  },
+  "planned": 15543,
+  "loaded": 15543,
+  "inserted": 15543,
+  "completed": 15543,
+  "unfinished": 0,
+  "on_road_remaining": 0,
+  "pending": 0,
+  "final_time_seconds": 8154,
+  "limit_reached": false,
+  "updates": 136,
+  "qp_failures": 0,
+  "solver_counts": {
+    "clarabel": 136
+  },
+  "maximum_absolute_residuals": {
+    "eq_violation": 1.2304565973156883e-10,
+    "ineq_violation": 1.9920563787856207e-11,
+    "stationarity": 5.50420820033537e-13,
+    "dual_violation": 0,
+    "complementarity": 5.500815233031888e-10
+  },
+  "solve_seconds_median": 1.6414882500030217,
+  "solve_seconds_max": 2.442312499988475,
+  "maximum_rounding_seconds": 0.6566805385113277,
+  "maximum_solver_repair_seconds": 1.4210854715202004e-14,
+  "checked_signal_seconds": 228312,
+  "signal_state_mismatches": 0,
+  "all_edge_vehicle_count_mismatches": 0,
+  "collision_vehicle_ids": [
+    "cwyz-N_000501",
+    "yuzhouN-S_000291"
+  ],
+  "teleport_vehicle_ids": [],
+  "teleports": 0,
+  "collision_output_events": 1,
+  "required_output_errors": [],
+  "ledger": {
+    "closes": true,
+    "planned": 15543,
+    "loaded": 15543,
+    "departed": 15543,
+    "arrived": 15543,
+    "unfinished_on_road": 0,
+    "not_departed": 0
+  },
+  "cycle_audit": {
+    "passed": true,
+    "problems": [],
+    "problem_count": 0,
+    "complete_cycles_checked": 3304
+  },
+  "mean_complete_delay_seconds": 130.70011452100624,
+  "runtime_seconds": 1328.727656099989,
+  "controller": "P-OSD, K=1",
+  "ir": {
+    "variant": "P-OSD",
+    "iterations": 1,
+    "updates": 136,
+    "failed_intersections_last_iteration": 0,
+    "no_bank_updates": 2,
+    "reference_failures": 0,
+    "parallel_seconds_median": 0.6354686499980744,
+    "partition": [
+      [
+        "1454",
+        "1455",
+        "1462",
+        "1465",
+        "1466",
+        "1700",
+        "5085"
+      ],
+      [
+        "1456",
+        "1463",
+        "1674",
+        "1675",
+        "1681",
+        "1689",
+        "1702"
+      ],
+      [
+        "1493",
+        "1677",
+        "1682",
+        "1690",
+        "5083",
+        "5084",
+        "5086"
+      ],
+      [
+        "1508",
+        "1676",
+        "1683",
+        "1684",
+        "1685",
+        "1688",
+        "1701"
+      ]
+    ]
+  }
+}

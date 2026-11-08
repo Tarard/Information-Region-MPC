@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-06-20 10:20:54 by Eclipse SUMO netedit Version 1.20.0
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- VTypes -->
+    <vType id="cangwu" maxSpeed="16.00" vClass="passenger"/>
+    <vType id="chaoyang" maxSpeed="16.00" vClass="passenger"/>
+    <vType id="chaoyangE-W" maxSpeed="15.30" vClass="passenger"/>
+    <vType id="chaoyangW-E" maxSpeed="15.30" vClass="passenger"/>
+    <vType id="haining" maxSpeed="16.00" vClass="passenger"/>
+    <vType id="jianshe" maxSpeed="16.00" vClass="passenger"/>
+    <vType id="keyuanN-S" maxSpeed="15.30" vClass="passenger"/>
+    <vType id="keyuanS-N" maxSpeed="15.30" vClass="passenger"/>
+    <vType id="lvyuan" maxSpeed="16.00" vClass="passenger"/>
+    <vType id="yuzhou" maxSpeed="16.00" vClass="passenger"/>
+	<vType id="gw" maxSpeed="16.00" vClass="passenger" color="green"/>
+    <!-- Routes -->
+    <route id="cw-e-w" edges="104041339#2 104041339#2.650 104041372#2 104041372#2.785 104041372#9 104041372#9.66 104041372#9.66.224 449081380#2 449081380#2.386 449081380#4 449081380#4.55 449081380#4.55.421 414851871#1 414851871#1.36"/>
+    <route id="cw-w-e" edges="104042429#2 104042429#2.521 104041324#0 104041324#0.31 104041324#2 104041324#3 104041324#3.73 104041324#3.410 104041324#5 449081366#1 449081366#3 449081366#4 449081366#4.782 449081366#8"/>
+    <route id="cy-e-w" edges="135267606#43.408 135267606#43.1114 414842078#2 414842078#2.55 414842078#3 414842078#5 414842078#5.99 414842078#7 414842078#7.95 414842078#7.95.124 414842089#2 414842089#2.497 414842089#3 414842089#3.73 414842089#4 414842089#6 414842089#7"/>
+    <route id="cy-w-e" edges="224720248#1 224720248#5 224720248#7 224720248#8 224720248#8.397 224720248#9 224720248#9.77 224720248#9.534 224720248#11 E118 224720248#11.136 296588577#2 296588577#2.36 296588577#3 296588577#5 296588577#5.104 296588577#7"/>
+    <route id="hn-e-w" edges="-795873264 -795873264.281 296585101#0 296585101#0.323 296585101#1 296585101#2 296585101#2.306 296585101#4 296585101#4.89 296585101#4.89.143 224720265#2 224720265#2.519 224720265#3 224720265#3.38"/>
+    <route id="hn-w-e" edges="121193899#1.129 121193899#1.262 121193899#2 121193899#2.542 121193899#4 121193899#4.212 224720247#2 224720247#2.93 224720247#2.345 224720247#3 224720247#4 795873264"/>
+    <route id="ly-e-w" edges="-E6 121193893#1 121193893#2 121193893#3 121193893#5 296588571#2 296588571#4 296588571#10"/>
+    <route id="ly-w-e" edges="449081389#4 449081389#10 449081389#12 449081389#15 414851878#2 414851878#3 414851878#4 E6"/>
+    <route id="yz-n-s" edges="121193898#10.303 121193898#10.537 121193898#12 121193898#12.34 121193898#14 121193898#14.165 121193898#16 121193898#18 121193898#20 121193898#21"/>
+    <route id="yz-s-n" edges="224722276#1.270 224722276#2 224722276#4 224722276#5 224722276#5.278 224722276#7 224722276#8 224722276#8.131 224722276#10 224722276#10.45"/>
+    <!-- Vehicles, persons and containers (sorted by depart) -->
+    <flow id="cangwuE-W" type="cangwu" begin="0.00" departLane="free" from="104041339#2" to="414851871#1.36" end="4200.00" vehsPerHour="100"/>
+    <flow id="cangwuW-E" type="cangwu" begin="0.00" departLane="free" from="104042429#2" to="449081366#8" end="4200.00" vehsPerHour="100"/>
+    <flow id="chaoyangE-W" type="chaoyang" begin="0.00" departLane="free" from="135267606#43.408" to="414842089#7" end="4200.00" vehsPerHour="100"/>
+    <flow id="chaoyangW-E" type="chaoyang" begin="0.00" departLane="free" from="224720248#1" to="296588577#7" end="4200.00" vehsPerHour="100"/>
+    <flow id="cyE-W" type="chaoyangE-W" begin="0.00" departLane="free" from="135267606#43.408" to="414842089#7" end="4200.00" vehsPerHour="100"/>
+    <flow id="cyW-E" type="chaoyangW-E" begin="0.00" departLane="free" from="224720248#1" to="296588577#7" end="4200.00" vehsPerHour="100"/>
+    <flow id="hainingE-W" type="haining" begin="0.00" departLane="free" from="-795873264" to="224720265#3.38" end="4200.00" vehsPerHour="100"/>
+    <flow id="hainingW-E" type="haining" begin="0.00" departLane="free" from="121193899#1.129" to="795873264" end="4200.00" vehsPerHour="100"/>
+    <flow id="jiansheE-W" type="jianshe" begin="0.00" departLane="free" from="-E13" to="331059409#3" end="4200.00" vehsPerHour="50"/>
+    <flow id="jiansheW-E" type="jianshe" begin="0.00" departLane="free" from="-331059409#3.32" to="E13" end="4200.00" vehsPerHour="50"/>
+    <flow id="kyN-S" type="keyuanN-S" begin="0.00" departLane="free" from="1131473775#1" to="701520969#9.94" end="4200.00" vehsPerHour="100"/>
+    <flow id="kyS-N" type="keyuanS-N" begin="0.00" departLane="free" from="414851853#3" to="1131473777#0" end="4200.00" vehsPerHour="100"/>
+    <flow id="lvyuanE-W" type="lvyuan" begin="0.00" departLane="free" from="-E6" to="296588571#10" end="4200.00" vehsPerHour="50"/>
+    <flow id="lvyuanW-E" type="lvyuan" begin="0.00" departLane="free" from="449081389#4" to="E6" end="4200.00" vehsPerHour="50"/>
+    <flow id="yuzhouN-S" type="yuzhou" begin="0.00" departLane="free" from="121193898#10.303" to="121193898#22" end="4200.00" vehsPerHour="200"/>
+    <flow id="yuzhouS-N" type="yuzhou" begin="0.00" departLane="free" from="224722276#0.121" to="224722276#10.45" end="4200.00" vehsPerHour="200"/>
+</routes>

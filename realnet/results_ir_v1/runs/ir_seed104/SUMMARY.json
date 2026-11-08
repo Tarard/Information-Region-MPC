@@ -1,0 +1,81 @@
+{
+  "valid": true,
+  "status": "VALID",
+  "seed": 104,
+  "error": null,
+  "failed_gates": [],
+  "gates": {
+    "no_process_error": true,
+    "required_outputs_parse": true,
+    "no_collision": true,
+    "signal_states_match_plan": true,
+    "edge_vehicle_counts_match": true,
+    "ledger_closes": true,
+    "exit_audit": true,
+    "fixed_route_audit": true,
+    "all_trips_completed": true,
+    "limit_not_reached": true,
+    "cycle_audit": true,
+    "rounding_below_1s": true,
+    "solver_repair_below_0.01s": true
+  },
+  "planned": 15654,
+  "loaded": 15654,
+  "inserted": 15654,
+  "completed": 15654,
+  "unfinished": 0,
+  "on_road_remaining": 0,
+  "pending": 0,
+  "final_time_seconds": 8495,
+  "limit_reached": false,
+  "updates": 142,
+  "qp_failures": 0,
+  "solver_counts": {
+    "clarabel": 142
+  },
+  "maximum_absolute_residuals": {
+    "eq_violation": 1.096144512796072e-10,
+    "ineq_violation": 5.2504953520398545e-11,
+    "stationarity": 4.7293709438584507e-11,
+    "dual_violation": 0,
+    "complementarity": 1.3248721934054979e-09
+  },
+  "solve_seconds_median": 1.4426402999961283,
+  "solve_seconds_max": 3.41910729999654,
+  "maximum_rounding_seconds": 0.6937839810827722,
+  "maximum_solver_repair_seconds": 7.105427357601002e-15,
+  "checked_signal_seconds": 237860,
+  "signal_state_mismatches": 0,
+  "all_edge_vehicle_count_mismatches": 0,
+  "collision_vehicle_ids": [],
+  "teleport_vehicle_ids": [],
+  "teleports": 0,
+  "collision_output_events": 0,
+  "required_output_errors": [],
+  "ledger": {
+    "closes": true,
+    "planned": 15654,
+    "loaded": 15654,
+    "departed": 15654,
+    "arrived": 15654,
+    "unfinished_on_road": 0,
+    "not_departed": 0
+  },
+  "cycle_audit": {
+    "passed": true,
+    "problems": [],
+    "problem_count": 0,
+    "complete_cycles_checked": 3451
+  },
+  "mean_complete_delay_seconds": 130.55453238788806,
+  "runtime_seconds": 958.4190184000036,
+  "controller": "ir",
+  "ir": {
+    "updates": 142,
+    "local_failures": 25,
+    "no_bank_updates": 0,
+    "local_max_seconds_median": 0.20781904999603285,
+    "local_max_seconds_max": 0.42981799998960923,
+    "local_sum_seconds_median": 0.9994245500129182
+  }
+}

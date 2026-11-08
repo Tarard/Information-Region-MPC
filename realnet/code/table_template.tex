@@ -1,0 +1,80 @@
+\begin{table}[h!]
+\centering
+\caption{Closed-loop traffic performance and computation time of IR-MPC and centralized MPC.}
+\label{tab:summary}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Metric & Centralized MPC & IR-MPC \\
+\midrule
+\shortstack[l]{Median computation time (s)} & 1.54 & 0.79 \\
+\midrule
+Mean delay (s/veh) & $102.88\pm1.32$ & $103.03\pm1.42$ \\
+Total time spent (veh$\cdot$h) & $917.3\pm12.7$ & $917.8\pm13.0$ \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{\columnwidth}
+\footnotesize
+Computation time: median over 19 test samples in one run; IR-MPC local QPs run in parallel. Traffic metrics: mean $\pm$ half-width of the 95\% confidence interval over six test days.
+\end{minipage}
+\endgroup
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Next-cycle green-time errors of IR-MPC relative to centralized MPC in closed-loop simulations.}
+\label{tab:central}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Period & \shortstack{Mean\\error (s)} & \shortstack{Error $\le1$ s\\(\%)} & \shortstack{Error $\le2$ s\\(\%)} & \shortstack{Identical\\executed\\greens (\%)} \\
+\midrule
+Off-peak & 0.065 & 98.3 & 99.5 & 95.0 \\
+Ramp-up & 0.173 & 95.5 & 98.7 & 86.4 \\
+Peak & 0.275 & 92.5 & 97.9 & 79.1 \\
+Ramp-down & 0.260 & 92.4 & 97.2 & 82.3 \\
+\midrule
+Overall & 0.156 & 95.7 & 98.7 & 88.3 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{\columnwidth}
+\footnotesize
+Error: maximum absolute next-cycle green-time difference over the phases of one intersection at one sample, relative to centralized MPC. Identical executed greens: the whole-second green times match centralized MPC. All statistics include 170 failed local problems (0.48\%) that apply the previous green times.
+\end{minipage}
+\endgroup
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{IR-MPC and OSD compared with centralized MPC on 50 test samples.}
+\label{tab:distributed}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{1.5pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Method & \shortstack{Solved\\(\%)} & \shortstack{Mean\\error (s)} & \shortstack{Error\\$\le1$ s (\%)} & \shortstack{Error\\$\le2$ s (\%)} & \shortstack{Cost gap\\($10^{-3}$\%)} & \shortstack{Comp.\\time (s)} \\
+\midrule
+IR-MPC & 100 & 0.160 & 95.9 & 98.8 & 1.58 & \phantom{0.00} \\
+OSD-1, $K=1$ & 100 & 0.350 & 87.5 & 94.9 & 7.47 & \phantom{0.00} \\
+OSD-1, $K=4$ & 94.9 & 0.141 & 97.9 & 98.4 & 0.34 & \phantom{0.00} \\
+OSD-2, $K=1$ & 100 & 0.181 & 93.6 & 98.3 & 2.39 & \phantom{0.00} \\
+OSD-2, $K=4$ & 96.4 & 0.083 & 98.4 & 98.9 & 0.01 & \phantom{0.00} \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{\columnwidth}
+\footnotesize
+OSD-$h$: OSD with an $h$-hop overlap; $K$: iterations. Solved: percentage of successfully solved local problems. Error: maximum absolute next-cycle green-time difference over phases, relative to centralized MPC. Cost gap: median relative objective increase over the samples; 1.58 denotes $1.58\times10^{-3}$\%.
+\end{minipage}
+\endgroup
+\end{table}

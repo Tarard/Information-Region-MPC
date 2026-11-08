@@ -1,0 +1,26 @@
+{
+ "n": 500,
+ "seed": 1,
+ "controller": "central",
+ "cleared": false,
+ "time_seconds": 5400,
+ "generated": 105738.61525062154,
+ "completed": 75373.2266707022,
+ "in_system": 30365.388579921895,
+ "delay_vehicle_seconds": 43568881.56680782,
+ "tts_vehicle_seconds": 70195118.96285117,
+ "mean_delay_seconds_per_vehicle": 578.0418789440412,
+ "max_link_occupancy": 4.258881658551071,
+ "max_link_occupancy_peak": 4.258881658551071,
+ "link_occupancy_peak_p90": 0.2590280473844735,
+ "links_over_storage_peak": 46,
+ "day_group_factors": [
+  1.0449731660523744,
+  0.9525336036410785,
+  0.9644217011124598
+ ],
+ "updates": 90,
+ "failures": 0,
+ "runtime_seconds": 3044.8093448,
+ "stopped_at": 5400
+}

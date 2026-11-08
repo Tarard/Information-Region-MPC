@@ -1,0 +1,7 @@
+{
+ "mu": 0.01,
+ "arrival_table": "<earlier study>/outputs\\LYG_red_delay_v3\\design\\arrival_table.json",
+ "arrival_table_sha256": "7caf7aca0542847b7bfed4c0dbe0db7a90140edb72c081e40af077464baaeef6",
+ "service_groups": "<earlier study>/outputs\\LYG_red_delay_v3\\design\\service_groups.json",
+ "service_groups_sha256": "8cc8c94a671839c9b63d24f5ea2ea07d0a2b3862544eef9a690e8277014a368a"
+}

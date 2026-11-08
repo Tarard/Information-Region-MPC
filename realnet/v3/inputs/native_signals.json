@@ -1,0 +1,2566 @@
+{
+ "experiment_id": "T1-20261010-01",
+ "sequence": 23,
+ "status": "NATIVE_SIGNAL_MAPPING_COMPLETE_MPC_NOT_IMPLEMENTED",
+ "created_utc": "2026-10-10T09:20:57.121277+00:00",
+ "signal_cycle_policy": "preserve native cycles, offsets, state sequence and fixed transitions",
+ "prediction_step_seconds": 15,
+ "action_tolerance_seconds": 3,
+ "signals": {
+  "1454": {
+   "program_attributes": {
+    "id": "1454",
+    "type": "static",
+    "programID": "0",
+    "offset": "66"
+   },
+   "cycle_seconds": "120",
+   "offset_seconds": "66",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "24",
+      "state": "rrrGGgGrrrrrrr"
+     },
+     "duration_seconds": "24",
+     "state": "rrrGGgGrrrrrrr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "rrryyyyrrrrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "rrryyyyrrrrrrr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "24",
+      "state": "rrrrrrrrrrGGgG"
+     },
+     "duration_seconds": "24",
+     "state": "rrrrrrrrrrGGgG"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "rrrrrrrrrryyyy"
+     },
+     "duration_seconds": "3",
+     "state": "rrrrrrrrrryyyy"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "31",
+      "state": "rrrrrrrGGGrrrr"
+     },
+     "duration_seconds": "31",
+     "state": "rrrrrrrGGGrrrr"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "rrrrrrryyyrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "rrrrrrryyyrrrr"
+    },
+    {
+     "native_index": 6,
+     "attributes": {
+      "duration": "29",
+      "state": "GGGrrrrrrrrrrr"
+     },
+     "duration_seconds": "29",
+     "state": "GGGrrrrrrrrrrr"
+    },
+    {
+     "native_index": 7,
+     "attributes": {
+      "duration": "3",
+      "state": "yyyrrrrrrrrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "yyyrrrrrrrrrrr"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "fixed_transition_seconds": "12",
+   "available_green_seconds": "108",
+   "nominal_green_seconds": [
+    "24",
+    "24",
+    "31",
+    "29"
+   ],
+   "green_bounds": null
+  },
+  "1455": {
+   "program_attributes": {
+    "id": "1455",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "90",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "33",
+      "state": "gGGrrgrrrgGGrrgrrr"
+     },
+     "duration_seconds": "33",
+     "state": "gGGrrgrrrgGGrrgrrr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "6",
+      "state": "gyyrrgrrrgyyrrgrrr"
+     },
+     "duration_seconds": "6",
+     "state": "gyyrrgrrrgyyrrgrrr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "6",
+      "state": "grrGGgrrrgrrGGgrrr"
+     },
+     "duration_seconds": "6",
+     "state": "grrGGgrrrgrrGGgrrr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "6",
+      "state": "grryygrrrgrryygrrr"
+     },
+     "duration_seconds": "6",
+     "state": "grryygrrrgrryygrrr"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "33",
+      "state": "grrrrgGGggrrrrgGGg"
+     },
+     "duration_seconds": "33",
+     "state": "grrrrgGGggrrrrgGGg"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "6",
+      "state": "grrrrgyyygrrrrgyyy"
+     },
+     "duration_seconds": "6",
+     "state": "grrrrgyyygrrrrgyyy"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5
+   ],
+   "fixed_transition_seconds": "18",
+   "available_green_seconds": "72",
+   "nominal_green_seconds": [
+    "33",
+    "6",
+    "33"
+   ],
+   "green_bounds": null
+  },
+  "1456": {
+   "program_attributes": {
+    "id": "1456",
+    "type": "static",
+    "programID": "0",
+    "offset": "24"
+   },
+   "cycle_seconds": "120",
+   "offset_seconds": "24",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "19",
+      "state": "grrrrGGrrrrrrrgGGrr"
+     },
+     "duration_seconds": "19",
+     "state": "grrrrGGrrrrrrrgGGrr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrryyrrrrrrrgyyrr"
+     },
+     "duration_seconds": "3",
+     "state": "grrrryyrrrrrrrgyyrr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "19",
+      "state": "grrrrrrGGrrrrrgrrGG"
+     },
+     "duration_seconds": "19",
+     "state": "grrrrrrGGrrrrrgrrGG"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrrrryyrrrrrgrryy"
+     },
+     "duration_seconds": "3",
+     "state": "grrrrrryyrrrrrgrryy"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "34",
+      "state": "gGGGGrrrrrrrrrgrrrr"
+     },
+     "duration_seconds": "34",
+     "state": "gGGGGrrrrrrrrrgrrrr"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "gyyyyrrrrrrrrrgrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "gyyyyrrrrrrrrrgrrrr"
+    },
+    {
+     "native_index": 6,
+     "attributes": {
+      "duration": "36",
+      "state": "grrrrrrrrGGGGGgrrrr"
+     },
+     "duration_seconds": "36",
+     "state": "grrrrrrrrGGGGGgrrrr"
+    },
+    {
+     "native_index": 7,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrrrrrryyyyygrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "grrrrrrrryyyyygrrrr"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "fixed_transition_seconds": "12",
+   "available_green_seconds": "108",
+   "nominal_green_seconds": [
+    "19",
+    "19",
+    "34",
+    "36"
+   ],
+   "green_bounds": null
+  },
+  "1462": {
+   "program_attributes": {
+    "id": "1462",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "92",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "rrrrGGrGrrrrGGrG"
+     },
+     "duration_seconds": "20",
+     "state": "rrrrGGrGrrrrGGrG"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "rrrryyryrrrryyry"
+     },
+     "duration_seconds": "3",
+     "state": "rrrryyryrrrryyry"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "20",
+      "state": "rrrrrrGrrrrrrrGr"
+     },
+     "duration_seconds": "20",
+     "state": "rrrrrrGrrrrrrrGr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "rrrrrryrrrrrrryr"
+     },
+     "duration_seconds": "3",
+     "state": "rrrrrryrrrrrrryr"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "20",
+      "state": "GGrrrrrrGGrrrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "GGrrrrrrGGrrrrrr"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "yyrrrrrryyrrrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "yyrrrrrryyrrrrrr"
+    },
+    {
+     "native_index": 6,
+     "attributes": {
+      "duration": "20",
+      "state": "rrGGrrrrrrGGrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "rrGGrrrrrrGGrrrr"
+    },
+    {
+     "native_index": 7,
+     "attributes": {
+      "duration": "3",
+      "state": "rryyrrrrrryyrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "rryyrrrrrryyrrrr"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "fixed_transition_seconds": "12",
+   "available_green_seconds": "80",
+   "nominal_green_seconds": [
+    "20",
+    "20",
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "1463": {
+   "program_attributes": {
+    "id": "1463",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "92",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "GGGGrrrrrrrrGGGGrrrrrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "GGGGrrrrrrrrGGGGrrrrrrrr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "yyyyrrrrrrrryyyyrrrrrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "yyyyrrrrrrrryyyyrrrrrrrr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "20",
+      "state": "rrrrGGGrrrrrrrrrGGGrrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "rrrrGGGrrrrrrrrrGGGrrrrr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "rrrryyyrrrrrrrrryyyrrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "rrrryyyrrrrrrrrryyyrrrrr"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "20",
+      "state": "rrrrrrrGGGrrrrrrrrrGGGrr"
+     },
+     "duration_seconds": "20",
+     "state": "rrrrrrrGGGrrrrrrrrrGGGrr"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "rrrrrrryyyrrrrrrrrryyyrr"
+     },
+     "duration_seconds": "3",
+     "state": "rrrrrrryyyrrrrrrrrryyyrr"
+    },
+    {
+     "native_index": 6,
+     "attributes": {
+      "duration": "20",
+      "state": "rrrrrrrrrrGGrrrrrrrrrrGG"
+     },
+     "duration_seconds": "20",
+     "state": "rrrrrrrrrrGGrrrrrrrrrrGG"
+    },
+    {
+     "native_index": 7,
+     "attributes": {
+      "duration": "3",
+      "state": "rrrrrrrrrryyrrrrrrrrrryy"
+     },
+     "duration_seconds": "3",
+     "state": "rrrrrrrrrryyrrrrrrrrrryy"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "fixed_transition_seconds": "12",
+   "available_green_seconds": "80",
+   "nominal_green_seconds": [
+    "20",
+    "20",
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "1465": {
+   "program_attributes": {
+    "id": "1465",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "92",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrgGGrGgrrgGGrG"
+     },
+     "duration_seconds": "20",
+     "state": "grrrgGGrGgrrgGGrG"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrgyyrygrrgyyry"
+     },
+     "duration_seconds": "3",
+     "state": "grrrgyyrygrrgyyry"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrgrrGrgrrgrrGr"
+     },
+     "duration_seconds": "20",
+     "state": "grrrgrrGrgrrgrrGr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrgrryrgrrgrryr"
+     },
+     "duration_seconds": "3",
+     "state": "grrrgrryrgrrgrryr"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrgrrrrgGggrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "grrrgrrrrgGggrrrr"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrgrrrrgyygrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "grrrgrrrrgyygrrrr"
+    },
+    {
+     "native_index": 6,
+     "attributes": {
+      "duration": "20",
+      "state": "ggGGgrrrrgrrgrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "ggGGgrrrrgrrgrrrr"
+    },
+    {
+     "native_index": 7,
+     "attributes": {
+      "duration": "3",
+      "state": "gyyygrrrrgrrgrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "gyyygrrrrgrrgrrrr"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "fixed_transition_seconds": "12",
+   "available_green_seconds": "80",
+   "nominal_green_seconds": [
+    "20",
+    "20",
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "1466": {
+   "program_attributes": {
+    "id": "1466",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "46",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrgGGggrrrgGGg"
+     },
+     "duration_seconds": "20",
+     "state": "grrrgGGggrrrgGGg"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrgyyygrrrgyyy"
+     },
+     "duration_seconds": "3",
+     "state": "grrrgyyygrrrgyyy"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "20",
+      "state": "gGGggrrrgGGggrrr"
+     },
+     "duration_seconds": "20",
+     "state": "gGGggrrrgGGggrrr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "gyyygrrrgyyygrrr"
+     },
+     "duration_seconds": "3",
+     "state": "gyyygrrrgyyygrrr"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2
+   ],
+   "fixed_transition_indices": [
+    1,
+    3
+   ],
+   "fixed_transition_seconds": "6",
+   "available_green_seconds": "40",
+   "nominal_green_seconds": [
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "1493": {
+   "program_attributes": {
+    "id": "1493",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "92",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "gGGrrgrrrrgGrrrgrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "gGGrrgrrrrgGrrrgrrrr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "gyyrrgrrrrgyrrrgrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "gyyrrgrrrrgyrrrgrrrr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "20",
+      "state": "grrGGgrrrrgrGGGgrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "grrGGgrrrrgrGGGgrrrr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "grryygrrrrgryyygrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "grryygrrrrgryyygrrrr"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrrgGGrrgrrrrgGGrr"
+     },
+     "duration_seconds": "20",
+     "state": "grrrrgGGrrgrrrrgGGrr"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrrgyyrrgrrrrgyyrr"
+     },
+     "duration_seconds": "3",
+     "state": "grrrrgyyrrgrrrrgyyrr"
+    },
+    {
+     "native_index": 6,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrrgrrGGgrrrrgrrGG"
+     },
+     "duration_seconds": "20",
+     "state": "grrrrgrrGGgrrrrgrrGG"
+    },
+    {
+     "native_index": 7,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrrgrryygrrrrgrryy"
+     },
+     "duration_seconds": "3",
+     "state": "grrrrgrryygrrrrgrryy"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "fixed_transition_seconds": "12",
+   "available_green_seconds": "80",
+   "nominal_green_seconds": [
+    "20",
+    "20",
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "1508": {
+   "program_attributes": {
+    "id": "1508",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "78",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "27",
+      "state": "gGGrgrrgGGrgrrr"
+     },
+     "duration_seconds": "27",
+     "state": "gGGrgrrgGGrgrrr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "gyyrgrrgyyrgrrr"
+     },
+     "duration_seconds": "3",
+     "state": "gyyrgrrgyyrgrrr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "6",
+      "state": "grrGgrrgrrGgrrr"
+     },
+     "duration_seconds": "6",
+     "state": "grrGgrrgrrGgrrr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "grrygrrgrrygrrr"
+     },
+     "duration_seconds": "3",
+     "state": "grrygrrgrrygrrr"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "27",
+      "state": "grrrgGrgrrrgGGr"
+     },
+     "duration_seconds": "27",
+     "state": "grrrgGrgrrrgGGr"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrgyrgrrrgyyr"
+     },
+     "duration_seconds": "3",
+     "state": "grrrgyrgrrrgyyr"
+    },
+    {
+     "native_index": 6,
+     "attributes": {
+      "duration": "6",
+      "state": "grrrgrGgrrrgrrG"
+     },
+     "duration_seconds": "6",
+     "state": "grrrgrGgrrrgrrG"
+    },
+    {
+     "native_index": 7,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrgrygrrrgrry"
+     },
+     "duration_seconds": "3",
+     "state": "grrrgrygrrrgrry"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "fixed_transition_seconds": "12",
+   "available_green_seconds": "66",
+   "nominal_green_seconds": [
+    "27",
+    "6",
+    "27",
+    "6"
+   ],
+   "green_bounds": null
+  },
+  "1674": {
+   "program_attributes": {
+    "id": "1674",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "69",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrgGGrrgrrrgGGrr"
+     },
+     "duration_seconds": "20",
+     "state": "grrrgGGrrgrrrgGGrr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrgyyrrgrrrgyyrr"
+     },
+     "duration_seconds": "3",
+     "state": "grrrgyyrrgrrrgyyrr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrgrrGGgrrrgrrGG"
+     },
+     "duration_seconds": "20",
+     "state": "grrrgrrGGgrrrgrrGG"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrgrryygrrrgrryy"
+     },
+     "duration_seconds": "3",
+     "state": "grrrgrryygrrrgrryy"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "20",
+      "state": "gGGggrrrrgGGggrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "gGGggrrrrgGGggrrrr"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "gyyygrrrrgyyygrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "gyyygrrrrgyyygrrrr"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5
+   ],
+   "fixed_transition_seconds": "9",
+   "available_green_seconds": "60",
+   "nominal_green_seconds": [
+    "20",
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "1675": {
+   "program_attributes": {
+    "id": "1675",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "92",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrgGGrrgrrrgGGrr"
+     },
+     "duration_seconds": "20",
+     "state": "grrrgGGrrgrrrgGGrr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrgyyrrgrrrgyyrr"
+     },
+     "duration_seconds": "3",
+     "state": "grrrgyyrrgrrrgyyrr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrgrrGGgrrrgrrGG"
+     },
+     "duration_seconds": "20",
+     "state": "grrrgrrGGgrrrgrrGG"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrgrryygrrrgrryy"
+     },
+     "duration_seconds": "3",
+     "state": "grrrgrryygrrrgrryy"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "20",
+      "state": "gGGrgrrrrgGGrgrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "gGGrgrrrrgGGrgrrrr"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "gyyrgrrrrgyyrgrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "gyyrgrrrrgyyrgrrrr"
+    },
+    {
+     "native_index": 6,
+     "attributes": {
+      "duration": "20",
+      "state": "grrGgrrrrgrrGgrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "grrGgrrrrgrrGgrrrr"
+    },
+    {
+     "native_index": 7,
+     "attributes": {
+      "duration": "3",
+      "state": "grrygrrrrgrrygrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "grrygrrrrgrrygrrrr"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "fixed_transition_seconds": "12",
+   "available_green_seconds": "80",
+   "nominal_green_seconds": [
+    "20",
+    "20",
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "1676": {
+   "program_attributes": {
+    "id": "1676",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "92",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "GGrrrrrrrrGGrrrrrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "GGrrrrrrrrGGrrrrrrrr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "yyrrrrrrrryyrrrrrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "yyrrrrrrrryyrrrrrrrr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "20",
+      "state": "rrGGGrrrrrrrGGGrrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "rrGGGrrrrrrrGGGrrrrr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "rryyyrrrrrrryyyrrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "rryyyrrrrrrryyyrrrrr"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "20",
+      "state": "rrrrrGGrrrrrrrrGGrrr"
+     },
+     "duration_seconds": "20",
+     "state": "rrrrrGGrrrrrrrrGGrrr"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "rrrrryyrrrrrrrryyrrr"
+     },
+     "duration_seconds": "3",
+     "state": "rrrrryyrrrrrrrryyrrr"
+    },
+    {
+     "native_index": 6,
+     "attributes": {
+      "duration": "20",
+      "state": "rrrrrrrGGGrrrrrrrGGG"
+     },
+     "duration_seconds": "20",
+     "state": "rrrrrrrGGGrrrrrrrGGG"
+    },
+    {
+     "native_index": 7,
+     "attributes": {
+      "duration": "3",
+      "state": "rrrrrrryyyrrrrrrryyy"
+     },
+     "duration_seconds": "3",
+     "state": "rrrrrrryyyrrrrrrryyy"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "fixed_transition_seconds": "12",
+   "available_green_seconds": "80",
+   "nominal_green_seconds": [
+    "20",
+    "20",
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "1677": {
+   "program_attributes": {
+    "id": "1677",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "92",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "gGGGrrrgrrrrgGGGrrrgrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "gGGGrrrgrrrrgGGGrrrgrrrr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "gyyyrrrgrrrrgyyyrrrgrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "gyyyrrrgrrrrgyyyrrrgrrrr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrGGGgrrrrgrrrGGGgrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "grrrGGGgrrrrgrrrGGGgrrrr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "grrryyygrrrrgrrryyygrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "grrryyygrrrrgrrryyygrrrr"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrrrrgGGrrgrrrrrrgGGrr"
+     },
+     "duration_seconds": "20",
+     "state": "grrrrrrgGGrrgrrrrrrgGGrr"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrrrrgyyrrgrrrrrrgyyrr"
+     },
+     "duration_seconds": "3",
+     "state": "grrrrrrgyyrrgrrrrrrgyyrr"
+    },
+    {
+     "native_index": 6,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrrrrgrrGGgrrrrrrgrrGG"
+     },
+     "duration_seconds": "20",
+     "state": "grrrrrrgrrGGgrrrrrrgrrGG"
+    },
+    {
+     "native_index": 7,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrrrrgrryygrrrrrrgrryy"
+     },
+     "duration_seconds": "3",
+     "state": "grrrrrrgrryygrrrrrrgrryy"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "fixed_transition_seconds": "12",
+   "available_green_seconds": "80",
+   "nominal_green_seconds": [
+    "20",
+    "20",
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "1681": {
+   "program_attributes": {
+    "id": "1681",
+    "type": "static",
+    "programID": "0",
+    "offset": "19"
+   },
+   "cycle_seconds": "120",
+   "offset_seconds": "19",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "27",
+      "state": "grrrrgGGGgrrrrgrrr"
+     },
+     "duration_seconds": "27",
+     "state": "grrrrgGGGgrrrrgrrr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrrgyyygrrrrgrrr"
+     },
+     "duration_seconds": "3",
+     "state": "grrrrgyyygrrrrgrrr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "27",
+      "state": "grrrrgrrrgrrrrgGGG"
+     },
+     "duration_seconds": "27",
+     "state": "grrrrgrrrgrrrrgGGG"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrrgrrrgrrrrgyyy"
+     },
+     "duration_seconds": "3",
+     "state": "grrrrgrrrgrrrrgyyy"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "34",
+      "state": "gGGrrgrrrgGGrrgrrr"
+     },
+     "duration_seconds": "34",
+     "state": "gGGrrgrrrgGGrrgrrr"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "gyyrrgrrrgyyrrgrrr"
+     },
+     "duration_seconds": "3",
+     "state": "gyyrrgrrrgyyrrgrrr"
+    },
+    {
+     "native_index": 6,
+     "attributes": {
+      "duration": "20",
+      "state": "grrGGgrrrgrrGGgrrr"
+     },
+     "duration_seconds": "20",
+     "state": "grrGGgrrrgrrGGgrrr"
+    },
+    {
+     "native_index": 7,
+     "attributes": {
+      "duration": "3",
+      "state": "grryygrrrgrryygrrr"
+     },
+     "duration_seconds": "3",
+     "state": "grryygrrrgrryygrrr"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "fixed_transition_seconds": "12",
+   "available_green_seconds": "108",
+   "nominal_green_seconds": [
+    "27",
+    "27",
+    "34",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "1682": {
+   "program_attributes": {
+    "id": "1682",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "84",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "39",
+      "state": "grrrgGGggrrrgGGg"
+     },
+     "duration_seconds": "39",
+     "state": "grrrgGGggrrrgGGg"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrgyyygrrrgyyy"
+     },
+     "duration_seconds": "3",
+     "state": "grrrgyyygrrrgyyy"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "39",
+      "state": "gGGggrrrgGGggrrr"
+     },
+     "duration_seconds": "39",
+     "state": "gGGggrrrgGGggrrr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "gyyygrrrgyyygrrr"
+     },
+     "duration_seconds": "3",
+     "state": "gyyygrrrgyyygrrr"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2
+   ],
+   "fixed_transition_indices": [
+    1,
+    3
+   ],
+   "fixed_transition_seconds": "6",
+   "available_green_seconds": "78",
+   "nominal_green_seconds": [
+    "39",
+    "39"
+   ],
+   "green_bounds": null
+  },
+  "1683": {
+   "program_attributes": {
+    "id": "1683",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "92",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "GGGrrgrrrGGGrrrgrrr"
+     },
+     "duration_seconds": "20",
+     "state": "GGGrrgrrrGGGrrrgrrr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "gyyrrgrrrgyyrrrgrrr"
+     },
+     "duration_seconds": "3",
+     "state": "gyyrrgrrrgyyrrrgrrr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "20",
+      "state": "grrGGgrrrgrrGGGgrrr"
+     },
+     "duration_seconds": "20",
+     "state": "grrGGgrrrgrrGGGgrrr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "grryygrrrgrryyygrrr"
+     },
+     "duration_seconds": "3",
+     "state": "grryygrrrgrryyygrrr"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrrGGGrgrrrrrGGGr"
+     },
+     "duration_seconds": "20",
+     "state": "grrrrGGGrgrrrrrGGGr"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrrgyyrgrrrrrgyyr"
+     },
+     "duration_seconds": "3",
+     "state": "grrrrgyyrgrrrrrgyyr"
+    },
+    {
+     "native_index": 6,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrrgrrGgrrrrrgrrG"
+     },
+     "duration_seconds": "20",
+     "state": "grrrrgrrGgrrrrrgrrG"
+    },
+    {
+     "native_index": 7,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrrgrrygrrrrrgrry"
+     },
+     "duration_seconds": "3",
+     "state": "grrrrgrrygrrrrrgrry"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "fixed_transition_seconds": "12",
+   "available_green_seconds": "80",
+   "nominal_green_seconds": [
+    "20",
+    "20",
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "1684": {
+   "program_attributes": {
+    "id": "1684",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "46",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrgGGggrrrgGGg"
+     },
+     "duration_seconds": "20",
+     "state": "grrrgGGggrrrgGGg"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrgyyygrrrgyyy"
+     },
+     "duration_seconds": "3",
+     "state": "grrrgyyygrrrgyyy"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "20",
+      "state": "gGGggrrrgGGggrrr"
+     },
+     "duration_seconds": "20",
+     "state": "gGGggrrrgGGggrrr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "gyyygrrrgyyygrrr"
+     },
+     "duration_seconds": "3",
+     "state": "gyyygrrrgyyygrrr"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2
+   ],
+   "fixed_transition_indices": [
+    1,
+    3
+   ],
+   "fixed_transition_seconds": "6",
+   "available_green_seconds": "40",
+   "nominal_green_seconds": [
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "1685": {
+   "program_attributes": {
+    "id": "1685",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "90",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "33",
+      "state": "gGGGGGGrrgr"
+     },
+     "duration_seconds": "33",
+     "state": "gGGGGGGrrgr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "6",
+      "state": "gyyyyyyrrgr"
+     },
+     "duration_seconds": "6",
+     "state": "gyyyyyyrrgr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "6",
+      "state": "grrrrrrGGgr"
+     },
+     "duration_seconds": "6",
+     "state": "grrrrrrGGgr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "6",
+      "state": "grrrrrryygr"
+     },
+     "duration_seconds": "6",
+     "state": "grrrrrryygr"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "33",
+      "state": "grrrrrrrrgG"
+     },
+     "duration_seconds": "33",
+     "state": "grrrrrrrrgG"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "6",
+      "state": "grrrrrrrrgy"
+     },
+     "duration_seconds": "6",
+     "state": "grrrrrrrrgy"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5
+   ],
+   "fixed_transition_seconds": "18",
+   "available_green_seconds": "72",
+   "nominal_green_seconds": [
+    "33",
+    "6",
+    "33"
+   ],
+   "green_bounds": null
+  },
+  "1688": {
+   "program_attributes": {
+    "id": "1688",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "95",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "GGrrrrrrGGrrrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "GGrrrrrrGGrrrrrr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "yyrrrrrryyrrrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "yyrrrrrryyrrrrrr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "20",
+      "state": "rrGGGrrrrrGGGrrr"
+     },
+     "duration_seconds": "20",
+     "state": "rrGGGrrrrrGGGrrr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "6",
+      "state": "rryyyrrrrryyyrrr"
+     },
+     "duration_seconds": "6",
+     "state": "rryyyrrrrryyyrrr"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "20",
+      "state": "rrrrrGGGrrrrrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "rrrrrGGGrrrrrrrr"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "rrrrryyyrrrrrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "rrrrryyyrrrrrrrr"
+    },
+    {
+     "native_index": 6,
+     "attributes": {
+      "duration": "20",
+      "state": "rrrrrrrrrrrrrGGG"
+     },
+     "duration_seconds": "20",
+     "state": "rrrrrrrrrrrrrGGG"
+    },
+    {
+     "native_index": 7,
+     "attributes": {
+      "duration": "3",
+      "state": "rrrrrrrrrrrrryyy"
+     },
+     "duration_seconds": "3",
+     "state": "rrrrrrrrrrrrryyy"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "fixed_transition_seconds": "15",
+   "available_green_seconds": "80",
+   "nominal_green_seconds": [
+    "20",
+    "20",
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "1689": {
+   "program_attributes": {
+    "id": "1689",
+    "type": "static",
+    "programID": "0",
+    "offset": "76"
+   },
+   "cycle_seconds": "120",
+   "offset_seconds": "76",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "24",
+      "state": "grrrrrgGrrgrrrrrgGGrr"
+     },
+     "duration_seconds": "24",
+     "state": "grrrrrgGrrgrrrrrgGGrr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrrrgyrrgrrrrrgyyrr"
+     },
+     "duration_seconds": "3",
+     "state": "grrrrrgyrrgrrrrrgyyrr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "24",
+      "state": "grrrrrgrGGgrrrrrgrrGG"
+     },
+     "duration_seconds": "24",
+     "state": "grrrrrgrGGgrrrrrgrrGG"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrrrgryygrrrrrgrryy"
+     },
+     "duration_seconds": "3",
+     "state": "grrrrrgryygrrrrrgrryy"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "31",
+      "state": "gGGGGGgrrrgrrrrrgrrrr"
+     },
+     "duration_seconds": "31",
+     "state": "gGGGGGgrrrgrrrrrgrrrr"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "gyyyyygrrrgrrrrrgrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "gyyyyygrrrgrrrrrgrrrr"
+    },
+    {
+     "native_index": 6,
+     "attributes": {
+      "duration": "29",
+      "state": "grrrrrgrrrgGGGGGgrrrr"
+     },
+     "duration_seconds": "29",
+     "state": "grrrrrgrrrgGGGGGgrrrr"
+    },
+    {
+     "native_index": 7,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrrrgrrrgyyyyygrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "grrrrrgrrrgyyyyygrrrr"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "fixed_transition_seconds": "12",
+   "available_green_seconds": "108",
+   "nominal_green_seconds": [
+    "24",
+    "24",
+    "31",
+    "29"
+   ],
+   "green_bounds": null
+  },
+  "1690": {
+   "program_attributes": {
+    "id": "1690",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "87",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "grrgGGrgrrrgGGr"
+     },
+     "duration_seconds": "20",
+     "state": "grrgGGrgrrrgGGr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "grrgyyrgrrrgyyr"
+     },
+     "duration_seconds": "3",
+     "state": "grrgyyrgrrrgyyr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "15",
+      "state": "grrgrrGgrrrgrrG"
+     },
+     "duration_seconds": "15",
+     "state": "grrgrrGgrrrgrrG"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "grrgrrygrrrgrry"
+     },
+     "duration_seconds": "3",
+     "state": "grrgrrygrrrgrry"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "20",
+      "state": "grrgrrrgGGGgrrr"
+     },
+     "duration_seconds": "20",
+     "state": "grrgrrrgGGGgrrr"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "grrgrrrgyyygrrr"
+     },
+     "duration_seconds": "3",
+     "state": "grrgrrrgyyygrrr"
+    },
+    {
+     "native_index": 6,
+     "attributes": {
+      "duration": "20",
+      "state": "gGGgrrrgrrrgrrr"
+     },
+     "duration_seconds": "20",
+     "state": "gGGgrrrgrrrgrrr"
+    },
+    {
+     "native_index": 7,
+     "attributes": {
+      "duration": "3",
+      "state": "gyygrrrgrrrgrrr"
+     },
+     "duration_seconds": "3",
+     "state": "gyygrrrgrrrgrrr"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "fixed_transition_seconds": "12",
+   "available_green_seconds": "75",
+   "nominal_green_seconds": [
+    "20",
+    "15",
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "1700": {
+   "program_attributes": {
+    "id": "1700",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "92",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrgGGGrrGgrrrgGGrrrG"
+     },
+     "duration_seconds": "20",
+     "state": "grrrgGGGrrGgrrrgGGrrrG"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrgyyyrrygrrrgyyrrry"
+     },
+     "duration_seconds": "3",
+     "state": "grrrgyyyrrygrrrgyyrrry"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrgrrrGGrgrrrgrrGGGr"
+     },
+     "duration_seconds": "20",
+     "state": "grrrgrrrGGrgrrrgrrGGGr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrgrrryyrgrrrgrryyyr"
+     },
+     "duration_seconds": "3",
+     "state": "grrrgrrryyrgrrrgrryyyr"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "20",
+      "state": "gGGrgrrrrrrgGGrgrrrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "gGGrgrrrrrrgGGrgrrrrrr"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "gyyrgrrrrrrgyyrgrrrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "gyyrgrrrrrrgyyrgrrrrrr"
+    },
+    {
+     "native_index": 6,
+     "attributes": {
+      "duration": "20",
+      "state": "grrGgrrrrrrgrrGgrrrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "grrGgrrrrrrgrrGgrrrrrr"
+    },
+    {
+     "native_index": 7,
+     "attributes": {
+      "duration": "3",
+      "state": "grrygrrrrrrgrrygrrrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "grrygrrrrrrgrrygrrrrrr"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "fixed_transition_seconds": "12",
+   "available_green_seconds": "80",
+   "nominal_green_seconds": [
+    "20",
+    "20",
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "1701": {
+   "program_attributes": {
+    "id": "1701",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "69",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "GGGrrgrrgGGGrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "GGGrrgrrgGGGrrrr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "yyyrrgrrgyyyrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "yyyrrgrrgyyyrrrr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "20",
+      "state": "rrrGGgrrgrrrGGrr"
+     },
+     "duration_seconds": "20",
+     "state": "rrrGGgrrgrrrGGrr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "rrryygrrgrrryyrr"
+     },
+     "duration_seconds": "3",
+     "state": "rrryygrrgrrryyrr"
+    },
+    {
+     "native_index": 4,
+     "attributes": {
+      "duration": "20",
+      "state": "rrrrrgGggrrrrrGg"
+     },
+     "duration_seconds": "20",
+     "state": "rrrrrgGggrrrrrGg"
+    },
+    {
+     "native_index": 5,
+     "attributes": {
+      "duration": "3",
+      "state": "rrrrrgyygrrrrryy"
+     },
+     "duration_seconds": "3",
+     "state": "rrrrrgyygrrrrryy"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2,
+    4
+   ],
+   "fixed_transition_indices": [
+    1,
+    3,
+    5
+   ],
+   "fixed_transition_seconds": "9",
+   "available_green_seconds": "60",
+   "nominal_green_seconds": [
+    "20",
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "1702": {
+   "program_attributes": {
+    "id": "1702",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "46",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrrgGGgggrrrrgGGgg"
+     },
+     "duration_seconds": "20",
+     "state": "grrrrgGGgggrrrrgGGgg"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrrgyyyygrrrrgyyyy"
+     },
+     "duration_seconds": "3",
+     "state": "grrrrgyyyygrrrrgyyyy"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "20",
+      "state": "gGGgggrrrrgGGgggrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "gGGgggrrrrgGGgggrrrr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "gyyyygrrrrgyyyygrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "gyyyygrrrrgyyyygrrrr"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2
+   ],
+   "fixed_transition_indices": [
+    1,
+    3
+   ],
+   "fixed_transition_seconds": "6",
+   "available_green_seconds": "40",
+   "nominal_green_seconds": [
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "5083": {
+   "program_attributes": {
+    "id": "5083",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "84",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "39",
+      "state": "GGggGGgrr"
+     },
+     "duration_seconds": "39",
+     "state": "GGggGGgrr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "yyygyygrr"
+     },
+     "duration_seconds": "3",
+     "state": "yyygyygrr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "39",
+      "state": "rrrgrrgGG"
+     },
+     "duration_seconds": "39",
+     "state": "rrrgrrgGG"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "rrrgrrgyy"
+     },
+     "duration_seconds": "3",
+     "state": "rrrgrrgyy"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2
+   ],
+   "fixed_transition_indices": [
+    1,
+    3
+   ],
+   "fixed_transition_seconds": "6",
+   "available_green_seconds": "78",
+   "nominal_green_seconds": [
+    "39",
+    "39"
+   ],
+   "green_bounds": null
+  },
+  "5084": {
+   "program_attributes": {
+    "id": "5084",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "84",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "39",
+      "state": "gGGgrrGGg"
+     },
+     "duration_seconds": "39",
+     "state": "gGGgrrGGg"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "gyygrryyy"
+     },
+     "duration_seconds": "3",
+     "state": "gyygrryyy"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "39",
+      "state": "grrgGGrrr"
+     },
+     "duration_seconds": "39",
+     "state": "grrgGGrrr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "grrgyyrrr"
+     },
+     "duration_seconds": "3",
+     "state": "grrgyyrrr"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2
+   ],
+   "fixed_transition_indices": [
+    1,
+    3
+   ],
+   "fixed_transition_seconds": "6",
+   "available_green_seconds": "78",
+   "nominal_green_seconds": [
+    "39",
+    "39"
+   ],
+   "green_bounds": null
+  },
+  "5085": {
+   "program_attributes": {
+    "id": "5085",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "46",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "GGGgggGGGgrr"
+     },
+     "duration_seconds": "20",
+     "state": "GGGgggGGGgrr"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "yyyygyyyygrr"
+     },
+     "duration_seconds": "3",
+     "state": "yyyygyyyygrr"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "20",
+      "state": "rrrrgrrrrgGG"
+     },
+     "duration_seconds": "20",
+     "state": "rrrrgrrrrgGG"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "rrrrgrrrrgyy"
+     },
+     "duration_seconds": "3",
+     "state": "rrrrgrrrrgyy"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2
+   ],
+   "fixed_transition_indices": [
+    1,
+    3
+   ],
+   "fixed_transition_seconds": "6",
+   "available_green_seconds": "40",
+   "nominal_green_seconds": [
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  },
+  "5086": {
+   "program_attributes": {
+    "id": "5086",
+    "type": "static",
+    "programID": "0",
+    "offset": "0"
+   },
+   "cycle_seconds": "46",
+   "offset_seconds": "0",
+   "phases": [
+    {
+     "native_index": 0,
+     "attributes": {
+      "duration": "20",
+      "state": "ggGGGgrrrGGGg"
+     },
+     "duration_seconds": "20",
+     "state": "ggGGGgrrrGGGg"
+    },
+    {
+     "native_index": 1,
+     "attributes": {
+      "duration": "3",
+      "state": "gyyyygrrryyyy"
+     },
+     "duration_seconds": "3",
+     "state": "gyyyygrrryyyy"
+    },
+    {
+     "native_index": 2,
+     "attributes": {
+      "duration": "20",
+      "state": "grrrrggGGrrrr"
+     },
+     "duration_seconds": "20",
+     "state": "grrrrggGGrrrr"
+    },
+    {
+     "native_index": 3,
+     "attributes": {
+      "duration": "3",
+      "state": "grrrrgyyyrrrr"
+     },
+     "duration_seconds": "3",
+     "state": "grrrrgyyyrrrr"
+    }
+   ],
+   "green_native_indices": [
+    0,
+    2
+   ],
+   "fixed_transition_indices": [
+    1,
+    3
+   ],
+   "fixed_transition_seconds": "6",
+   "available_green_seconds": "40",
+   "nominal_green_seconds": [
+    "20",
+    "20"
+   ],
+   "green_bounds": null
+  }
+ },
+ "source_bindings": {
+  "network": {
+   "path": "<original location>/lyg_safe.net.xml",
+   "sha256": "05df04932ce82f9b1f6ab6c3736cf923a502eab7646be2c33c0677c6c8844a3e"
+  },
+  "topology": {
+   "path": "<original location>/topology.json",
+   "sha256": "20c81dbcf37041f45e8a12b3093f0a0825ec94573c37c87a7acc72ab5958494b"
+  }
+ },
+ "source_files_unchanged": true,
+ "green_stage_count_distribution": {
+  "4": 16,
+  "3": 4,
+  "2": 8
+ },
+ "native_signal_mapping_changes": [
+  {
+   "tls": "1455",
+   "previous_green_states": [
+    "grrrrgGGGgrrrrgrrr",
+    "grrrrgrrrgrrrrgGGG",
+    "gGGGGgrrrgrrrrgrrr",
+    "grrrrgrrrgGGGGgrrr"
+   ],
+   "native_green_states": [
+    "gGGrrgrrrgGGrrgrrr",
+    "grrGGgrrrgrrGGgrrr",
+    "grrrrgGGggrrrrgGGg"
+   ]
+  }
+ ],
+ "focused_check": "PASS",
+ "scientific_solves": 0,
+ "traffic_simulations": 0
+}

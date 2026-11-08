@@ -1,0 +1,89 @@
+{
+  "valid": true,
+  "status": "VALID",
+  "seed": 101,
+  "error": null,
+  "failed_gates": [],
+  "gates": {
+    "no_process_error": true,
+    "required_outputs_parse": true,
+    "no_collision": true,
+    "signal_states_match_plan": true,
+    "edge_vehicle_counts_match": true,
+    "ledger_closes": true,
+    "exit_audit": true,
+    "fixed_route_audit": true,
+    "all_trips_completed": true,
+    "limit_not_reached": true,
+    "cycle_audit": true,
+    "rounding_below_1s": true,
+    "solver_repair_below_0.01s": true
+  },
+  "planned": 15688,
+  "loaded": 15688,
+  "inserted": 15688,
+  "completed": 15688,
+  "unfinished": 0,
+  "on_road_remaining": 0,
+  "pending": 0,
+  "final_time_seconds": 8091,
+  "limit_reached": false,
+  "updates": 135,
+  "qp_failures": 0,
+  "solver_counts": {
+    "clarabel": 135
+  },
+  "maximum_absolute_residuals": {
+    "eq_violation": 1.2978766586758276e-10,
+    "ineq_violation": 7.860717722325696e-11,
+    "stationarity": 6.793732243437489e-13,
+    "dual_violation": 0,
+    "complementarity": 3.972590374840052e-11
+  },
+  "solve_seconds_median": 1.6157690999971237,
+  "solve_seconds_max": 3.4587436000001617,
+  "maximum_rounding_seconds": 0.6577264320181158,
+  "maximum_solver_repair_seconds": 1.4210854715202004e-14,
+  "checked_signal_seconds": 226548,
+  "signal_state_mismatches": 0,
+  "all_edge_vehicle_count_mismatches": 0,
+  "collision_vehicle_ids": [],
+  "teleport_vehicle_ids": [
+    "cwdyh-N_000533",
+    "cwky-N_000500",
+    "cwyz-W_000480",
+    "kyN-S_000151",
+    "kyN-S_000154"
+  ],
+  "teleports": 5,
+  "collision_output_events": 0,
+  "required_output_errors": [],
+  "ledger": {
+    "closes": true,
+    "planned": 15688,
+    "loaded": 15688,
+    "departed": 15688,
+    "arrived": 15688,
+    "unfinished_on_road": 0,
+    "not_departed": 0
+  },
+  "cycle_audit": {
+    "passed": true,
+    "problems": [],
+    "problem_count": 0,
+    "complete_cycles_checked": 3283
+  },
+  "mean_complete_delay_seconds": 160.51719403365632,
+  "runtime_seconds": 2192.9495398,
+  "controller": "OSD-2, K=1",
+  "ir": {
+    "variant": "OSD-2",
+    "iterations": 1,
+    "updates": 135,
+    "failed_intersections_last_iteration": 0,
+    "no_bank_updates": 1,
+    "reference_failures": 0,
+    "parallel_seconds_median": 0.662921599992842,
+    "partition": null
+  }
+}

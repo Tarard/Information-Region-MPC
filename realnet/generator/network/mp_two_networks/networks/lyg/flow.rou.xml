@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-03-22 16:42:03 by Eclipse SUMO netedit Version 1.19.0
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- Vehicles, persons and containers (sorted by depart) -->
+	<vType id="flow" vClass="passenger" maxSpeed="15.30"/>
+	<!-- 苍梧-郁洲路 -->
+	<flow id="cwyz-W" type="flow" begin="0.00" departLane="best" from="104042429#2" to="104042429#2" end="4200.00" vehsPerHour="300"/>
+	<flow id="cwyz-N" type="flow" begin="0.00" departLane="best" from="121193898#10.303" to="121193898#10.303" end="4200.00" vehsPerHour="300"/>
+	<!-- 苍梧-巨龙 -->
+	<flow id="cwjl-N" type="flow" begin="0.00" departLane="best" from="-104042433#11" to="-104042433#11" end="4200.00" vehsPerHour="200"/>
+	<!-- 苍梧-东盐河 -->
+	<flow id="cwdyh-N" type="flow" begin="0.00" departLane="best" from="-449081360#0" to="-449081360#0" end="4200.00" vehsPerHour="300"/>
+	<!-- 苍梧-科苑 -->
+	<flow id="cwky-N" type="flow" begin="0.00" departLane="best" from="1131473775#1" to="1131473775#1" end="4200.00" vehsPerHour="300"/>
+	<!-- 苍梧-学院 -->
+	<flow id="cwxy-N" type="flow" begin="0.00" departLane="best" from="1131473779#9.359" to="1131473779#9.359" end="4200.00" vehsPerHour="300"/>
+	<flow id="cwxy-E" type="flow" begin="0.00" departLane="best" from="104041339#2" to="104041339#2" end="4200.00" vehsPerHour="300"/>
+	<!-- 绿园-学院 -->
+	<flow id="lyxy-E" type="flow" begin="0.00" departLane="best" from="-E6" to="-E6" end="4200.00" vehsPerHour="300"/>
+	<!-- 朝阳-学院 -->
+	<flow id="cyxy-E" type="flow" begin="0.00" departLane="best" from="135267606#43.408" to="135267606#43.408" end="4200.00" vehsPerHour="300"/>
+	<!-- 建设东路-学院 -->
+	<flow id="jsdlxy-E" type="flow" begin="0.00" departLane="best" from="-E13" to="-E13" end="4200.00" vehsPerHour="100"/>
+	<!-- 海宁-学院 -->
+	<flow id="hnxy-E" type="flow" begin="0.00" departLane="best" from="-795873264" to="-795873264" end="4200.00" vehsPerHour="300"/>
+	<flow id="hnxy-S" type="flow" begin="0.00" departLane="best" from="-331054323#0" to="-331054323#0" end="4200.00" vehsPerHour="300"/>
+	<!-- 海宁-东景观大道 -->
+	<flow id="hndjg-S" type="flow" begin="0.00" departLane="best" from="306148921#4" to="306148921#4" end="4200.00" vehsPerHour="300"/>
+	<!-- 海宁-科苑 -->
+	<flow id="hnky-S" type="flow" begin="0.00" departLane="best" from="414851853#3" to="414851853#3" end="4200.00" vehsPerHour="300"/>
+	<!-- 海宁-巨龙 -->
+	<flow id="hnjl-S" type="flow" begin="0.00" departLane="best" from="-E32" to="-E32" end="4200.00" vehsPerHour="50"/>
+	<flow id="hnjl-W" type="flow" begin="0.00" departLane="best" from="121193899#1.129" to="121193899#1.129" end="4200.00" vehsPerHour="50"/>
+	<!-- 建设东路-郁洲 -->
+	<flow id="jsdlyz-W" type="flow" begin="0.00" departLane="best" from="-331059409#3.32" to="-331059409#3.32" end="4200.00" vehsPerHour="300"/>
+	<!-- 朝阳-郁洲 -->
+	<flow id="cyyz-W" type="flow" begin="0.00" departLane="best" from="224720248#1" to="224720248#1" end="4200.00" vehsPerHour="300"/>
+	<!-- 绿园-郁洲 -->
+	<flow id="lyyz-W" type="flow" begin="0.00" departLane="best" from="449081389#4" to="449081389#4" end="4200.00" vehsPerHour="100"/>
+	<!-- 朝阳-东景观大道 -->
+	<flow id="cydjjdd-N" type="flow" begin="0.00" departLane="best" from="331054321#0" to="331054321#0" end="4200.00" vehsPerHour="50"/>
+</routes>

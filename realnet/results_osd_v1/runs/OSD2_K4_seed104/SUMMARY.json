@@ -1,0 +1,83 @@
+{
+  "valid": true,
+  "status": "VALID",
+  "seed": 104,
+  "error": null,
+  "failed_gates": [],
+  "gates": {
+    "no_process_error": true,
+    "required_outputs_parse": true,
+    "no_collision": true,
+    "signal_states_match_plan": true,
+    "edge_vehicle_counts_match": true,
+    "ledger_closes": true,
+    "exit_audit": true,
+    "fixed_route_audit": true,
+    "all_trips_completed": true,
+    "limit_not_reached": true,
+    "cycle_audit": true,
+    "rounding_below_1s": true,
+    "solver_repair_below_0.01s": true
+  },
+  "planned": 15654,
+  "loaded": 15654,
+  "inserted": 15654,
+  "completed": 15654,
+  "unfinished": 0,
+  "on_road_remaining": 0,
+  "pending": 0,
+  "final_time_seconds": 8496,
+  "limit_reached": false,
+  "updates": 142,
+  "qp_failures": 0,
+  "solver_counts": {
+    "clarabel": 142
+  },
+  "maximum_absolute_residuals": {
+    "eq_violation": 1.096144512796072e-10,
+    "ineq_violation": 3.069243837214694e-11,
+    "stationarity": 1.6072143615986079e-12,
+    "dual_violation": 0,
+    "complementarity": 5.424234044635663e-11
+  },
+  "solve_seconds_median": 1.7687562500068452,
+  "solve_seconds_max": 4.797849900001893,
+  "maximum_rounding_seconds": 0.6515024543127694,
+  "maximum_solver_repair_seconds": 1.4210854715202004e-14,
+  "checked_signal_seconds": 237888,
+  "signal_state_mismatches": 0,
+  "all_edge_vehicle_count_mismatches": 0,
+  "collision_vehicle_ids": [],
+  "teleport_vehicle_ids": [],
+  "teleports": 0,
+  "collision_output_events": 0,
+  "required_output_errors": [],
+  "ledger": {
+    "closes": true,
+    "planned": 15654,
+    "loaded": 15654,
+    "departed": 15654,
+    "arrived": 15654,
+    "unfinished_on_road": 0,
+    "not_departed": 0
+  },
+  "cycle_audit": {
+    "passed": true,
+    "problems": [],
+    "problem_count": 0,
+    "complete_cycles_checked": 3451
+  },
+  "mean_complete_delay_seconds": 130.65428005621567,
+  "runtime_seconds": 6069.482299199997,
+  "controller": "OSD-2, K=4",
+  "ir": {
+    "variant": "OSD-2",
+    "iterations": 4,
+    "updates": 142,
+    "failed_intersections_last_iteration": 0,
+    "no_bank_updates": 0,
+    "reference_failures": 0,
+    "parallel_seconds_median": 2.9507616499904543,
+    "partition": null
+  }
+}

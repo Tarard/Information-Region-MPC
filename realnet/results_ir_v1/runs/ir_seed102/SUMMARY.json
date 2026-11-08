@@ -1,0 +1,86 @@
+{
+  "valid": false,
+  "status": "INVALID",
+  "seed": 102,
+  "error": null,
+  "failed_gates": [
+    "no_collision"
+  ],
+  "gates": {
+    "no_process_error": true,
+    "required_outputs_parse": true,
+    "no_collision": false,
+    "signal_states_match_plan": true,
+    "edge_vehicle_counts_match": true,
+    "ledger_closes": true,
+    "exit_audit": true,
+    "fixed_route_audit": true,
+    "all_trips_completed": true,
+    "limit_not_reached": true,
+    "cycle_audit": true,
+    "rounding_below_1s": true,
+    "solver_repair_below_0.01s": true
+  },
+  "planned": 15722,
+  "loaded": 15722,
+  "inserted": 15722,
+  "completed": 15722,
+  "unfinished": 0,
+  "on_road_remaining": 0,
+  "pending": 0,
+  "final_time_seconds": 8234,
+  "limit_reached": false,
+  "updates": 138,
+  "qp_failures": 0,
+  "solver_counts": {
+    "clarabel": 138
+  },
+  "maximum_absolute_residuals": {
+    "eq_violation": 8.111867854678275e-11,
+    "ineq_violation": 7.05256218794273e-11,
+    "stationarity": 1.1369146938605935e-12,
+    "dual_violation": 0,
+    "complementarity": 3.068812904291583e-11
+  },
+  "solve_seconds_median": 1.4333184999995865,
+  "solve_seconds_max": 2.077528399997391,
+  "maximum_rounding_seconds": 0.6612704763695909,
+  "maximum_solver_repair_seconds": 7.105427357601002e-15,
+  "checked_signal_seconds": 230552,
+  "signal_state_mismatches": 0,
+  "all_edge_vehicle_count_mismatches": 0,
+  "collision_vehicle_ids": [
+    "hnxy-S_000332",
+    "hnxy-S_000334"
+  ],
+  "teleport_vehicle_ids": [],
+  "teleports": 0,
+  "collision_output_events": 1,
+  "required_output_errors": [],
+  "ledger": {
+    "closes": true,
+    "planned": 15722,
+    "loaded": 15722,
+    "departed": 15722,
+    "arrived": 15722,
+    "unfinished_on_road": 0,
+    "not_departed": 0
+  },
+  "cycle_audit": {
+    "passed": true,
+    "problems": [],
+    "problem_count": 0,
+    "complete_cycles_checked": 3353
+  },
+  "mean_complete_delay_seconds": 127.65579888054954,
+  "runtime_seconds": 930.7281298000016,
+  "controller": "ir",
+  "ir": {
+    "updates": 138,
+    "local_failures": 9,
+    "no_bank_updates": 0,
+    "local_max_seconds_median": 0.20775310000317404,
+    "local_max_seconds_max": 0.45051650000095833,
+    "local_sum_seconds_median": 1.0577575499992236
+  }
+}

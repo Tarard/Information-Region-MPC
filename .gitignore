@@ -1,0 +1,4 @@
+# Large grid states, downloaded by grid/archive/get_large_states.py (release grid-states-v1)
+grid/archive/work/N200/runs/*/states.npz
+grid/archive/work/N500/runs/*/states.npz
+__pycache__/

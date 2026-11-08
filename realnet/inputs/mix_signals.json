@@ -1,0 +1,1284 @@
+{
+ "created_utc": "2026-10-29T22:00:40.135642+00:00",
+ "source": "<original location>/native_signals.json",
+ "source_sha256": "bb1093ebd95e5cca7629741f4f142f5b72c78643a115ec57fb831f36f4a0ea61",
+ "rule": "Native stage order and state strings; cycle 60 or 120 s per intersection (CYCLE_CHOICE.json), offset 0; every green 10-60 s; 3-s yellow after every green (native transition durations replaced, state strings kept).",
+ "signals": {
+  "1454": {
+   "stage_count": 4,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 12,
+   "green_budget_seconds": 48,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   "native_cycle_seconds": 120,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "rrrGGgGrrrrrrr",
+     "yellow_native_index": 1,
+     "yellow_state": "rrryyyyrrrrrrr",
+     "native_green_seconds": 24,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "rrrrrrrrrrGGgG",
+     "yellow_native_index": 3,
+     "yellow_state": "rrrrrrrrrryyyy",
+     "native_green_seconds": 24,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "rrrrrrrGGGrrrr",
+     "yellow_native_index": 5,
+     "yellow_state": "rrrrrrryyyrrrr",
+     "native_green_seconds": 31,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 6,
+     "green_state": "GGGrrrrrrrrrrr",
+     "yellow_native_index": 7,
+     "yellow_state": "yyyrrrrrrrrrrr",
+     "native_green_seconds": 29,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1455": {
+   "stage_count": 3,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 9,
+   "green_budget_seconds": 51,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    17.0,
+    17.0,
+    17.0
+   ],
+   "native_cycle_seconds": 90,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "gGGrrgrrrgGGrrgrrr",
+     "yellow_native_index": 1,
+     "yellow_state": "gyyrrgrrrgyyrrgrrr",
+     "native_green_seconds": 33,
+     "native_transition_seconds": 6
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "grrGGgrrrgrrGGgrrr",
+     "yellow_native_index": 3,
+     "yellow_state": "grryygrrrgrryygrrr",
+     "native_green_seconds": 6,
+     "native_transition_seconds": 6
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "grrrrgGGggrrrrgGGg",
+     "yellow_native_index": 5,
+     "yellow_state": "grrrrgyyygrrrrgyyy",
+     "native_green_seconds": 33,
+     "native_transition_seconds": 6
+    }
+   ]
+  },
+  "1456": {
+   "stage_count": 4,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 12,
+   "green_budget_seconds": 48,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   "native_cycle_seconds": 120,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "grrrrGGrrrrrrrgGGrr",
+     "yellow_native_index": 1,
+     "yellow_state": "grrrryyrrrrrrrgyyrr",
+     "native_green_seconds": 19,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "grrrrrrGGrrrrrgrrGG",
+     "yellow_native_index": 3,
+     "yellow_state": "grrrrrryyrrrrrgrryy",
+     "native_green_seconds": 19,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "gGGGGrrrrrrrrrgrrrr",
+     "yellow_native_index": 5,
+     "yellow_state": "gyyyyrrrrrrrrrgrrrr",
+     "native_green_seconds": 34,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 6,
+     "green_state": "grrrrrrrrGGGGGgrrrr",
+     "yellow_native_index": 7,
+     "yellow_state": "grrrrrrrryyyyygrrrr",
+     "native_green_seconds": 36,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1462": {
+   "stage_count": 4,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 12,
+   "green_budget_seconds": 48,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   "native_cycle_seconds": 92,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "rrrrGGrGrrrrGGrG",
+     "yellow_native_index": 1,
+     "yellow_state": "rrrryyryrrrryyry",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "rrrrrrGrrrrrrrGr",
+     "yellow_native_index": 3,
+     "yellow_state": "rrrrrryrrrrrrryr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "GGrrrrrrGGrrrrrr",
+     "yellow_native_index": 5,
+     "yellow_state": "yyrrrrrryyrrrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 6,
+     "green_state": "rrGGrrrrrrGGrrrr",
+     "yellow_native_index": 7,
+     "yellow_state": "rryyrrrrrryyrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1463": {
+   "stage_count": 4,
+   "cycle_seconds": 120,
+   "cycles_per_step": 1,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 12,
+   "green_budget_seconds": 108,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    27.0,
+    27.0,
+    27.0,
+    27.0
+   ],
+   "native_cycle_seconds": 92,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "GGGGrrrrrrrrGGGGrrrrrrrr",
+     "yellow_native_index": 1,
+     "yellow_state": "yyyyrrrrrrrryyyyrrrrrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "rrrrGGGrrrrrrrrrGGGrrrrr",
+     "yellow_native_index": 3,
+     "yellow_state": "rrrryyyrrrrrrrrryyyrrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "rrrrrrrGGGrrrrrrrrrGGGrr",
+     "yellow_native_index": 5,
+     "yellow_state": "rrrrrrryyyrrrrrrrrryyyrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 6,
+     "green_state": "rrrrrrrrrrGGrrrrrrrrrrGG",
+     "yellow_native_index": 7,
+     "yellow_state": "rrrrrrrrrryyrrrrrrrrrryy",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1465": {
+   "stage_count": 4,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 12,
+   "green_budget_seconds": 48,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   "native_cycle_seconds": 92,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "grrrgGGrGgrrgGGrG",
+     "yellow_native_index": 1,
+     "yellow_state": "grrrgyyrygrrgyyry",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "grrrgrrGrgrrgrrGr",
+     "yellow_native_index": 3,
+     "yellow_state": "grrrgrryrgrrgrryr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "grrrgrrrrgGggrrrr",
+     "yellow_native_index": 5,
+     "yellow_state": "grrrgrrrrgyygrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 6,
+     "green_state": "ggGGgrrrrgrrgrrrr",
+     "yellow_native_index": 7,
+     "yellow_state": "gyyygrrrrgrrgrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1466": {
+   "stage_count": 2,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 6,
+   "green_budget_seconds": 54,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    27.0,
+    27.0
+   ],
+   "native_cycle_seconds": 46,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "grrrgGGggrrrgGGg",
+     "yellow_native_index": 1,
+     "yellow_state": "grrrgyyygrrrgyyy",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "gGGggrrrgGGggrrr",
+     "yellow_native_index": 3,
+     "yellow_state": "gyyygrrrgyyygrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1493": {
+   "stage_count": 4,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 12,
+   "green_budget_seconds": 48,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   "native_cycle_seconds": 92,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "gGGrrgrrrrgGrrrgrrrr",
+     "yellow_native_index": 1,
+     "yellow_state": "gyyrrgrrrrgyrrrgrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "grrGGgrrrrgrGGGgrrrr",
+     "yellow_native_index": 3,
+     "yellow_state": "grryygrrrrgryyygrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "grrrrgGGrrgrrrrgGGrr",
+     "yellow_native_index": 5,
+     "yellow_state": "grrrrgyyrrgrrrrgyyrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 6,
+     "green_state": "grrrrgrrGGgrrrrgrrGG",
+     "yellow_native_index": 7,
+     "yellow_state": "grrrrgrryygrrrrgrryy",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1508": {
+   "stage_count": 4,
+   "cycle_seconds": 120,
+   "cycles_per_step": 1,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 12,
+   "green_budget_seconds": 108,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    27.0,
+    27.0,
+    27.0,
+    27.0
+   ],
+   "native_cycle_seconds": 78,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "gGGrgrrgGGrgrrr",
+     "yellow_native_index": 1,
+     "yellow_state": "gyyrgrrgyyrgrrr",
+     "native_green_seconds": 27,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "grrGgrrgrrGgrrr",
+     "yellow_native_index": 3,
+     "yellow_state": "grrygrrgrrygrrr",
+     "native_green_seconds": 6,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "grrrgGrgrrrgGGr",
+     "yellow_native_index": 5,
+     "yellow_state": "grrrgyrgrrrgyyr",
+     "native_green_seconds": 27,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 6,
+     "green_state": "grrrgrGgrrrgrrG",
+     "yellow_native_index": 7,
+     "yellow_state": "grrrgrygrrrgrry",
+     "native_green_seconds": 6,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1674": {
+   "stage_count": 3,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 9,
+   "green_budget_seconds": 51,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    17.0,
+    17.0,
+    17.0
+   ],
+   "native_cycle_seconds": 69,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "grrrgGGrrgrrrgGGrr",
+     "yellow_native_index": 1,
+     "yellow_state": "grrrgyyrrgrrrgyyrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "grrrgrrGGgrrrgrrGG",
+     "yellow_native_index": 3,
+     "yellow_state": "grrrgrryygrrrgrryy",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "gGGggrrrrgGGggrrrr",
+     "yellow_native_index": 5,
+     "yellow_state": "gyyygrrrrgyyygrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1675": {
+   "stage_count": 4,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 12,
+   "green_budget_seconds": 48,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   "native_cycle_seconds": 92,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "grrrgGGrrgrrrgGGrr",
+     "yellow_native_index": 1,
+     "yellow_state": "grrrgyyrrgrrrgyyrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "grrrgrrGGgrrrgrrGG",
+     "yellow_native_index": 3,
+     "yellow_state": "grrrgrryygrrrgrryy",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "gGGrgrrrrgGGrgrrrr",
+     "yellow_native_index": 5,
+     "yellow_state": "gyyrgrrrrgyyrgrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 6,
+     "green_state": "grrGgrrrrgrrGgrrrr",
+     "yellow_native_index": 7,
+     "yellow_state": "grrygrrrrgrrygrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1676": {
+   "stage_count": 4,
+   "cycle_seconds": 120,
+   "cycles_per_step": 1,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 12,
+   "green_budget_seconds": 108,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    27.0,
+    27.0,
+    27.0,
+    27.0
+   ],
+   "native_cycle_seconds": 92,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "GGrrrrrrrrGGrrrrrrrr",
+     "yellow_native_index": 1,
+     "yellow_state": "yyrrrrrrrryyrrrrrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "rrGGGrrrrrrrGGGrrrrr",
+     "yellow_native_index": 3,
+     "yellow_state": "rryyyrrrrrrryyyrrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "rrrrrGGrrrrrrrrGGrrr",
+     "yellow_native_index": 5,
+     "yellow_state": "rrrrryyrrrrrrrryyrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 6,
+     "green_state": "rrrrrrrGGGrrrrrrrGGG",
+     "yellow_native_index": 7,
+     "yellow_state": "rrrrrrryyyrrrrrrryyy",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1677": {
+   "stage_count": 4,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 12,
+   "green_budget_seconds": 48,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   "native_cycle_seconds": 92,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "gGGGrrrgrrrrgGGGrrrgrrrr",
+     "yellow_native_index": 1,
+     "yellow_state": "gyyyrrrgrrrrgyyyrrrgrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "grrrGGGgrrrrgrrrGGGgrrrr",
+     "yellow_native_index": 3,
+     "yellow_state": "grrryyygrrrrgrrryyygrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "grrrrrrgGGrrgrrrrrrgGGrr",
+     "yellow_native_index": 5,
+     "yellow_state": "grrrrrrgyyrrgrrrrrrgyyrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 6,
+     "green_state": "grrrrrrgrrGGgrrrrrrgrrGG",
+     "yellow_native_index": 7,
+     "yellow_state": "grrrrrrgrryygrrrrrrgrryy",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1681": {
+   "stage_count": 4,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 12,
+   "green_budget_seconds": 48,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   "native_cycle_seconds": 120,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "grrrrgGGGgrrrrgrrr",
+     "yellow_native_index": 1,
+     "yellow_state": "grrrrgyyygrrrrgrrr",
+     "native_green_seconds": 27,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "grrrrgrrrgrrrrgGGG",
+     "yellow_native_index": 3,
+     "yellow_state": "grrrrgrrrgrrrrgyyy",
+     "native_green_seconds": 27,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "gGGrrgrrrgGGrrgrrr",
+     "yellow_native_index": 5,
+     "yellow_state": "gyyrrgrrrgyyrrgrrr",
+     "native_green_seconds": 34,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 6,
+     "green_state": "grrGGgrrrgrrGGgrrr",
+     "yellow_native_index": 7,
+     "yellow_state": "grryygrrrgrryygrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1682": {
+   "stage_count": 2,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 6,
+   "green_budget_seconds": 54,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    27.0,
+    27.0
+   ],
+   "native_cycle_seconds": 84,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "grrrgGGggrrrgGGg",
+     "yellow_native_index": 1,
+     "yellow_state": "grrrgyyygrrrgyyy",
+     "native_green_seconds": 39,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "gGGggrrrgGGggrrr",
+     "yellow_native_index": 3,
+     "yellow_state": "gyyygrrrgyyygrrr",
+     "native_green_seconds": 39,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1683": {
+   "stage_count": 4,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 12,
+   "green_budget_seconds": 48,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   "native_cycle_seconds": 92,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "GGGrrgrrrGGGrrrgrrr",
+     "yellow_native_index": 1,
+     "yellow_state": "gyyrrgrrrgyyrrrgrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "grrGGgrrrgrrGGGgrrr",
+     "yellow_native_index": 3,
+     "yellow_state": "grryygrrrgrryyygrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "grrrrGGGrgrrrrrGGGr",
+     "yellow_native_index": 5,
+     "yellow_state": "grrrrgyyrgrrrrrgyyr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 6,
+     "green_state": "grrrrgrrGgrrrrrgrrG",
+     "yellow_native_index": 7,
+     "yellow_state": "grrrrgrrygrrrrrgrry",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1684": {
+   "stage_count": 2,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 6,
+   "green_budget_seconds": 54,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    27.0,
+    27.0
+   ],
+   "native_cycle_seconds": 46,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "grrrgGGggrrrgGGg",
+     "yellow_native_index": 1,
+     "yellow_state": "grrrgyyygrrrgyyy",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "gGGggrrrgGGggrrr",
+     "yellow_native_index": 3,
+     "yellow_state": "gyyygrrrgyyygrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1685": {
+   "stage_count": 3,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 9,
+   "green_budget_seconds": 51,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    17.0,
+    17.0,
+    17.0
+   ],
+   "native_cycle_seconds": 90,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "gGGGGGGrrgr",
+     "yellow_native_index": 1,
+     "yellow_state": "gyyyyyyrrgr",
+     "native_green_seconds": 33,
+     "native_transition_seconds": 6
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "grrrrrrGGgr",
+     "yellow_native_index": 3,
+     "yellow_state": "grrrrrryygr",
+     "native_green_seconds": 6,
+     "native_transition_seconds": 6
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "grrrrrrrrgG",
+     "yellow_native_index": 5,
+     "yellow_state": "grrrrrrrrgy",
+     "native_green_seconds": 33,
+     "native_transition_seconds": 6
+    }
+   ]
+  },
+  "1688": {
+   "stage_count": 4,
+   "cycle_seconds": 120,
+   "cycles_per_step": 1,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 12,
+   "green_budget_seconds": 108,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    27.0,
+    27.0,
+    27.0,
+    27.0
+   ],
+   "native_cycle_seconds": 95,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "GGrrrrrrGGrrrrrr",
+     "yellow_native_index": 1,
+     "yellow_state": "yyrrrrrryyrrrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "rrGGGrrrrrGGGrrr",
+     "yellow_native_index": 3,
+     "yellow_state": "rryyyrrrrryyyrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 6
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "rrrrrGGGrrrrrrrr",
+     "yellow_native_index": 5,
+     "yellow_state": "rrrrryyyrrrrrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 6,
+     "green_state": "rrrrrrrrrrrrrGGG",
+     "yellow_native_index": 7,
+     "yellow_state": "rrrrrrrrrrrrryyy",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1689": {
+   "stage_count": 4,
+   "cycle_seconds": 120,
+   "cycles_per_step": 1,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 12,
+   "green_budget_seconds": 108,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    27.0,
+    27.0,
+    27.0,
+    27.0
+   ],
+   "native_cycle_seconds": 120,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "grrrrrgGrrgrrrrrgGGrr",
+     "yellow_native_index": 1,
+     "yellow_state": "grrrrrgyrrgrrrrrgyyrr",
+     "native_green_seconds": 24,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "grrrrrgrGGgrrrrrgrrGG",
+     "yellow_native_index": 3,
+     "yellow_state": "grrrrrgryygrrrrrgrryy",
+     "native_green_seconds": 24,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "gGGGGGgrrrgrrrrrgrrrr",
+     "yellow_native_index": 5,
+     "yellow_state": "gyyyyygrrrgrrrrrgrrrr",
+     "native_green_seconds": 31,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 6,
+     "green_state": "grrrrrgrrrgGGGGGgrrrr",
+     "yellow_native_index": 7,
+     "yellow_state": "grrrrrgrrrgyyyyygrrrr",
+     "native_green_seconds": 29,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1690": {
+   "stage_count": 4,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 12,
+   "green_budget_seconds": 48,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   "native_cycle_seconds": 87,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "grrgGGrgrrrgGGr",
+     "yellow_native_index": 1,
+     "yellow_state": "grrgyyrgrrrgyyr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "grrgrrGgrrrgrrG",
+     "yellow_native_index": 3,
+     "yellow_state": "grrgrrygrrrgrry",
+     "native_green_seconds": 15,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "grrgrrrgGGGgrrr",
+     "yellow_native_index": 5,
+     "yellow_state": "grrgrrrgyyygrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 6,
+     "green_state": "gGGgrrrgrrrgrrr",
+     "yellow_native_index": 7,
+     "yellow_state": "gyygrrrgrrrgrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1700": {
+   "stage_count": 4,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 12,
+   "green_budget_seconds": 48,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   "native_cycle_seconds": 92,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "grrrgGGGrrGgrrrgGGrrrG",
+     "yellow_native_index": 1,
+     "yellow_state": "grrrgyyyrrygrrrgyyrrry",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "grrrgrrrGGrgrrrgrrGGGr",
+     "yellow_native_index": 3,
+     "yellow_state": "grrrgrrryyrgrrrgrryyyr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "gGGrgrrrrrrgGGrgrrrrrr",
+     "yellow_native_index": 5,
+     "yellow_state": "gyyrgrrrrrrgyyrgrrrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 6,
+     "green_state": "grrGgrrrrrrgrrGgrrrrrr",
+     "yellow_native_index": 7,
+     "yellow_state": "grrygrrrrrrgrrygrrrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1701": {
+   "stage_count": 3,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 9,
+   "green_budget_seconds": 51,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    17.0,
+    17.0,
+    17.0
+   ],
+   "native_cycle_seconds": 69,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "GGGrrgrrgGGGrrrr",
+     "yellow_native_index": 1,
+     "yellow_state": "yyyrrgrrgyyyrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "rrrGGgrrgrrrGGrr",
+     "yellow_native_index": 3,
+     "yellow_state": "rrryygrrgrrryyrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 4,
+     "green_state": "rrrrrgGggrrrrrGg",
+     "yellow_native_index": 5,
+     "yellow_state": "rrrrrgyygrrrrryy",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "1702": {
+   "stage_count": 2,
+   "cycle_seconds": 120,
+   "cycles_per_step": 1,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 6,
+   "green_budget_seconds": 114,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    57.0,
+    57.0
+   ],
+   "native_cycle_seconds": 46,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "grrrrgGGgggrrrrgGGgg",
+     "yellow_native_index": 1,
+     "yellow_state": "grrrrgyyyygrrrrgyyyy",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "gGGgggrrrrgGGgggrrrr",
+     "yellow_native_index": 3,
+     "yellow_state": "gyyyygrrrrgyyyygrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "5083": {
+   "stage_count": 2,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 6,
+   "green_budget_seconds": 54,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    27.0,
+    27.0
+   ],
+   "native_cycle_seconds": 84,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "GGggGGgrr",
+     "yellow_native_index": 1,
+     "yellow_state": "yyygyygrr",
+     "native_green_seconds": 39,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "rrrgrrgGG",
+     "yellow_native_index": 3,
+     "yellow_state": "rrrgrrgyy",
+     "native_green_seconds": 39,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "5084": {
+   "stage_count": 2,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 6,
+   "green_budget_seconds": 54,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    27.0,
+    27.0
+   ],
+   "native_cycle_seconds": 84,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "gGGgrrGGg",
+     "yellow_native_index": 1,
+     "yellow_state": "gyygrryyy",
+     "native_green_seconds": 39,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "grrgGGrrr",
+     "yellow_native_index": 3,
+     "yellow_state": "grrgyyrrr",
+     "native_green_seconds": 39,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "5085": {
+   "stage_count": 2,
+   "cycle_seconds": 60,
+   "cycles_per_step": 2,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 6,
+   "green_budget_seconds": 54,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    27.0,
+    27.0
+   ],
+   "native_cycle_seconds": 46,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "GGGgggGGGgrr",
+     "yellow_native_index": 1,
+     "yellow_state": "yyyygyyyygrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "rrrrgrrrrgGG",
+     "yellow_native_index": 3,
+     "yellow_state": "rrrrgrrrrgyy",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  },
+  "5086": {
+   "stage_count": 2,
+   "cycle_seconds": 120,
+   "cycles_per_step": 1,
+   "offset_seconds": 0,
+   "yellow_seconds": 3,
+   "lost_time_seconds": 6,
+   "green_budget_seconds": 114,
+   "green_min_seconds": 10,
+   "green_max_seconds": 60,
+   "reference_green_seconds_at_t0": [
+    57.0,
+    57.0
+   ],
+   "native_cycle_seconds": 46,
+   "stages": [
+    {
+     "green_native_index": 0,
+     "green_state": "ggGGGgrrrGGGg",
+     "yellow_native_index": 1,
+     "yellow_state": "gyyyygrrryyyy",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    },
+    {
+     "green_native_index": 2,
+     "green_state": "grrrrggGGrrrr",
+     "yellow_native_index": 3,
+     "yellow_state": "grrrrgyyyrrrr",
+     "native_green_seconds": 20,
+     "native_transition_seconds": 3
+    }
+   ]
+  }
+ }
+}

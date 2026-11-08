@@ -1,0 +1,133 @@
+{
+  "valid": true,
+  "status": "VALID",
+  "seed": 102,
+  "error": null,
+  "failed_gates": [],
+  "gates": {
+    "no_process_error": true,
+    "required_outputs_parse": true,
+    "no_collision": true,
+    "signal_states_match_plan": true,
+    "edge_vehicle_counts_match": true,
+    "ledger_closes": true,
+    "exit_audit": true,
+    "fixed_route_audit": true,
+    "all_trips_completed": true,
+    "limit_not_reached": true,
+    "cycle_audit": true,
+    "rounding_below_1s": true,
+    "solver_repair_below_0.01s": true
+  },
+  "planned": 15722,
+  "loaded": 15722,
+  "inserted": 15722,
+  "completed": 15722,
+  "unfinished": 0,
+  "on_road_remaining": 0,
+  "pending": 0,
+  "final_time_seconds": 8973,
+  "limit_reached": false,
+  "updates": 150,
+  "qp_failures": 0,
+  "solver_counts": {
+    "clarabel": 150
+  },
+  "maximum_absolute_residuals": {
+    "eq_violation": 1.38545213474416e-10,
+    "ineq_violation": 2.7198756856798008e-11,
+    "stationarity": 2.7284843947288685e-12,
+    "dual_violation": 0,
+    "complementarity": 2.944520268705554e-11
+  },
+  "solve_seconds_median": 1.8071718500068528,
+  "solve_seconds_max": 3.403655300004175,
+  "maximum_rounding_seconds": 0.6543441159307619,
+  "maximum_solver_repair_seconds": 1.4210854715202004e-14,
+  "checked_signal_seconds": 251244,
+  "signal_state_mismatches": 0,
+  "all_edge_vehicle_count_mismatches": 0,
+  "collision_vehicle_ids": [],
+  "teleport_vehicle_ids": [
+    "cwdyh-N_000727",
+    "cwdyh-N_000730",
+    "cwky-N_000689",
+    "cwky-N_000690",
+    "cwky-N_000695",
+    "hnky-S_000667",
+    "hnky-S_000675",
+    "hnky-S_000680",
+    "kyS-N_000244",
+    "lvyuanE-W_000105",
+    "lvyuanW-E_000105",
+    "lyxy-E_000720"
+  ],
+  "teleports": 12,
+  "collision_output_events": 0,
+  "required_output_errors": [],
+  "ledger": {
+    "closes": true,
+    "planned": 15722,
+    "loaded": 15722,
+    "departed": 15722,
+    "arrived": 15722,
+    "unfinished_on_road": 0,
+    "not_departed": 0
+  },
+  "cycle_audit": {
+    "passed": true,
+    "problems": [],
+    "problem_count": 0,
+    "complete_cycles_checked": 3647
+  },
+  "mean_complete_delay_seconds": 138.8657861595217,
+  "runtime_seconds": 2343.3322826000076,
+  "controller": "P-OSD, K=4",
+  "ir": {
+    "variant": "P-OSD",
+    "iterations": 4,
+    "updates": 150,
+    "failed_intersections_last_iteration": 0,
+    "no_bank_updates": 8,
+    "reference_failures": 0,
+    "parallel_seconds_median": 2.7201227999976254,
+    "partition": [
+      [
+        "1454",
+        "1455",
+        "1462",
+        "1465",
+        "1466",
+        "1700",
+        "5085"
+      ],
+      [
+        "1456",
+        "1463",
+        "1674",
+        "1675",
+        "1681",
+        "1689",
+        "1702"
+      ],
+      [
+        "1493",
+        "1677",
+        "1682",
+        "1690",
+        "5083",
+        "5084",
+        "5086"
+      ],
+      [
+        "1508",
+        "1676",
+        "1683",
+        "1684",
+        "1685",
+        "1688",
+        "1701"
+      ]
+    ]
+  }
+}

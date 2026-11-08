@@ -1,0 +1,72 @@
+{
+ "links_internal": 158,
+ "links_all": 312,
+ "minor_links_before_deletion": 48,
+ "deleted_segments": 5,
+ "tee_intersections": 10,
+ "lanes_per_link": {
+  "2": 118,
+  "4": 96
+ },
+ "internal_link_length_m": {
+  "median": 300.0,
+  "p75": 350.0,
+  "p90": 450.0,
+  "max": 500.0,
+  "min": 150.0
+ },
+ "stages": {
+  "2": 16,
+  "3": 10,
+  "4": 23
+ },
+ "cycles": {
+  "60": 48,
+  "120": 1
+ },
+ "lambda": 4.19031269303989,
+ "Y": {
+  "median": 0.3,
+  "p75": 0.4679773452263059,
+  "p90": 0.5875123769035474,
+  "max": 0.810868003757177,
+  "min": 0.10764416128680976
+ },
+ "busiest_movement_x": {
+  "median": 0.4341753344474085,
+  "p75": 0.6896135263028697,
+  "p90": 0.8246944171099766,
+  "max": 1.0747546744440928,
+  "min": 0.11960462365201086
+ },
+ "centre": [
+  "J3_3",
+  "J2_3",
+  "J3_2",
+  "J2_2"
+ ],
+ "od_pairs": 2543,
+ "routes_per_pair_mean": 3.0,
+ "peak_entry_flow_veh_per_second": 4.190312693039889,
+ "group_peak_flow_veh_per_second": {
+  "through": 1.6761250772159553,
+  "central": 0.6462027158648594,
+  "local": 1.8679848999590745
+ },
+ "lyg": {
+  "stages": {
+   "4": 16,
+   "3": 4,
+   "2": 8
+  },
+  "cycles": {
+   "60": 21,
+   "120": 7
+  },
+  "Y_median": 0.5,
+  "Y_p75": 0.62,
+  "Y_p90": 0.81,
+  "Y_max": 1.29,
+  "X_median": 0.69
+ }
+}

@@ -1,0 +1,4949 @@
+{
+ "definition": "Closed-loop cost of the MPC stage cost on the SUMO trajectories (reviewer comment 9).\n\nDefinition (same terms and weights as cc_model.build / direct_cost, evaluated on what happened in SUMO):\n  J_state = sum over updates t = 60, 120, ... of\n            sum_e 0.5 n_e(t)^2 / cap_e  +  sum_entries 0.5 w_e(t)^2 / cap_e        (measured n0, backlog in p(t))\n  J_green = sum over executed cycles c of intersection m (start s before the window end) of 0.5 mu_g ||g_c - g_{c-1}||^2\n  J_red   = sum over the same cycles of sum_movements 0.5 mu_R beta(s) (C_m - gamma^T g_c)^2, weight 1 per cycle\n  J = J_state + J_green + J_red.\ng_c = executed integer greens, read from previous_green in p at s + 60 (the running or just ended cycle started at s).\ng_{-1} = previous_green at t = 0 (the same plan for every method). beta(s) = the model's red-delay weight at clock s\n(historical arrival row of s), taken from cc_model.build at s (it depends on the clock only, not on the state).\nEvery run continues until the network is empty (last update 7860-11280 s). Two windows:\n  full   : all updates of the run, all cycles that start before its last update (main result; the state term is 0\n           once the network is empty, so the window is common in effect for J_state);\n  common : updates t <= 7800 s and cycles that start before 7800 s (every run reaches 7800 s).\nAfter the last update the network still holds a few vehicles for < 60 s; their number is reported.\n",
+ "days": [
+  101,
+  102,
+  103,
+  104,
+  106,
+  107,
+  108,
+  109,
+  110,
+  111
+ ],
+ "per_day": {
+  "full": {
+   "Centralized": {
+    "101": {
+     "state_link": 6284.057360943577,
+     "state_entry": 0.6710019742938708,
+     "state": 6284.728362917871,
+     "green_change": 1.3180999999999794,
+     "red_delay": 14643.20995708599,
+     "total": 20929.25642000386,
+     "state_by_period": {
+      "medium": 1646.8007723395879,
+      "high": 2914.5423342997356,
+      "low": 1598.9676934187098,
+      "clear": 124.41756285983726
+     },
+     "cycles": 3283,
+     "last_update": 8040,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 69
+    },
+    "102": {
+     "state_link": 6205.7285347440575,
+     "state_entry": 0.9291454583579362,
+     "state": 6206.657680202416,
+     "green_change": 1.3724999999999745,
+     "red_delay": 14649.09379765056,
+     "total": 20857.123977852974,
+     "state_by_period": {
+      "medium": 1683.6530597868145,
+      "high": 2801.310217686751,
+      "low": 1596.832700566129,
+      "clear": 124.86170216272411
+     },
+     "cycles": 3409,
+     "last_update": 8340,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8352,
+     "vehicle_seconds_after_last_update": 11
+    },
+    "103": {
+     "state_link": 6199.343328442853,
+     "state_entry": 0.5293026947120649,
+     "state": 6199.872631137565,
+     "green_change": 1.312499999999978,
+     "red_delay": 14650.764540671424,
+     "total": 20851.949671808987,
+     "state_by_period": {
+      "medium": 1635.204644882068,
+      "high": 2841.4011474488784,
+      "low": 1603.8404315786713,
+      "clear": 119.42640722794759
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 3,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8155,
+     "vehicle_seconds_after_last_update": 124
+    },
+    "104": {
+     "state_link": 6263.087118159013,
+     "state_entry": 0.9829734718128621,
+     "state": 6264.070091630826,
+     "green_change": 1.3043999999999782,
+     "red_delay": 14646.513367185074,
+     "total": 20911.8878588159,
+     "state_by_period": {
+      "medium": 1693.1848177979982,
+      "high": 2949.8912504662576,
+      "low": 1522.5690047716782,
+      "clear": 98.4250185948901
+     },
+     "cycles": 3458,
+     "last_update": 8460,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8496,
+     "vehicle_seconds_after_last_update": 35
+    },
+    "106": {
+     "state_link": 6430.997046001669,
+     "state_entry": 1.0620079395579927,
+     "state": 6432.059053941227,
+     "green_change": 1.302399999999979,
+     "red_delay": 14648.70480420663,
+     "total": 21082.066258147857,
+     "state_by_period": {
+      "medium": 1670.9122229860438,
+      "high": 2928.8847316121596,
+      "low": 1709.7080059179946,
+      "clear": 122.55409342503134
+     },
+     "cycles": 3381,
+     "last_update": 8280,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8331,
+     "vehicle_seconds_after_last_update": 50
+    },
+    "107": {
+     "state_link": 6227.939559824055,
+     "state_entry": 0.980821133901692,
+     "state": 6228.920380957957,
+     "green_change": 1.3309999999999773,
+     "red_delay": 14647.438713210293,
+     "total": 20877.69009416825,
+     "state_by_period": {
+      "medium": 1714.0687200161972,
+      "high": 2918.8675612315283,
+      "low": 1476.5301886334705,
+      "clear": 119.45391107676001
+     },
+     "cycles": 3262,
+     "last_update": 7980,
+     "vehicles_at_last_update": 3,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8017,
+     "vehicle_seconds_after_last_update": 72
+    },
+    "108": {
+     "state_link": 6278.983672711814,
+     "state_entry": 0.9895729579547037,
+     "state": 6279.973245669768,
+     "green_change": 1.3761999999999763,
+     "red_delay": 14643.473147308916,
+     "total": 20924.822592978686,
+     "state_by_period": {
+      "medium": 1714.1016559374418,
+      "high": 2846.5071855488427,
+      "low": 1598.0680248790848,
+      "clear": 121.29637930439907
+     },
+     "cycles": 3360,
+     "last_update": 8220,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8245,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "109": {
+     "state_link": 6682.650864751677,
+     "state_entry": 1.1100766965067552,
+     "state": 6683.760941448183,
+     "green_change": 1.3835999999999795,
+     "red_delay": 14640.852739373066,
+     "total": 21325.997280821248,
+     "state_by_period": {
+      "medium": 1736.8181256613987,
+      "high": 3129.0039290761683,
+      "low": 1691.3975387035002,
+      "clear": 126.541348007119
+     },
+     "cycles": 3213,
+     "last_update": 7860,
+     "vehicles_at_last_update": 4,
+     "pending_at_last_update": 0,
+     "last_trace_second": 7905,
+     "vehicle_seconds_after_last_update": 103
+    },
+    "110": {
+     "state_link": 6263.056318649393,
+     "state_entry": 0.5521683925477539,
+     "state": 6263.608487041941,
+     "green_change": 1.254699999999978,
+     "red_delay": 14650.22588853177,
+     "total": 20915.089075573713,
+     "state_by_period": {
+      "medium": 1795.5787916705037,
+      "high": 2799.9653812882475,
+      "low": 1539.2273577949647,
+      "clear": 128.83695628822386
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8113,
+     "vehicle_seconds_after_last_update": 12
+    },
+    "111": {
+     "state_link": 6368.223917688736,
+     "state_entry": 0.8620460914075992,
+     "state": 6369.085963780144,
+     "green_change": 1.312599999999977,
+     "red_delay": 14646.798477461216,
+     "total": 21017.19704124136,
+     "state_by_period": {
+      "medium": 1787.3684488033166,
+      "high": 2756.018427012978,
+      "low": 1709.1975892862595,
+      "clear": 116.50149867759066
+     },
+     "cycles": 3283,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 50
+    }
+   },
+   "IR-MPC": {
+    "101": {
+     "state_link": 6302.976658896831,
+     "state_entry": 0.681248844126141,
+     "state": 6303.657907740958,
+     "green_change": 1.281799999999981,
+     "red_delay": 14645.373521698451,
+     "total": 20950.31322943941,
+     "state_by_period": {
+      "medium": 1642.7914919674374,
+      "high": 2941.6124399544997,
+      "low": 1595.921013357528,
+      "clear": 123.33296246149351
+     },
+     "cycles": 3283,
+     "last_update": 8040,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 69
+    },
+    "102": {
+     "state_link": 6215.800237627029,
+     "state_entry": 0.9301423737140287,
+     "state": 6216.730380000743,
+     "green_change": 1.3363999999999774,
+     "red_delay": 14648.600710629787,
+     "total": 20866.66749063053,
+     "state_by_period": {
+      "medium": 1677.9091646030085,
+      "high": 2801.6694092582757,
+      "low": 1613.6284555639259,
+      "clear": 123.52335057553282
+     },
+     "cycles": 3360,
+     "last_update": 8220,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8234,
+     "vehicle_seconds_after_last_update": 25
+    },
+    "103": {
+     "state_link": 6158.3112336352715,
+     "state_entry": 0.5570804724898427,
+     "state": 6158.868314107762,
+     "green_change": 1.2621999999999798,
+     "red_delay": 14651.119747745663,
+     "total": 20811.250261853424,
+     "state_by_period": {
+      "medium": 1614.8290211365324,
+      "high": 2829.8856577746838,
+      "low": 1595.8071501720367,
+      "clear": 118.34648502450803
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8139,
+     "vehicle_seconds_after_last_update": 70
+    },
+    "104": {
+     "state_link": 6248.007417034129,
+     "state_entry": 1.0024646015981098,
+     "state": 6249.009881635727,
+     "green_change": 1.2763999999999782,
+     "red_delay": 14647.213200816446,
+     "total": 20897.49948245217,
+     "state_by_period": {
+      "medium": 1690.9633706906884,
+      "high": 2929.574795842943,
+      "low": 1528.862294216537,
+      "clear": 99.60942088556313
+     },
+     "cycles": 3458,
+     "last_update": 8460,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8495,
+     "vehicle_seconds_after_last_update": 34
+    },
+    "106": {
+     "state_link": 6404.808782882777,
+     "state_entry": 1.1076403995496296,
+     "state": 6405.916423282327,
+     "green_change": 1.3083999999999785,
+     "red_delay": 14651.565573847827,
+     "total": 21058.790397130153,
+     "state_by_period": {
+      "medium": 1673.7482702089085,
+      "high": 2921.8019633010003,
+      "low": 1688.6478718378055,
+      "clear": 121.7183179346154
+     },
+     "cycles": 3381,
+     "last_update": 8280,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8331,
+     "vehicle_seconds_after_last_update": 50
+    },
+    "107": {
+     "state_link": 6244.115140283724,
+     "state_entry": 0.9823092291397874,
+     "state": 6245.097449512864,
+     "green_change": 1.263399999999981,
+     "red_delay": 14647.0915442782,
+     "total": 20893.452393791064,
+     "state_by_period": {
+      "medium": 1706.244970919431,
+      "high": 2927.2252434371467,
+      "low": 1490.8997687727278,
+      "clear": 120.72746638355736
+     },
+     "cycles": 3262,
+     "last_update": 7980,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8003,
+     "vehicle_seconds_after_last_update": 37
+    },
+    "108": {
+     "state_link": 6275.120891553712,
+     "state_entry": 0.9875649258261896,
+     "state": 6276.108456479538,
+     "green_change": 1.3401999999999767,
+     "red_delay": 14645.544239834846,
+     "total": 20922.992896314383,
+     "state_by_period": {
+      "medium": 1732.3864432841362,
+      "high": 2821.0642239780886,
+      "low": 1602.3707980882286,
+      "clear": 120.28699112907974
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8124,
+     "vehicle_seconds_after_last_update": 23
+    },
+    "109": {
+     "state_link": 6754.815601871493,
+     "state_entry": 1.0701461409511996,
+     "state": 6755.885748012443,
+     "green_change": 1.3785999999999778,
+     "red_delay": 14644.435784864898,
+     "total": 21401.70013287734,
+     "state_by_period": {
+      "medium": 1748.6525091015849,
+      "high": 3149.3146402193574,
+      "low": 1730.2681678099468,
+      "clear": 127.65043088155619
+     },
+     "cycles": 3262,
+     "last_update": 7980,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 7981,
+     "vehicle_seconds_after_last_update": 0
+    },
+    "110": {
+     "state_link": 6239.693050335718,
+     "state_entry": 0.5955711703255315,
+     "state": 6240.2886215060435,
+     "green_change": 1.2432999999999805,
+     "red_delay": 14649.882163756716,
+     "total": 20891.41408526276,
+     "state_by_period": {
+      "medium": 1790.2680162285712,
+      "high": 2776.2639644775845,
+      "low": 1544.2914717317376,
+      "clear": 129.46516906815233
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8113,
+     "vehicle_seconds_after_last_update": 12
+    },
+    "111": {
+     "state_link": 6400.341012661898,
+     "state_entry": 0.8230423320091032,
+     "state": 6401.1640549939075,
+     "green_change": 1.3151999999999786,
+     "red_delay": 14645.477632693795,
+     "total": 21047.956887687702,
+     "state_by_period": {
+      "medium": 1781.7457689505911,
+      "high": 2784.883830216799,
+      "low": 1717.572974353448,
+      "clear": 116.96148147306617
+     },
+     "cycles": 3283,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 50
+    }
+   },
+   "OSD-1-K1": {
+    "101": {
+     "state_link": 6323.054919014481,
+     "state_entry": 0.6718189677579232,
+     "state": 6323.726737982239,
+     "green_change": 1.3266999999999765,
+     "red_delay": 14648.284566693917,
+     "total": 20973.338004676156,
+     "state_by_period": {
+      "medium": 1658.2378733494068,
+      "high": 2932.405889709515,
+      "low": 1606.0610352430606,
+      "clear": 127.02193968025446
+     },
+     "cycles": 3283,
+     "last_update": 8040,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 69
+    },
+    "102": {
+     "state_link": 6193.840668201654,
+     "state_entry": 0.9861714141180691,
+     "state": 6194.826839615772,
+     "green_change": 1.3429999999999753,
+     "red_delay": 14649.53402028951,
+     "total": 20845.703859905283,
+     "state_by_period": {
+      "medium": 1683.5701672851415,
+      "high": 2779.7379697740757,
+      "low": 1610.0525725961852,
+      "clear": 121.46612996036698
+     },
+     "cycles": 3360,
+     "last_update": 8220,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8234,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "103": {
+     "state_link": 6161.141074266307,
+     "state_entry": 0.5692332502676206,
+     "state": 6161.710307516575,
+     "green_change": 1.3316999999999768,
+     "red_delay": 14653.13570533969,
+     "total": 20816.177712856264,
+     "state_by_period": {
+      "medium": 1623.613834275416,
+      "high": 2825.8645862770068,
+      "low": 1593.013837239616,
+      "clear": 119.21804972453783
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8139,
+     "vehicle_seconds_after_last_update": 70
+    },
+    "104": {
+     "state_link": 6236.381193810271,
+     "state_entry": 1.0580201571536652,
+     "state": 6237.439213967425,
+     "green_change": 1.2988999999999757,
+     "red_delay": 14650.689929821614,
+     "total": 20889.428043789037,
+     "state_by_period": {
+      "medium": 1675.3582586804303,
+      "high": 2923.187738450073,
+      "low": 1539.389259060958,
+      "clear": 99.50395777596304
+     },
+     "cycles": 3458,
+     "last_update": 8460,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8499,
+     "vehicle_seconds_after_last_update": 38
+    },
+    "106": {
+     "state_link": 6436.732416394729,
+     "state_entry": 0.985679378854432,
+     "state": 6437.718095773583,
+     "green_change": 1.29319999999998,
+     "red_delay": 14651.278849895065,
+     "total": 21090.29014566865,
+     "state_by_period": {
+      "medium": 1658.9377986698996,
+      "high": 2921.2482038837593,
+      "low": 1736.3742460183373,
+      "clear": 121.15784720158992
+     },
+     "cycles": 3381,
+     "last_update": 8280,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8331,
+     "vehicle_seconds_after_last_update": 50
+    },
+    "107": {
+     "state_link": 6254.546285690781,
+     "state_entry": 0.9742447130107551,
+     "state": 6255.520530403792,
+     "green_change": 1.3464999999999778,
+     "red_delay": 14650.941945527084,
+     "total": 20907.808975930875,
+     "state_by_period": {
+      "medium": 1702.209841100632,
+      "high": 2933.189360560673,
+      "low": 1496.7380247682652,
+      "clear": 123.38330397422233
+     },
+     "cycles": 3262,
+     "last_update": 7980,
+     "vehicles_at_last_update": 3,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8018,
+     "vehicle_seconds_after_last_update": 73
+    },
+    "108": {
+     "state_link": 6297.647895125777,
+     "state_entry": 0.9707832578817309,
+     "state": 6298.618678383658,
+     "green_change": 1.3744999999999759,
+     "red_delay": 14650.114967028077,
+     "total": 20950.108145411737,
+     "state_by_period": {
+      "medium": 1723.1594714677012,
+      "high": 2847.4285370035404,
+      "low": 1606.9413691482382,
+      "clear": 121.08930076418058
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8124,
+     "vehicle_seconds_after_last_update": 23
+    },
+    "109": {
+     "state_link": 6772.922277644315,
+     "state_entry": 1.0406322520623108,
+     "state": 6773.962909896377,
+     "green_change": 1.353599999999978,
+     "red_delay": 14653.003744805623,
+     "total": 21428.320254702,
+     "state_by_period": {
+      "medium": 1740.4940456045188,
+      "high": 3177.9532301746367,
+      "low": 1723.1156950893273,
+      "clear": 132.399939027891
+     },
+     "cycles": 3262,
+     "last_update": 7980,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 7981,
+     "vehicle_seconds_after_last_update": 0
+    },
+    "110": {
+     "state_link": 9210.311251408386,
+     "state_entry": 0.5816822814366427,
+     "state": 9210.892933689822,
+     "green_change": 1.263199999999981,
+     "red_delay": 14659.92083985,
+     "total": 23872.07697353982,
+     "state_by_period": {
+      "medium": 1779.9295782878785,
+      "high": 2838.178698192359,
+      "low": 4461.383293956402,
+      "clear": 131.4013632531786
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8113,
+     "vehicle_seconds_after_last_update": 12
+    },
+    "111": {
+     "state_link": 6396.788152048074,
+     "state_entry": 0.8713613276965199,
+     "state": 6397.659513375771,
+     "green_change": 1.2758999999999778,
+     "red_delay": 14649.70259648276,
+     "total": 21048.638009858532,
+     "state_by_period": {
+      "medium": 1783.5012832350687,
+      "high": 2770.656995417959,
+      "low": 1724.6099463762562,
+      "clear": 118.89128834648636
+     },
+     "cycles": 3283,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 50
+    }
+   },
+   "OSD-1-K4": {
+    "101": {
+     "state_link": 6306.4896668798465,
+     "state_entry": 0.681248844126141,
+     "state": 6307.170915723973,
+     "green_change": 1.3513999999999793,
+     "red_delay": 14644.188463535738,
+     "total": 20952.71077925971,
+     "state_by_period": {
+      "medium": 1655.8031763780218,
+      "high": 2910.3110252347165,
+      "low": 1616.0356307225363,
+      "clear": 125.02108338869509
+     },
+     "cycles": 3283,
+     "last_update": 8040,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 69
+    },
+    "102": {
+     "state_link": 6206.113502481976,
+     "state_entry": 0.9330493504582148,
+     "state": 6207.0465518324345,
+     "green_change": 1.3634999999999762,
+     "red_delay": 14649.12175289741,
+     "total": 20857.531804729846,
+     "state_by_period": {
+      "medium": 1681.3719990099016,
+      "high": 2789.2978798287236,
+      "low": 1611.115390666787,
+      "clear": 125.2612823270224
+     },
+     "cycles": 3360,
+     "last_update": 8220,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8234,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "103": {
+     "state_link": 6201.7063918778285,
+     "state_entry": 0.5414554724898427,
+     "state": 6202.247847350319,
+     "green_change": 1.3907999999999778,
+     "red_delay": 14652.537912239444,
+     "total": 20856.176559589763,
+     "state_by_period": {
+      "medium": 1633.9364841474926,
+      "high": 2846.9016272766203,
+      "low": 1598.9402874630548,
+      "clear": 122.46944846315134
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 3,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8154,
+     "vehicle_seconds_after_last_update": 123
+    },
+    "104": {
+     "state_link": 28077.100064399216,
+     "state_entry": 1.0441312682647763,
+     "state": 28078.14419566748,
+     "green_change": 1.168399999999983,
+     "red_delay": 14667.830829747103,
+     "total": 42747.14342541458,
+     "state_by_period": {
+      "medium": 1712.959085441888,
+      "high": 4509.156748527091,
+      "low": 12227.862314612667,
+      "clear": 9628.166047085828
+     },
+     "cycles": 4214,
+     "last_update": 10320,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 10345,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "106": {
+     "state_link": 6400.996795997084,
+     "state_entry": 1.1104313629814158,
+     "state": 6402.107227360065,
+     "green_change": 1.349799999999978,
+     "red_delay": 14649.981671107418,
+     "total": 21053.438698467482,
+     "state_by_period": {
+      "medium": 1664.7925530211305,
+      "high": 2912.783431522594,
+      "low": 1702.5141992616336,
+      "clear": 122.01704355471017
+     },
+     "cycles": 3381,
+     "last_update": 8280,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8331,
+     "vehicle_seconds_after_last_update": 50
+    },
+    "107": {
+     "state_link": 6241.942080458049,
+     "state_entry": 1.0854838323143905,
+     "state": 6243.027564290363,
+     "green_change": 1.3709999999999778,
+     "red_delay": 14646.503368834838,
+     "total": 20890.901933125202,
+     "state_by_period": {
+      "medium": 1701.0074537037078,
+      "high": 2915.494488064322,
+      "low": 1506.241942654311,
+      "clear": 120.28367986802337
+     },
+     "cycles": 3262,
+     "last_update": 7980,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8002,
+     "vehicle_seconds_after_last_update": 36
+    },
+    "108": {
+     "state_link": 6283.280920141784,
+     "state_entry": 0.9416157769358642,
+     "state": 6284.22253591872,
+     "green_change": 1.4160999999999786,
+     "red_delay": 14645.763820530105,
+     "total": 20931.402456448825,
+     "state_by_period": {
+      "medium": 1728.3538667443381,
+      "high": 2830.270598242663,
+      "low": 1603.1670771127203,
+      "clear": 122.43099381900124
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8124,
+     "vehicle_seconds_after_last_update": 23
+    },
+    "109": {
+     "state_link": 6719.883174345778,
+     "state_entry": 1.0562572520623108,
+     "state": 6720.93943159784,
+     "green_change": 1.4349999999999778,
+     "red_delay": 14642.821629816493,
+     "total": 21365.19606141433,
+     "state_by_period": {
+      "medium": 1743.2909874039178,
+      "high": 3142.228890257574,
+      "low": 1703.776737937538,
+      "clear": 131.64281599881213
+     },
+     "cycles": 3262,
+     "last_update": 7980,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 7981,
+     "vehicle_seconds_after_last_update": 0
+    },
+    "110": {
+     "state_link": 8837.89334331567,
+     "state_entry": 0.5492614158035678,
+     "state": 8838.442604731474,
+     "green_change": 1.23979999999998,
+     "red_delay": 14666.997473239508,
+     "total": 23506.67987797098,
+     "state_by_period": {
+      "medium": 1794.0739111130588,
+      "high": 2802.629233273194,
+      "low": 4108.524945516289,
+      "clear": 133.21451482893195
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8113,
+     "vehicle_seconds_after_last_update": 12
+    },
+    "111": {
+     "state_link": 6410.498001154286,
+     "state_entry": 0.7985540279155359,
+     "state": 6411.296555182201,
+     "green_change": 1.3183999999999763,
+     "red_delay": 14647.397977109675,
+     "total": 21060.012932291876,
+     "state_by_period": {
+      "medium": 1782.6397995889843,
+      "high": 2794.4810475002755,
+      "low": 1718.1843391106115,
+      "clear": 115.99136898232818
+     },
+     "cycles": 3283,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 50
+    }
+   },
+   "OSD-2-K1": {
+    "101": {
+     "state_link": 8611.342520328655,
+     "state_entry": 0.683256876254655,
+     "state": 8612.02577720491,
+     "green_change": 1.32699999999998,
+     "red_delay": 14658.007737773349,
+     "total": 23271.36051497826,
+     "state_by_period": {
+      "medium": 1659.953749900179,
+      "high": 2965.679895942907,
+      "low": 3859.4041794364484,
+      "clear": 126.9879519253785
+     },
+     "cycles": 3283,
+     "last_update": 8040,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 69
+    },
+    "102": {
+     "state_link": 6203.67136324448,
+     "state_entry": 0.8692670766254963,
+     "state": 6204.540630321106,
+     "green_change": 1.3779999999999775,
+     "red_delay": 14651.923822444314,
+     "total": 20857.84245276542,
+     "state_by_period": {
+      "medium": 1683.7905260664156,
+      "high": 2785.1351982176056,
+      "low": 1614.6020273439235,
+      "clear": 121.01287869316093
+     },
+     "cycles": 3360,
+     "last_update": 8220,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8234,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "103": {
+     "state_link": 6159.5230434987225,
+     "state_entry": 0.5709693613787318,
+     "state": 6160.094012860101,
+     "green_change": 1.361099999999976,
+     "red_delay": 14653.329678050866,
+     "total": 20814.78479091097,
+     "state_by_period": {
+      "medium": 1630.1442204008026,
+      "high": 2823.808176239597,
+      "low": 1585.2550166803558,
+      "clear": 120.88659953935135
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8140,
+     "vehicle_seconds_after_last_update": 71
+    },
+    "104": {
+     "state_link": 38327.58536523397,
+     "state_entry": 1439.2272589497172,
+     "state": 39766.81262418369,
+     "green_change": 1.2196999999999805,
+     "red_delay": 14663.912099577643,
+     "total": 54431.944423761335,
+     "state_by_period": {
+      "medium": 1680.772632346007,
+      "high": 4437.9310719462555,
+      "low": 17747.733401663136,
+      "clear": 15900.37551822831
+     },
+     "cycles": 4606,
+     "last_update": 11280,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 11310,
+     "vehicle_seconds_after_last_update": 52
+    },
+    "106": {
+     "state_link": 6439.7217811569535,
+     "state_entry": 1.080917474092527,
+     "state": 6440.802698631046,
+     "green_change": 1.28709999999998,
+     "red_delay": 14653.279254014025,
+     "total": 21095.36905264507,
+     "state_by_period": {
+      "medium": 1662.1695315116788,
+      "high": 2936.774698666205,
+      "low": 1719.7868405992017,
+      "clear": 122.07162785396255
+     },
+     "cycles": 3381,
+     "last_update": 8280,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8331,
+     "vehicle_seconds_after_last_update": 50
+    },
+    "107": {
+     "state_link": 6281.705604656297,
+     "state_entry": 0.9882616100921683,
+     "state": 6282.693866266389,
+     "green_change": 1.3273999999999786,
+     "red_delay": 14653.349598642246,
+     "total": 20937.370864908633,
+     "state_by_period": {
+      "medium": 1711.9480170203813,
+      "high": 2954.4326031466367,
+      "low": 1492.8229462657364,
+      "clear": 123.4902998336371
+     },
+     "cycles": 3262,
+     "last_update": 7980,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8002,
+     "vehicle_seconds_after_last_update": 36
+    },
+    "108": {
+     "state_link": 6272.799122060379,
+     "state_entry": 0.9657634341451798,
+     "state": 6273.764885494525,
+     "green_change": 1.3748999999999758,
+     "red_delay": 14649.854183132315,
+     "total": 20924.99396862684,
+     "state_by_period": {
+      "medium": 1728.4526380712737,
+      "high": 2826.724401964166,
+      "low": 1599.2005675026455,
+      "clear": 119.38727795643803
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8125,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "109": {
+     "state_link": 6868.060204551756,
+     "state_entry": 1.0245112203162792,
+     "state": 6869.084715772073,
+     "green_change": 1.3744999999999772,
+     "red_delay": 14653.191690442183,
+     "total": 21523.650906214258,
+     "state_by_period": {
+      "medium": 1755.8649436327096,
+      "high": 3190.109312705911,
+      "low": 1795.8556602515062,
+      "clear": 127.25479918194743
+     },
+     "cycles": 3262,
+     "last_update": 7980,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 7981,
+     "vehicle_seconds_after_last_update": 0
+    },
+    "110": {
+     "state_link": 13700.115661793741,
+     "state_entry": 0.5455894451793328,
+     "state": 13700.66125123892,
+     "green_change": 1.2421999999999804,
+     "red_delay": 14657.601064347875,
+     "total": 28359.504515586796,
+     "state_by_period": {
+      "medium": 1779.6727606393001,
+      "high": 2824.9575320128674,
+      "low": 7889.060673601594,
+      "clear": 1206.9702849851515
+     },
+     "cycles": 3528,
+     "last_update": 8640,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8654,
+     "vehicle_seconds_after_last_update": 15
+    },
+    "111": {
+     "state_link": 6401.551036486517,
+     "state_entry": 0.879903234264742,
+     "state": 6402.430939720782,
+     "green_change": 1.3399999999999788,
+     "red_delay": 14648.64198901933,
+     "total": 21052.412928740112,
+     "state_by_period": {
+      "medium": 1791.7080805875758,
+      "high": 2764.3579290500334,
+      "low": 1728.2040286289507,
+      "clear": 118.1609014542236
+     },
+     "cycles": 3283,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 50
+    }
+   },
+   "OSD-2-K4": {
+    "101": {
+     "state_link": 6291.782453927478,
+     "state_entry": 0.683256876254655,
+     "state": 6292.465710803733,
+     "green_change": 1.3285999999999774,
+     "red_delay": 14643.708827696462,
+     "total": 20937.503138500193,
+     "state_by_period": {
+      "medium": 1644.601008684688,
+      "high": 2922.0249064231407,
+      "low": 1598.0989507068723,
+      "clear": 127.74084498903174
+     },
+     "cycles": 3283,
+     "last_update": 8040,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 69
+    },
+    "102": {
+     "state_link": 6213.10861695588,
+     "state_entry": 0.9507880193596743,
+     "state": 6214.05940497524,
+     "green_change": 1.331499999999977,
+     "red_delay": 14648.82221322014,
+     "total": 20864.21311819538,
+     "state_by_period": {
+      "medium": 1691.1014524515745,
+      "high": 2797.7440153767184,
+      "low": 1601.47574841496,
+      "clear": 123.738188731989
+     },
+     "cycles": 3360,
+     "last_update": 8220,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8234,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "103": {
+     "state_link": 6163.228872494999,
+     "state_entry": 0.5562634790257904,
+     "state": 6163.785135974025,
+     "green_change": 1.3242999999999796,
+     "red_delay": 14649.955385836693,
+     "total": 20815.064821810716,
+     "state_by_period": {
+      "medium": 1628.1368697470893,
+      "high": 2814.8382605441016,
+      "low": 1599.1219502451743,
+      "clear": 121.6880554376575
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8140,
+     "vehicle_seconds_after_last_update": 71
+    },
+    "104": {
+     "state_link": 6232.421134061094,
+     "state_entry": 1.03276763190114,
+     "state": 6233.453901692995,
+     "green_change": 1.2809999999999786,
+     "red_delay": 14644.185140062154,
+     "total": 20878.920041755147,
+     "state_by_period": {
+      "medium": 1691.0938479217718,
+      "high": 2925.2299326661287,
+      "low": 1512.7203108054484,
+      "clear": 104.40981029964722
+     },
+     "cycles": 3458,
+     "last_update": 8460,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8496,
+     "vehicle_seconds_after_last_update": 35
+    },
+    "106": {
+     "state_link": 6415.13419264634,
+     "state_entry": 1.1104313629814158,
+     "state": 6416.244624009321,
+     "green_change": 1.3053999999999795,
+     "red_delay": 14647.141567817373,
+     "total": 21064.691591826693,
+     "state_by_period": {
+      "medium": 1656.5067835330597,
+      "high": 2933.4426102012294,
+      "low": 1705.4706436409833,
+      "clear": 120.82458663405262
+     },
+     "cycles": 3381,
+     "last_update": 8280,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8330,
+     "vehicle_seconds_after_last_update": 49
+    },
+    "107": {
+     "state_link": 6203.270218049414,
+     "state_entry": 1.000094656563769,
+     "state": 6204.2703127059785,
+     "green_change": 1.3293999999999762,
+     "red_delay": 14647.409297158372,
+     "total": 20853.00900986435,
+     "state_by_period": {
+      "medium": 1688.789450946913,
+      "high": 2911.0802299547117,
+      "low": 1481.8615999852148,
+      "clear": 122.53903181913702
+     },
+     "cycles": 3283,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8077,
+     "vehicle_seconds_after_last_update": 36
+    },
+    "108": {
+     "state_link": 6274.352708418453,
+     "state_entry": 0.9945745896345468,
+     "state": 6275.347283008088,
+     "green_change": 1.3764999999999792,
+     "red_delay": 14644.411105297295,
+     "total": 20921.134888305383,
+     "state_by_period": {
+      "medium": 1712.4693627325541,
+      "high": 2833.2128001209458,
+      "low": 1606.519219657128,
+      "clear": 123.14590049746029
+     },
+     "cycles": 3360,
+     "last_update": 8220,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8244,
+     "vehicle_seconds_after_last_update": 23
+    },
+    "109": {
+     "state_link": 6998.238177475687,
+     "state_entry": 1.0703941568242157,
+     "state": 6999.308571632511,
+     "green_change": 1.373799999999978,
+     "red_delay": 14640.845789285842,
+     "total": 21641.528160918355,
+     "state_by_period": {
+      "medium": 1735.0285214415471,
+      "high": 3203.0367988770745,
+      "low": 1931.4516090212264,
+      "clear": 129.79164229266465
+     },
+     "cycles": 3262,
+     "last_update": 7980,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 7981,
+     "vehicle_seconds_after_last_update": 0
+    },
+    "110": {
+     "state_link": 6270.732267739431,
+     "state_entry": 0.5539045036588649,
+     "state": 6271.28617224309,
+     "green_change": 1.2728999999999782,
+     "red_delay": 14651.786198027858,
+     "total": 20924.345270270947,
+     "state_by_period": {
+      "medium": 1791.9313305718297,
+      "high": 2789.7838031615383,
+      "low": 1555.2526588532046,
+      "clear": 134.3183796565196
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8113,
+     "vehicle_seconds_after_last_update": 12
+    },
+    "111": {
+     "state_link": 6397.934598135241,
+     "state_entry": 0.8660143453758532,
+     "state": 6398.800612480617,
+     "green_change": 1.3318999999999777,
+     "red_delay": 14647.694787763534,
+     "total": 21047.82730024415,
+     "state_by_period": {
+      "medium": 1782.0019469409071,
+      "high": 2769.0659239441375,
+      "low": 1729.1913387446218,
+      "clear": 118.54140285095099
+     },
+     "cycles": 3283,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 50
+    }
+   },
+   "P-OSD-K1": {
+    "101": {
+     "state_link": 6317.197412864675,
+     "state_entry": 0.6765001194978983,
+     "state": 6317.873912984173,
+     "green_change": 1.3141999999999763,
+     "red_delay": 14648.565854092903,
+     "total": 20967.75396707708,
+     "state_by_period": {
+      "medium": 1638.9609608245073,
+      "high": 2945.934694630631,
+      "low": 1605.080900228256,
+      "clear": 127.89735730077584
+     },
+     "cycles": 3283,
+     "last_update": 8040,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 68
+    },
+    "102": {
+     "state_link": 6187.642358196508,
+     "state_entry": 0.888475707047362,
+     "state": 6188.5308339035555,
+     "green_change": 1.3590999999999769,
+     "red_delay": 14652.261499279954,
+     "total": 20842.15143318351,
+     "state_by_period": {
+      "medium": 1676.8373188530861,
+      "high": 2790.1479709080804,
+      "low": 1600.716874270503,
+      "clear": 120.82866987188616
+     },
+     "cycles": 3360,
+     "last_update": 8220,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8234,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "103": {
+     "state_link": 6162.912653315677,
+     "state_entry": 0.5293026947120649,
+     "state": 6163.441956010389,
+     "green_change": 1.3819999999999764,
+     "red_delay": 14654.345723333141,
+     "total": 20819.16967934353,
+     "state_by_period": {
+      "medium": 1629.8259298094817,
+      "high": 2824.2581029552034,
+      "low": 1591.5293591050324,
+      "clear": 117.82856414066993
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 3,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8154,
+     "vehicle_seconds_after_last_update": 123
+    },
+    "104": {
+     "state_link": 18528.0617415055,
+     "state_entry": 106.77471548507388,
+     "state": 18634.83645699057,
+     "green_change": 1.2187999999999826,
+     "red_delay": 14667.70408443999,
+     "total": 33303.75934143056,
+     "state_by_period": {
+      "medium": 1774.2255402214807,
+      "high": 12360.899459117329,
+      "low": 4397.5419250867835,
+      "clear": 102.16953256498063
+     },
+     "cycles": 3458,
+     "last_update": 8460,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8499,
+     "vehicle_seconds_after_last_update": 38
+    },
+    "106": {
+     "state_link": 6427.23920086673,
+     "state_entry": 1.1104313629814158,
+     "state": 6428.3496322297115,
+     "green_change": 1.297599999999979,
+     "red_delay": 14653.690979529092,
+     "total": 21083.338211758804,
+     "state_by_period": {
+      "medium": 1663.0240191966993,
+      "high": 2935.0796931207155,
+      "low": 1707.9944169078592,
+      "clear": 122.25150300444112
+     },
+     "cycles": 3381,
+     "last_update": 8280,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8331,
+     "vehicle_seconds_after_last_update": 50
+    },
+    "107": {
+     "state_link": 6261.991298602565,
+     "state_entry": 1.0125671656477238,
+     "state": 6263.003865768213,
+     "green_change": 1.304499999999978,
+     "red_delay": 14652.59058301113,
+     "total": 20916.898948779344,
+     "state_by_period": {
+      "medium": 1711.6081187444165,
+      "high": 2937.026345784753,
+      "low": 1492.3253856797396,
+      "clear": 122.04401555930184
+     },
+     "cycles": 3262,
+     "last_update": 7980,
+     "vehicles_at_last_update": 3,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8017,
+     "vehicle_seconds_after_last_update": 72
+    },
+    "108": {
+     "state_link": 6282.069215980665,
+     "state_entry": 0.9815084418256714,
+     "state": 6283.050724422491,
+     "green_change": 1.3575999999999768,
+     "red_delay": 14649.92412241961,
+     "total": 20934.3324468421,
+     "state_by_period": {
+      "medium": 1730.1256476545461,
+      "high": 2822.6778690120836,
+      "low": 1610.0982331116704,
+      "clear": 120.14897464418436
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8125,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "109": {
+     "state_link": 6844.641660615914,
+     "state_entry": 1.0979239187289775,
+     "state": 6845.739584534643,
+     "green_change": 1.3778999999999768,
+     "red_delay": 14651.579566796616,
+     "total": 21498.69705133126,
+     "state_by_period": {
+      "medium": 1740.9645170421059,
+      "high": 3192.4679718789266,
+      "low": 1781.6337839540927,
+      "clear": 130.67331165951487
+     },
+     "cycles": 3213,
+     "last_update": 7860,
+     "vehicles_at_last_update": 5,
+     "pending_at_last_update": 0,
+     "last_trace_second": 7905,
+     "vehicle_seconds_after_last_update": 104
+    },
+    "110": {
+     "state_link": 6260.85849475645,
+     "state_entry": 0.548380513759875,
+     "state": 6261.406875270211,
+     "green_change": 1.2554999999999807,
+     "red_delay": 14652.56941575495,
+     "total": 20915.23179102516,
+     "state_by_period": {
+      "medium": 1786.417949562345,
+      "high": 2786.713844701174,
+      "low": 1557.5598711181206,
+      "clear": 130.71520988857338
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8113,
+     "vehicle_seconds_after_last_update": 12
+    },
+    "111": {
+     "state_link": 6420.267335632176,
+     "state_entry": 0.8660143453758532,
+     "state": 6421.133349977552,
+     "green_change": 1.3071999999999773,
+     "red_delay": 14650.563032633203,
+     "total": 21073.003582610756,
+     "state_by_period": {
+      "medium": 1795.0465691808738,
+      "high": 2781.172029704528,
+      "low": 1727.1395937849802,
+      "clear": 117.77515730717154
+     },
+     "cycles": 3283,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8090,
+     "vehicle_seconds_after_last_update": 49
+    }
+   },
+   "P-OSD-K4": {
+    "101": {
+     "state_link": 6271.642558028937,
+     "state_entry": 0.683256876254655,
+     "state": 6272.325814905192,
+     "green_change": 1.3376999999999768,
+     "red_delay": 14642.8671092936,
+     "total": 20916.530624198793,
+     "state_by_period": {
+      "medium": 1641.3651595438957,
+      "high": 2897.856757692417,
+      "low": 1605.2011879611448,
+      "clear": 127.90270970773
+     },
+     "cycles": 3283,
+     "last_update": 8040,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8090,
+     "vehicle_seconds_after_last_update": 68
+    },
+    "102": {
+     "state_link": 6729.673409356264,
+     "state_entry": 0.8792299060137702,
+     "state": 6730.552639262278,
+     "green_change": 1.3291999999999748,
+     "red_delay": 14647.491656255374,
+     "total": 21379.37349551765,
+     "state_by_period": {
+      "medium": 1685.8065572451817,
+      "high": 2804.9345083706635,
+      "low": 1605.0359284452659,
+      "clear": 634.7756452011635
+     },
+     "cycles": 3654,
+     "last_update": 8940,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8973,
+     "vehicle_seconds_after_last_update": 43
+    },
+    "103": {
+     "state_link": 6156.037233029952,
+     "state_entry": 0.539675625830478,
+     "state": 6156.576908655783,
+     "green_change": 1.3321999999999783,
+     "red_delay": 14648.84334651855,
+     "total": 20806.752455174334,
+     "state_by_period": {
+      "medium": 1630.7052597297138,
+      "high": 2812.970474827772,
+      "low": 1591.8562751074403,
+      "clear": 121.04489899085625
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 3,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8155,
+     "vehicle_seconds_after_last_update": 124
+    },
+    "104": {
+     "state_link": 6230.82114747275,
+     "state_entry": 0.9801723513646831,
+     "state": 6231.801319824115,
+     "green_change": 1.2964999999999796,
+     "red_delay": 14644.53634948154,
+     "total": 20877.634169305653,
+     "state_by_period": {
+      "medium": 1691.4183334231757,
+      "high": 2922.3285236002316,
+      "low": 1514.4345079175564,
+      "clear": 103.619954883148
+     },
+     "cycles": 3458,
+     "last_update": 8460,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8495,
+     "vehicle_seconds_after_last_update": 34
+    },
+    "106": {
+     "state_link": 6470.780023156151,
+     "state_entry": 1.067028585203638,
+     "state": 6471.847051741355,
+     "green_change": 1.3024999999999798,
+     "red_delay": 14647.810307415615,
+     "total": 21120.95985915697,
+     "state_by_period": {
+      "medium": 1675.0441473704363,
+      "high": 2944.695686245749,
+      "low": 1728.479852801739,
+      "clear": 123.62736532343344
+     },
+     "cycles": 3381,
+     "last_update": 8280,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8330,
+     "vehicle_seconds_after_last_update": 49
+    },
+    "107": {
+     "state_link": 6239.492186114347,
+     "state_entry": 0.9221017001822583,
+     "state": 6240.4142878145285,
+     "green_change": 1.3360999999999763,
+     "red_delay": 14646.712830068895,
+     "total": 20888.46321788342,
+     "state_by_period": {
+      "medium": 1694.820352131713,
+      "high": 2947.5965212345786,
+      "low": 1478.12727868971,
+      "clear": 119.87013575852649
+     },
+     "cycles": 3262,
+     "last_update": 7980,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8002,
+     "vehicle_seconds_after_last_update": 36
+    },
+    "108": {
+     "state_link": 6283.816374915505,
+     "state_entry": 0.9662213096030552,
+     "state": 6284.782596225108,
+     "green_change": 1.3995999999999784,
+     "red_delay": 14643.618421369503,
+     "total": 20929.80061759461,
+     "state_by_period": {
+      "medium": 1725.3096805601872,
+      "high": 2842.7537488865582,
+      "low": 1595.2950361464952,
+      "clear": 121.42413063186655
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8124,
+     "vehicle_seconds_after_last_update": 23
+    },
+    "109": {
+     "state_link": 6856.519302228627,
+     "state_entry": 1.0684100298400885,
+     "state": 6857.587712258467,
+     "green_change": 1.3818999999999781,
+     "red_delay": 14641.658212162423,
+     "total": 21500.62782442089,
+     "state_by_period": {
+      "medium": 1741.9219695971562,
+      "high": 3183.2742899174236,
+      "low": 1803.230792335,
+      "clear": 129.16066040889018
+     },
+     "cycles": 3262,
+     "last_update": 7980,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 7982,
+     "vehicle_seconds_after_last_update": 1
+    },
+    "110": {
+     "state_link": 6247.90877158846,
+     "state_entry": 0.5612574448353356,
+     "state": 6248.470029033295,
+     "green_change": 1.2422999999999786,
+     "red_delay": 14650.462906875506,
+     "total": 20900.1752359088,
+     "state_by_period": {
+      "medium": 1785.365604863091,
+      "high": 2782.994906467321,
+      "low": 1551.3260923146809,
+      "clear": 128.78342538820698
+     },
+     "cycles": 3311,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8114,
+     "vehicle_seconds_after_last_update": 13
+    },
+    "111": {
+     "state_link": 6384.901074280255,
+     "state_entry": 0.8595951110154424,
+     "state": 6385.76066939127,
+     "green_change": 1.290199999999979,
+     "red_delay": 14648.648050205507,
+     "total": 21035.698919596776,
+     "state_by_period": {
+      "medium": 1782.4518314085713,
+      "high": 2767.773462571558,
+      "low": 1719.0850829973988,
+      "clear": 116.45029241374728
+     },
+     "cycles": 3283,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 50
+    }
+   }
+  },
+  "common": {
+   "Centralized": {
+    "101": {
+     "state_link": 6283.857405639289,
+     "state_entry": 0.6710019742938708,
+     "state": 6284.528407613583,
+     "green_change": 1.2810999999999806,
+     "red_delay": 14637.436628276018,
+     "total": 20923.246135889603,
+     "state_by_period": {
+      "medium": 1646.8007723395879,
+      "high": 2914.5423342997356,
+      "low": 1598.9676934187098,
+      "clear": 124.21760755554992
+     },
+     "cycles": 3185,
+     "last_update": 8040,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 69
+    },
+    "102": {
+     "state_link": 6205.410522011866,
+     "state_entry": 0.9291454583579362,
+     "state": 6206.339667470224,
+     "green_change": 1.3291999999999762,
+     "red_delay": 14643.025016931304,
+     "total": 20850.693884401528,
+     "state_by_period": {
+      "medium": 1683.6530597868145,
+      "high": 2801.310217686751,
+      "low": 1596.832700566129,
+      "clear": 124.5436894305337
+     },
+     "cycles": 3185,
+     "last_update": 8340,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8352,
+     "vehicle_seconds_after_last_update": 11
+    },
+    "103": {
+     "state_link": 6198.9843709981,
+     "state_entry": 0.5293026947120649,
+     "state": 6199.513673692812,
+     "green_change": 1.2728999999999793,
+     "red_delay": 14644.796884961754,
+     "total": 20845.583458654564,
+     "state_by_period": {
+      "medium": 1635.204644882068,
+      "high": 2841.4011474488784,
+      "low": 1603.8404315786713,
+      "clear": 119.06744978319439
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 3,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8155,
+     "vehicle_seconds_after_last_update": 124
+    },
+    "104": {
+     "state_link": 6262.744645471338,
+     "state_entry": 0.9829734718128621,
+     "state": 6263.727618943151,
+     "green_change": 1.26089999999998,
+     "red_delay": 14640.438914765411,
+     "total": 20905.427433708563,
+     "state_by_period": {
+      "medium": 1693.1848177979982,
+      "high": 2949.8912504662576,
+      "low": 1522.5690047716782,
+      "clear": 98.08254590721492
+     },
+     "cycles": 3185,
+     "last_update": 8460,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8496,
+     "vehicle_seconds_after_last_update": 35
+    },
+    "106": {
+     "state_link": 6430.802733462301,
+     "state_entry": 1.0620079395579927,
+     "state": 6431.864741401859,
+     "green_change": 1.2595999999999805,
+     "red_delay": 14642.649859927504,
+     "total": 21075.77420132936,
+     "state_by_period": {
+      "medium": 1670.9122229860438,
+      "high": 2928.8847316121596,
+      "low": 1709.7080059179946,
+      "clear": 122.3597808856615
+     },
+     "cycles": 3185,
+     "last_update": 8280,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8331,
+     "vehicle_seconds_after_last_update": 50
+    },
+    "107": {
+     "state_link": 6227.804894346025,
+     "state_entry": 0.980821133901692,
+     "state": 6228.785715479927,
+     "green_change": 1.2961999999999783,
+     "red_delay": 14641.836068449637,
+     "total": 20871.91798392956,
+     "state_by_period": {
+      "medium": 1714.0687200161972,
+      "high": 2918.8675612315283,
+      "low": 1476.5301886334705,
+      "clear": 119.31924559873016
+     },
+     "cycles": 3185,
+     "last_update": 7980,
+     "vehicles_at_last_update": 3,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8017,
+     "vehicle_seconds_after_last_update": 72
+    },
+    "108": {
+     "state_link": 6278.7688991663845,
+     "state_entry": 0.9895729579547037,
+     "state": 6279.758472124339,
+     "green_change": 1.3339999999999779,
+     "red_delay": 14637.426131197233,
+     "total": 20918.518603321572,
+     "state_by_period": {
+      "medium": 1714.1016559374418,
+      "high": 2846.5071855488427,
+      "low": 1598.0680248790848,
+      "clear": 121.08160575896888
+     },
+     "cycles": 3185,
+     "last_update": 8220,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8245,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "109": {
+     "state_link": 6682.643399642946,
+     "state_entry": 1.1100766965067552,
+     "state": 6683.753476339452,
+     "green_change": 1.36139999999998,
+     "red_delay": 14636.833108350278,
+     "total": 21321.94798468973,
+     "state_by_period": {
+      "medium": 1736.8181256613987,
+      "high": 3129.0039290761683,
+      "low": 1691.3975387035002,
+      "clear": 126.53388289838807
+     },
+     "cycles": 3185,
+     "last_update": 7860,
+     "vehicles_at_last_update": 4,
+     "pending_at_last_update": 0,
+     "last_trace_second": 7905,
+     "vehicle_seconds_after_last_update": 103
+    },
+    "110": {
+     "state_link": 6262.956704249655,
+     "state_entry": 0.5521683925477539,
+     "state": 6263.508872642203,
+     "green_change": 1.2150999999999792,
+     "red_delay": 14644.2582328221,
+     "total": 20908.9822054643,
+     "state_by_period": {
+      "medium": 1795.5787916705037,
+      "high": 2799.9653812882475,
+      "low": 1539.2273577949647,
+      "clear": 128.73734188848522
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8113,
+     "vehicle_seconds_after_last_update": 12
+    },
+    "111": {
+     "state_link": 6368.1008480136115,
+     "state_entry": 0.8620460914075992,
+     "state": 6368.96289410502,
+     "green_change": 1.275599999999978,
+     "red_delay": 14641.025148651244,
+     "total": 21011.263642756265,
+     "state_by_period": {
+      "medium": 1787.3684488033166,
+      "high": 2756.018427012978,
+      "low": 1709.1975892862595,
+      "clear": 116.3784290024662
+     },
+     "cycles": 3185,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 50
+    }
+   },
+   "IR-MPC": {
+    "101": {
+     "state_link": 6302.7767035925435,
+     "state_entry": 0.681248844126141,
+     "state": 6303.45795243667,
+     "green_change": 1.2447999999999821,
+     "red_delay": 14639.60019288848,
+     "total": 20944.30294532515,
+     "state_by_period": {
+      "medium": 1642.7914919674374,
+      "high": 2941.6124399544997,
+      "low": 1595.921013357528,
+      "clear": 123.13300715720617
+     },
+     "cycles": 3185,
+     "last_update": 8040,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 69
+    },
+    "102": {
+     "state_link": 6215.488177275791,
+     "state_entry": 0.9301423737140287,
+     "state": 6216.418319649505,
+     "green_change": 1.294199999999979,
+     "red_delay": 14642.553694518105,
+     "total": 20860.266214167612,
+     "state_by_period": {
+      "medium": 1677.9091646030085,
+      "high": 2801.6694092582757,
+      "low": 1613.6284555639259,
+      "clear": 123.21129022429481
+     },
+     "cycles": 3185,
+     "last_update": 8220,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8234,
+     "vehicle_seconds_after_last_update": 25
+    },
+    "103": {
+     "state_link": 6157.938928003501,
+     "state_entry": 0.5570804724898427,
+     "state": 6158.496008475991,
+     "green_change": 1.222599999999981,
+     "red_delay": 14645.152092035993,
+     "total": 20804.870700511983,
+     "state_by_period": {
+      "medium": 1614.8290211365324,
+      "high": 2829.8856577746838,
+      "low": 1595.8071501720367,
+      "clear": 117.9741793927372
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8139,
+     "vehicle_seconds_after_last_update": 70
+    },
+    "104": {
+     "state_link": 6247.632747376757,
+     "state_entry": 1.0024646015981098,
+     "state": 6248.635211978355,
+     "green_change": 1.2298999999999798,
+     "red_delay": 14641.138733301872,
+     "total": 20891.003845280226,
+     "state_by_period": {
+      "medium": 1690.9633706906884,
+      "high": 2929.574795842943,
+      "low": 1528.862294216537,
+      "clear": 99.23475122819097
+     },
+     "cycles": 3185,
+     "last_update": 8460,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8495,
+     "vehicle_seconds_after_last_update": 34
+    },
+    "106": {
+     "state_link": 6404.614470343409,
+     "state_entry": 1.1076403995496296,
+     "state": 6405.722110742959,
+     "green_change": 1.26559999999998,
+     "red_delay": 14645.5106295687,
+     "total": 21052.498340311657,
+     "state_by_period": {
+      "medium": 1673.7482702089085,
+      "high": 2921.8019633010003,
+      "low": 1688.6478718378055,
+      "clear": 121.52400539524555
+     },
+     "cycles": 3185,
+     "last_update": 8280,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8331,
+     "vehicle_seconds_after_last_update": 50
+    },
+    "107": {
+     "state_link": 6243.987882213102,
+     "state_entry": 0.9823092291397874,
+     "state": 6244.970191442242,
+     "green_change": 1.228599999999982,
+     "red_delay": 14641.488899517544,
+     "total": 20887.687690959785,
+     "state_by_period": {
+      "medium": 1706.244970919431,
+      "high": 2927.2252434371467,
+      "low": 1490.8997687727278,
+      "clear": 120.60020831293491
+     },
+     "cycles": 3185,
+     "last_update": 7980,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8003,
+     "vehicle_seconds_after_last_update": 37
+    },
+    "108": {
+     "state_link": 6274.990574177113,
+     "state_entry": 0.9875649258261896,
+     "state": 6275.978139102939,
+     "green_change": 1.300599999999978,
+     "red_delay": 14639.576584125176,
+     "total": 20916.855323228116,
+     "state_by_period": {
+      "medium": 1732.3864432841362,
+      "high": 2821.0642239780886,
+      "low": 1602.3707980882286,
+      "clear": 120.15667375248071
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8124,
+     "vehicle_seconds_after_last_update": 23
+    },
+    "109": {
+     "state_link": 6754.770217742047,
+     "state_entry": 1.0701461409511996,
+     "state": 6755.840363882998,
+     "green_change": 1.3437999999999788,
+     "red_delay": 14638.833140104241,
+     "total": 21396.01730398724,
+     "state_by_period": {
+      "medium": 1748.6525091015849,
+      "high": 3149.3146402193574,
+      "low": 1730.2681678099468,
+      "clear": 127.60504675210962
+     },
+     "cycles": 3185,
+     "last_update": 7980,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 7981,
+     "vehicle_seconds_after_last_update": 0
+    },
+    "110": {
+     "state_link": 6239.59343593598,
+     "state_entry": 0.5955711703255315,
+     "state": 6240.189007106305,
+     "green_change": 1.2036999999999818,
+     "red_delay": 14643.914508047046,
+     "total": 20885.307215153352,
+     "state_by_period": {
+      "medium": 1790.2680162285712,
+      "high": 2776.2639644775845,
+      "low": 1544.2914717317376,
+      "clear": 129.3655546684137
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8113,
+     "vehicle_seconds_after_last_update": 12
+    },
+    "111": {
+     "state_link": 6400.16608665102,
+     "state_entry": 0.8230423320091032,
+     "state": 6400.989128983029,
+     "green_change": 1.2781999999999798,
+     "red_delay": 14639.704303883824,
+     "total": 21041.97163286685,
+     "state_by_period": {
+      "medium": 1781.7457689505911,
+      "high": 2784.883830216799,
+      "low": 1717.572974353448,
+      "clear": 116.78655546218707
+     },
+     "cycles": 3185,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 50
+    }
+   },
+   "OSD-1-K1": {
+    "101": {
+     "state_link": 6322.854963710193,
+     "state_entry": 0.6718189677579232,
+     "state": 6323.526782677951,
+     "green_change": 1.2896999999999776,
+     "red_delay": 14642.511237883946,
+     "total": 20967.327720561898,
+     "state_by_period": {
+      "medium": 1658.2378733494068,
+      "high": 2932.405889709515,
+      "low": 1606.0610352430606,
+      "clear": 126.82198437596712
+     },
+     "cycles": 3185,
+     "last_update": 8040,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 69
+    },
+    "102": {
+     "state_link": 6193.554031908929,
+     "state_entry": 0.9861714141180691,
+     "state": 6194.540203323047,
+     "green_change": 1.3059999999999765,
+     "red_delay": 14643.484436944836,
+     "total": 20839.330640267883,
+     "state_by_period": {
+      "medium": 1683.5701672851415,
+      "high": 2779.7379697740757,
+      "low": 1610.0525725961852,
+      "clear": 121.17949366764128
+     },
+     "cycles": 3185,
+     "last_update": 8220,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8234,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "103": {
+     "state_link": 6160.798376598412,
+     "state_entry": 0.5692332502676206,
+     "state": 6161.367609848679,
+     "green_change": 1.294699999999978,
+     "red_delay": 14647.166774065046,
+     "total": 20809.829083913726,
+     "state_by_period": {
+      "medium": 1623.613834275416,
+      "high": 2825.8645862770068,
+      "low": 1593.013837239616,
+      "clear": 118.87535205664221
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8139,
+     "vehicle_seconds_after_last_update": 70
+    },
+    "104": {
+     "state_link": 6236.02718630665,
+     "state_entry": 1.0580201571536652,
+     "state": 6237.085206463804,
+     "green_change": 1.261899999999977,
+     "red_delay": 14644.612175548496,
+     "total": 20882.9592820123,
+     "state_by_period": {
+      "medium": 1675.3582586804303,
+      "high": 2923.187738450073,
+      "low": 1539.389259060958,
+      "clear": 99.14995027234127
+     },
+     "cycles": 3185,
+     "last_update": 8460,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8499,
+     "vehicle_seconds_after_last_update": 38
+    },
+    "106": {
+     "state_link": 6436.5381038553605,
+     "state_entry": 0.985679378854432,
+     "state": 6437.5237832342145,
+     "green_change": 1.256199999999981,
+     "red_delay": 14645.221203856165,
+     "total": 21084.00118709038,
+     "state_by_period": {
+      "medium": 1658.9377986698996,
+      "high": 2921.2482038837593,
+      "low": 1736.3742460183373,
+      "clear": 120.96353466222007
+     },
+     "cycles": 3185,
+     "last_update": 8280,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8331,
+     "vehicle_seconds_after_last_update": 50
+    },
+    "107": {
+     "state_link": 6254.397241127784,
+     "state_entry": 0.9742447130107551,
+     "state": 6255.371485840795,
+     "green_change": 1.3116999999999788,
+     "red_delay": 14645.339300766427,
+     "total": 20902.022486607224,
+     "state_by_period": {
+      "medium": 1702.209841100632,
+      "high": 2933.189360560673,
+      "low": 1496.7380247682652,
+      "clear": 123.23425941122517
+     },
+     "cycles": 3185,
+     "last_update": 7980,
+     "vehicles_at_last_update": 3,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8018,
+     "vehicle_seconds_after_last_update": 73
+    },
+    "108": {
+     "state_link": 6297.449125368226,
+     "state_entry": 0.9707832578817309,
+     "state": 6298.419908626108,
+     "green_change": 1.337499999999977,
+     "red_delay": 14644.146035753434,
+     "total": 20943.903444379543,
+     "state_by_period": {
+      "medium": 1723.1594714677012,
+      "high": 2847.4285370035404,
+      "low": 1606.9413691482382,
+      "clear": 120.89053100662917
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8124,
+     "vehicle_seconds_after_last_update": 23
+    },
+    "109": {
+     "state_link": 6772.878560181535,
+     "state_entry": 1.0406322520623108,
+     "state": 6773.919192433597,
+     "green_change": 1.3187999999999789,
+     "red_delay": 14647.401100044966,
+     "total": 21422.639092478563,
+     "state_by_period": {
+      "medium": 1740.4940456045188,
+      "high": 3177.9532301746367,
+      "low": 1723.1156950893273,
+      "clear": 132.35622156511113
+     },
+     "cycles": 3185,
+     "last_update": 7980,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 7981,
+     "vehicle_seconds_after_last_update": 0
+    },
+    "110": {
+     "state_link": 9210.213166060634,
+     "state_entry": 0.5816822814366427,
+     "state": 9210.79484834207,
+     "green_change": 1.2261999999999822,
+     "red_delay": 14653.951908575356,
+     "total": 23865.972956917423,
+     "state_by_period": {
+      "medium": 1779.9295782878785,
+      "high": 2838.178698192359,
+      "low": 4461.383293956402,
+      "clear": 131.30327790542773
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8113,
+     "vehicle_seconds_after_last_update": 12
+    },
+    "111": {
+     "state_link": 6396.667869440955,
+     "state_entry": 0.8713613276965199,
+     "state": 6397.539230768652,
+     "green_change": 1.238899999999979,
+     "red_delay": 14643.92926767279,
+     "total": 21042.707398441442,
+     "state_by_period": {
+      "medium": 1783.5012832350687,
+      "high": 2770.656995417959,
+      "low": 1724.6099463762562,
+      "clear": 118.77100573936636
+     },
+     "cycles": 3185,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 50
+    }
+   },
+   "OSD-1-K4": {
+    "101": {
+     "state_link": 6306.289711575559,
+     "state_entry": 0.681248844126141,
+     "state": 6306.970960419685,
+     "green_change": 1.3143999999999805,
+     "red_delay": 14638.415134725767,
+     "total": 20946.70049514545,
+     "state_by_period": {
+      "medium": 1655.8031763780218,
+      "high": 2910.3110252347165,
+      "low": 1616.0356307225363,
+      "clear": 124.82112808440775
+     },
+     "cycles": 3185,
+     "last_update": 8040,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 69
+    },
+    "102": {
+     "state_link": 6205.80739451169,
+     "state_entry": 0.9330493504582148,
+     "state": 6206.740443862149,
+     "green_change": 1.3212999999999777,
+     "red_delay": 14643.074736785728,
+     "total": 20851.136480647874,
+     "state_by_period": {
+      "medium": 1681.3719990099016,
+      "high": 2789.2978798287236,
+      "low": 1611.115390666787,
+      "clear": 124.95517435673678
+     },
+     "cycles": 3185,
+     "last_update": 8220,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8234,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "103": {
+     "state_link": 6201.301886000027,
+     "state_entry": 0.5414554724898427,
+     "state": 6201.843341472517,
+     "green_change": 1.351199999999979,
+     "red_delay": 14646.570256529774,
+     "total": 20849.764798002292,
+     "state_by_period": {
+      "medium": 1633.9364841474926,
+      "high": 2846.9016272766203,
+      "low": 1598.9402874630548,
+      "clear": 122.0649425853497
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 3,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8154,
+     "vehicle_seconds_after_last_update": 123
+    },
+    "104": {
+     "state_link": 22083.21063284855,
+     "state_entry": 1.0441312682647763,
+     "state": 22084.254764116813,
+     "green_change": 1.1288999999999845,
+     "red_delay": 14661.713664956102,
+     "total": 36747.097329072916,
+     "state_by_period": {
+      "medium": 1712.959085441888,
+      "high": 4509.156748527091,
+      "low": 12227.862314612667,
+      "clear": 3634.276615535171
+     },
+     "cycles": 3185,
+     "last_update": 10320,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 10345,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "106": {
+     "state_link": 6400.802483457715,
+     "state_entry": 1.1104313629814158,
+     "state": 6401.912914820697,
+     "green_change": 1.3069999999999795,
+     "red_delay": 14643.926726828291,
+     "total": 21047.146641648986,
+     "state_by_period": {
+      "medium": 1664.7925530211305,
+      "high": 2912.783431522594,
+      "low": 1702.5141992616336,
+      "clear": 121.82273101534032
+     },
+     "cycles": 3185,
+     "last_update": 8280,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8331,
+     "vehicle_seconds_after_last_update": 50
+    },
+    "107": {
+     "state_link": 6241.814822387427,
+     "state_entry": 1.0854838323143905,
+     "state": 6242.900306219742,
+     "green_change": 1.3361999999999787,
+     "red_delay": 14640.900724074181,
+     "total": 20885.137230293923,
+     "state_by_period": {
+      "medium": 1701.0074537037078,
+      "high": 2915.494488064322,
+      "low": 1506.241942654311,
+      "clear": 120.15642179740092
+     },
+     "cycles": 3185,
+     "last_update": 7980,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8002,
+     "vehicle_seconds_after_last_update": 36
+    },
+    "108": {
+     "state_link": 6283.0821503842335,
+     "state_entry": 0.9416157769358642,
+     "state": 6284.023766161169,
+     "green_change": 1.3764999999999799,
+     "red_delay": 14639.796164820435,
+     "total": 20925.196430981603,
+     "state_by_period": {
+      "medium": 1728.3538667443381,
+      "high": 2830.270598242663,
+      "low": 1603.1670771127203,
+      "clear": 122.23222406144984
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8124,
+     "vehicle_seconds_after_last_update": 23
+    },
+    "109": {
+     "state_link": 6719.835896276938,
+     "state_entry": 1.0562572520623108,
+     "state": 6720.892153529,
+     "green_change": 1.4001999999999788,
+     "red_delay": 14637.218985055837,
+     "total": 21359.511338584838,
+     "state_by_period": {
+      "medium": 1743.2909874039178,
+      "high": 3142.228890257574,
+      "low": 1703.776737937538,
+      "clear": 131.59553792997164
+     },
+     "cycles": 3185,
+     "last_update": 7980,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 7981,
+     "vehicle_seconds_after_last_update": 0
+    },
+    "110": {
+     "state_link": 8837.778350272834,
+     "state_entry": 0.5492614158035678,
+     "state": 8838.327611688637,
+     "green_change": 1.2001999999999813,
+     "red_delay": 14661.029817529838,
+     "total": 23500.557629218474,
+     "state_by_period": {
+      "medium": 1794.0739111130588,
+      "high": 2802.629233273194,
+      "low": 4108.524945516289,
+      "clear": 133.09952178609728
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8113,
+     "vehicle_seconds_after_last_update": 12
+    },
+    "111": {
+     "state_link": 6410.381341735572,
+     "state_entry": 0.7985540279155359,
+     "state": 6411.179895763487,
+     "green_change": 1.2813999999999774,
+     "red_delay": 14641.624648299703,
+     "total": 21054.08594406319,
+     "state_by_period": {
+      "medium": 1782.6397995889843,
+      "high": 2794.4810475002755,
+      "low": 1718.1843391106115,
+      "clear": 115.87470956361398
+     },
+     "cycles": 3185,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 50
+    }
+   },
+   "OSD-2-K1": {
+    "101": {
+     "state_link": 8611.142565024367,
+     "state_entry": 0.683256876254655,
+     "state": 8611.825821900622,
+     "green_change": 1.2899999999999812,
+     "red_delay": 14652.234408963377,
+     "total": 23265.350230864,
+     "state_by_period": {
+      "medium": 1659.953749900179,
+      "high": 2965.679895942907,
+      "low": 3859.4041794364484,
+      "clear": 126.78799662109115
+     },
+     "cycles": 3185,
+     "last_update": 8040,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 69
+    },
+    "102": {
+     "state_link": 6203.384726951755,
+     "state_entry": 0.8692670766254963,
+     "state": 6204.2539940283805,
+     "green_change": 1.3409999999999787,
+     "red_delay": 14645.874239099641,
+     "total": 20851.469233128024,
+     "state_by_period": {
+      "medium": 1683.7905260664156,
+      "high": 2785.1351982176056,
+      "low": 1614.6020273439235,
+      "clear": 120.72624240043523
+     },
+     "cycles": 3185,
+     "last_update": 8220,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8234,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "103": {
+     "state_link": 6159.159512497493,
+     "state_entry": 0.5709693613787318,
+     "state": 6159.730481858872,
+     "green_change": 1.3240999999999772,
+     "red_delay": 14647.360746776223,
+     "total": 20808.415328635096,
+     "state_by_period": {
+      "medium": 1630.1442204008026,
+      "high": 2823.808176239597,
+      "low": 1585.2550166803558,
+      "clear": 120.5230685381224
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8140,
+     "vehicle_seconds_after_last_update": 71
+    },
+    "104": {
+     "state_link": 27150.677182736843,
+     "state_entry": 1439.2272589497172,
+     "state": 28589.90444168656,
+     "green_change": 1.163699999999982,
+     "red_delay": 14657.775900110046,
+     "total": 43248.844041796605,
+     "state_by_period": {
+      "medium": 1680.772632346007,
+      "high": 4437.9310719462555,
+      "low": 17747.733401663136,
+      "clear": 4723.467335731161
+     },
+     "cycles": 3185,
+     "last_update": 11280,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 11310,
+     "vehicle_seconds_after_last_update": 52
+    },
+    "106": {
+     "state_link": 6439.527468617585,
+     "state_entry": 1.080917474092527,
+     "state": 6440.608386091678,
+     "green_change": 1.2500999999999811,
+     "red_delay": 14647.221607975125,
+     "total": 21089.080094066805,
+     "state_by_period": {
+      "medium": 1662.1695315116788,
+      "high": 2936.774698666205,
+      "low": 1719.7868405992017,
+      "clear": 121.8773153145927
+     },
+     "cycles": 3185,
+     "last_update": 8280,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8331,
+     "vehicle_seconds_after_last_update": 50
+    },
+    "107": {
+     "state_link": 6281.578346585675,
+     "state_entry": 0.9882616100921683,
+     "state": 6282.566608195767,
+     "green_change": 1.2925999999999795,
+     "red_delay": 14647.74695388159,
+     "total": 20931.606162077354,
+     "state_by_period": {
+      "medium": 1711.9480170203813,
+      "high": 2954.4326031466367,
+      "low": 1492.8229462657364,
+      "clear": 123.36304176301465
+     },
+     "cycles": 3185,
+     "last_update": 7980,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8002,
+     "vehicle_seconds_after_last_update": 36
+    },
+    "108": {
+     "state_link": 6272.5357425981865,
+     "state_entry": 0.9657634341451798,
+     "state": 6273.501506032332,
+     "green_change": 1.337899999999977,
+     "red_delay": 14643.885251857671,
+     "total": 20918.72465789,
+     "state_by_period": {
+      "medium": 1728.4526380712737,
+      "high": 2826.724401964166,
+      "low": 1599.2005675026455,
+      "clear": 119.12389849424528
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8125,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "109": {
+     "state_link": 6868.022897345387,
+     "state_entry": 1.0245112203162792,
+     "state": 6869.047408565703,
+     "green_change": 1.3396999999999781,
+     "red_delay": 14647.589045681527,
+     "total": 21517.97615424723,
+     "state_by_period": {
+      "medium": 1755.8649436327096,
+      "high": 3190.109312705911,
+      "low": 1795.8556602515062,
+      "clear": 127.21749197557779
+     },
+     "cycles": 3185,
+     "last_update": 7980,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 7981,
+     "vehicle_seconds_after_last_update": 0
+    },
+    "110": {
+     "state_link": 13631.835368444103,
+     "state_entry": 0.5455894451793328,
+     "state": 13632.380957889281,
+     "green_change": 1.2044999999999815,
+     "red_delay": 14651.497815681443,
+     "total": 28285.083273570723,
+     "state_by_period": {
+      "medium": 1779.6727606393001,
+      "high": 2824.9575320128674,
+      "low": 7889.060673601594,
+      "clear": 1138.689991635514
+     },
+     "cycles": 3185,
+     "last_update": 8640,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8654,
+     "vehicle_seconds_after_last_update": 15
+    },
+    "111": {
+     "state_link": 6401.434377067803,
+     "state_entry": 0.879903234264742,
+     "state": 6402.314280302068,
+     "green_change": 1.30299999999998,
+     "red_delay": 14642.868660209358,
+     "total": 21046.485940511426,
+     "state_by_period": {
+      "medium": 1791.7080805875758,
+      "high": 2764.3579290500334,
+      "low": 1728.2040286289507,
+      "clear": 118.0442420355094
+     },
+     "cycles": 3185,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 50
+    }
+   },
+   "OSD-2-K4": {
+    "101": {
+     "state_link": 6291.58249862319,
+     "state_entry": 0.683256876254655,
+     "state": 6292.265755499445,
+     "green_change": 1.2915999999999785,
+     "red_delay": 14637.93549888649,
+     "total": 20931.492854385935,
+     "state_by_period": {
+      "medium": 1644.601008684688,
+      "high": 2922.0249064231407,
+      "low": 1598.0989507068723,
+      "clear": 127.5408896847444
+     },
+     "cycles": 3185,
+     "last_update": 8040,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 69
+    },
+    "102": {
+     "state_link": 6212.820313996488,
+     "state_entry": 0.9507880193596743,
+     "state": 6213.771102015848,
+     "green_change": 1.2892999999999786,
+     "red_delay": 14642.775197108458,
+     "total": 20857.835599124308,
+     "state_by_period": {
+      "medium": 1691.1014524515745,
+      "high": 2797.7440153767184,
+      "low": 1601.47574841496,
+      "clear": 123.44988577259663
+     },
+     "cycles": 3185,
+     "last_update": 8220,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8234,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "103": {
+     "state_link": 6162.904488780591,
+     "state_entry": 0.5562634790257904,
+     "state": 6163.460752259617,
+     "green_change": 1.2846999999999809,
+     "red_delay": 14643.987730127023,
+     "total": 20808.73318238664,
+     "state_by_period": {
+      "medium": 1628.1368697470893,
+      "high": 2814.8382605441016,
+      "low": 1599.1219502451743,
+      "clear": 121.36367172325025
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8140,
+     "vehicle_seconds_after_last_update": 71
+    },
+    "104": {
+     "state_link": 6232.073522449163,
+     "state_entry": 1.03276763190114,
+     "state": 6233.106290081064,
+     "green_change": 1.2374999999999803,
+     "red_delay": 14638.110687642491,
+     "total": 20872.454477723557,
+     "state_by_period": {
+      "medium": 1691.0938479217718,
+      "high": 2925.2299326661287,
+      "low": 1512.7203108054484,
+      "clear": 104.06219868771547
+     },
+     "cycles": 3185,
+     "last_update": 8460,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8496,
+     "vehicle_seconds_after_last_update": 35
+    },
+    "106": {
+     "state_link": 6414.939880106972,
+     "state_entry": 1.1104313629814158,
+     "state": 6416.050311469953,
+     "green_change": 1.262599999999981,
+     "red_delay": 14641.086623538245,
+     "total": 21058.399535008197,
+     "state_by_period": {
+      "medium": 1656.5067835330597,
+      "high": 2933.4426102012294,
+      "low": 1705.4706436409833,
+      "clear": 120.63027409468278
+     },
+     "cycles": 3185,
+     "last_update": 8280,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8330,
+     "vehicle_seconds_after_last_update": 49
+    },
+    "107": {
+     "state_link": 6203.140390995773,
+     "state_entry": 1.000094656563769,
+     "state": 6204.140485652337,
+     "green_change": 1.2923999999999773,
+     "red_delay": 14641.6359683484,
+     "total": 20847.06885400074,
+     "state_by_period": {
+      "medium": 1688.789450946913,
+      "high": 2911.0802299547117,
+      "low": 1481.8615999852148,
+      "clear": 122.409204765495
+     },
+     "cycles": 3185,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8077,
+     "vehicle_seconds_after_last_update": 36
+    },
+    "108": {
+     "state_link": 6274.132726539691,
+     "state_entry": 0.9945745896345468,
+     "state": 6275.127301129326,
+     "green_change": 1.3342999999999807,
+     "red_delay": 14638.364089185612,
+     "total": 20914.825690314938,
+     "state_by_period": {
+      "medium": 1712.4693627325541,
+      "high": 2833.2128001209458,
+      "low": 1606.519219657128,
+      "clear": 122.92591861869676
+     },
+     "cycles": 3185,
+     "last_update": 8220,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8244,
+     "vehicle_seconds_after_last_update": 23
+    },
+    "109": {
+     "state_link": 6998.192793346241,
+     "state_entry": 1.0703941568242157,
+     "state": 6999.263187503066,
+     "green_change": 1.3389999999999789,
+     "red_delay": 14635.243144525186,
+     "total": 21635.84533202825,
+     "state_by_period": {
+      "medium": 1735.0285214415471,
+      "high": 3203.0367988770745,
+      "low": 1931.4516090212264,
+      "clear": 129.7462581632181
+     },
+     "cycles": 3185,
+     "last_update": 7980,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 7981,
+     "vehicle_seconds_after_last_update": 0
+    },
+    "110": {
+     "state_link": 6270.606996036369,
+     "state_entry": 0.5539045036588649,
+     "state": 6271.160900540028,
+     "green_change": 1.2332999999999794,
+     "red_delay": 14645.818542318188,
+     "total": 20918.212742858217,
+     "state_by_period": {
+      "medium": 1791.9313305718297,
+      "high": 2789.7838031615383,
+      "low": 1555.2526588532046,
+      "clear": 134.1931079534574
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8113,
+     "vehicle_seconds_after_last_update": 12
+    },
+    "111": {
+     "state_link": 6397.738838791029,
+     "state_entry": 0.8660143453758532,
+     "state": 6398.604853136405,
+     "green_change": 1.2948999999999788,
+     "red_delay": 14641.921458953562,
+     "total": 21041.821212089966,
+     "state_by_period": {
+      "medium": 1782.0019469409071,
+      "high": 2769.0659239441375,
+      "low": 1729.1913387446218,
+      "clear": 118.34564350673854
+     },
+     "cycles": 3185,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 50
+    }
+   },
+   "P-OSD-K1": {
+    "101": {
+     "state_link": 6316.997457560387,
+     "state_entry": 0.6765001194978983,
+     "state": 6317.6739576798855,
+     "green_change": 1.2771999999999775,
+     "red_delay": 14642.792525282932,
+     "total": 20961.743682962817,
+     "state_by_period": {
+      "medium": 1638.9609608245073,
+      "high": 2945.934694630631,
+      "low": 1605.080900228256,
+      "clear": 127.6974019964885
+     },
+     "cycles": 3185,
+     "last_update": 8040,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 68
+    },
+    "102": {
+     "state_link": 6187.33029784527,
+     "state_entry": 0.888475707047362,
+     "state": 6188.2187735523175,
+     "green_change": 1.322099999999978,
+     "red_delay": 14646.21191593528,
+     "total": 20835.752789487597,
+     "state_by_period": {
+      "medium": 1676.8373188530861,
+      "high": 2790.1479709080804,
+      "low": 1600.716874270503,
+      "clear": 120.51660952064816
+     },
+     "cycles": 3185,
+     "last_update": 8220,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8234,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "103": {
+     "state_link": 6162.5530548452825,
+     "state_entry": 0.5293026947120649,
+     "state": 6163.0823575399945,
+     "green_change": 1.3449999999999775,
+     "red_delay": 14648.376792058498,
+     "total": 20812.804149598494,
+     "state_by_period": {
+      "medium": 1629.8259298094817,
+      "high": 2824.2581029552034,
+      "low": 1591.5293591050324,
+      "clear": 117.4689656702757
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 3,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8154,
+     "vehicle_seconds_after_last_update": 123
+    },
+    "104": {
+     "state_link": 18527.682834559993,
+     "state_entry": 106.77471548507388,
+     "state": 18634.457550045066,
+     "green_change": 1.1817999999999838,
+     "red_delay": 14661.626330166873,
+     "total": 33297.26568021194,
+     "state_by_period": {
+      "medium": 1774.2255402214807,
+      "high": 12360.899459117329,
+      "low": 4397.5419250867835,
+      "clear": 101.79062561947288
+     },
+     "cycles": 3185,
+     "last_update": 8460,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8499,
+     "vehicle_seconds_after_last_update": 38
+    },
+    "106": {
+     "state_link": 6427.044888327362,
+     "state_entry": 1.1104313629814158,
+     "state": 6428.155319690343,
+     "green_change": 1.2547999999999806,
+     "red_delay": 14647.636035249965,
+     "total": 21077.046154940308,
+     "state_by_period": {
+      "medium": 1663.0240191966993,
+      "high": 2935.0796931207155,
+      "low": 1707.9944169078592,
+      "clear": 122.05719046507127
+     },
+     "cycles": 3185,
+     "last_update": 8280,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8331,
+     "vehicle_seconds_after_last_update": 50
+    },
+    "107": {
+     "state_link": 6261.845522013424,
+     "state_entry": 1.0125671656477238,
+     "state": 6262.858089179072,
+     "green_change": 1.269699999999979,
+     "red_delay": 14646.987938250473,
+     "total": 20911.115727429544,
+     "state_by_period": {
+      "medium": 1711.6081187444165,
+      "high": 2937.026345784753,
+      "low": 1492.3253856797396,
+      "clear": 121.89823897016089
+     },
+     "cycles": 3185,
+     "last_update": 7980,
+     "vehicles_at_last_update": 3,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8017,
+     "vehicle_seconds_after_last_update": 72
+    },
+    "108": {
+     "state_link": 6281.938898604066,
+     "state_entry": 0.9815084418256714,
+     "state": 6282.920407045892,
+     "green_change": 1.317999999999978,
+     "red_delay": 14643.95646670994,
+     "total": 20928.194873755834,
+     "state_by_period": {
+      "medium": 1730.1256476545461,
+      "high": 2822.6778690120836,
+      "low": 1610.0982331116704,
+      "clear": 120.01865726758534
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8125,
+     "vehicle_seconds_after_last_update": 24
+    },
+    "109": {
+     "state_link": 6844.629958219047,
+     "state_entry": 1.0979239187289775,
+     "state": 6845.727882137776,
+     "green_change": 1.3556999999999773,
+     "red_delay": 14647.559935773828,
+     "total": 21494.643517911605,
+     "state_by_period": {
+      "medium": 1740.9645170421059,
+      "high": 3192.4679718789266,
+      "low": 1781.6337839540927,
+      "clear": 130.66160926264834
+     },
+     "cycles": 3185,
+     "last_update": 7860,
+     "vehicles_at_last_update": 5,
+     "pending_at_last_update": 0,
+     "last_trace_second": 7905,
+     "vehicle_seconds_after_last_update": 104
+    },
+    "110": {
+     "state_link": 6260.758880356712,
+     "state_entry": 0.548380513759875,
+     "state": 6261.307260870472,
+     "green_change": 1.215899999999982,
+     "red_delay": 14646.60176004528,
+     "total": 20909.124920915754,
+     "state_by_period": {
+      "medium": 1786.417949562345,
+      "high": 2786.713844701174,
+      "low": 1557.5598711181206,
+      "clear": 130.61559548883474
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8113,
+     "vehicle_seconds_after_last_update": 12
+    },
+    "111": {
+     "state_link": 6420.078600644104,
+     "state_entry": 0.8660143453758532,
+     "state": 6420.94461498948,
+     "green_change": 1.2701999999999785,
+     "red_delay": 14644.789703823231,
+     "total": 21067.00451881271,
+     "state_by_period": {
+      "medium": 1795.0465691808738,
+      "high": 2781.172029704528,
+      "low": 1727.1395937849802,
+      "clear": 117.58642231909914
+     },
+     "cycles": 3185,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8090,
+     "vehicle_seconds_after_last_update": 49
+    }
+   },
+   "P-OSD-K4": {
+    "101": {
+     "state_link": 6271.442602724649,
+     "state_entry": 0.683256876254655,
+     "state": 6272.125859600904,
+     "green_change": 1.300699999999978,
+     "red_delay": 14637.093780483629,
+     "total": 20910.52034008453,
+     "state_by_period": {
+      "medium": 1641.3651595438957,
+      "high": 2897.856757692417,
+      "low": 1605.2011879611448,
+      "clear": 127.70275440344265
+     },
+     "cycles": 3185,
+     "last_update": 8040,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8090,
+     "vehicle_seconds_after_last_update": 68
+    },
+    "102": {
+     "state_link": 6525.373303763202,
+     "state_entry": 0.8792299060137702,
+     "state": 6526.252533669216,
+     "green_change": 1.2818999999999763,
+     "red_delay": 14641.385015986758,
+     "total": 21168.919449655972,
+     "state_by_period": {
+      "medium": 1685.8065572451817,
+      "high": 2804.9345083706635,
+      "low": 1605.0359284452659,
+      "clear": 430.4755396081024
+     },
+     "cycles": 3185,
+     "last_update": 8940,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8973,
+     "vehicle_seconds_after_last_update": 43
+    },
+    "103": {
+     "state_link": 6155.658368177792,
+     "state_entry": 0.539675625830478,
+     "state": 6156.198043803623,
+     "green_change": 1.2925999999999795,
+     "red_delay": 14642.87569080888,
+     "total": 20800.366334612503,
+     "state_by_period": {
+      "medium": 1630.7052597297138,
+      "high": 2812.970474827772,
+      "low": 1591.8562751074403,
+      "clear": 120.66603413869564
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 3,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8155,
+     "vehicle_seconds_after_last_update": 124
+    },
+    "104": {
+     "state_link": 6230.44537956187,
+     "state_entry": 0.9801723513646831,
+     "state": 6231.425551913235,
+     "green_change": 1.2529999999999812,
+     "red_delay": 14638.461897061876,
+     "total": 20871.14044897511,
+     "state_by_period": {
+      "medium": 1691.4183334231757,
+      "high": 2922.3285236002316,
+      "low": 1514.4345079175564,
+      "clear": 103.24418697226679
+     },
+     "cycles": 3185,
+     "last_update": 8460,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8495,
+     "vehicle_seconds_after_last_update": 34
+    },
+    "106": {
+     "state_link": 6470.585710616783,
+     "state_entry": 1.067028585203638,
+     "state": 6471.652739201987,
+     "green_change": 1.2596999999999814,
+     "red_delay": 14641.755363136488,
+     "total": 21114.667802338474,
+     "state_by_period": {
+      "medium": 1675.0441473704363,
+      "high": 2944.695686245749,
+      "low": 1728.479852801739,
+      "clear": 123.43305278406359
+     },
+     "cycles": 3185,
+     "last_update": 8280,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8330,
+     "vehicle_seconds_after_last_update": 49
+    },
+    "107": {
+     "state_link": 6239.364928043725,
+     "state_entry": 0.9221017001822583,
+     "state": 6240.287029743907,
+     "green_change": 1.3012999999999773,
+     "red_delay": 14641.110185308238,
+     "total": 20882.698515052143,
+     "state_by_period": {
+      "medium": 1694.820352131713,
+      "high": 2947.5965212345786,
+      "low": 1478.12727868971,
+      "clear": 119.74287768790404
+     },
+     "cycles": 3185,
+     "last_update": 7980,
+     "vehicles_at_last_update": 2,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8002,
+     "vehicle_seconds_after_last_update": 36
+    },
+    "108": {
+     "state_link": 6283.657882935731,
+     "state_entry": 0.9662213096030552,
+     "state": 6284.624104245335,
+     "green_change": 1.3599999999999797,
+     "red_delay": 14637.650765659833,
+     "total": 20923.634869905167,
+     "state_by_period": {
+      "medium": 1725.3096805601872,
+      "high": 2842.7537488865582,
+      "low": 1595.2950361464952,
+      "clear": 121.26563865209293
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8124,
+     "vehicle_seconds_after_last_update": 23
+    },
+    "109": {
+     "state_link": 6856.473918099181,
+     "state_entry": 1.0684100298400885,
+     "state": 6857.542328129021,
+     "green_change": 1.347099999999979,
+     "red_delay": 14636.055567401767,
+     "total": 21494.944995530786,
+     "state_by_period": {
+      "medium": 1741.9219695971562,
+      "high": 3183.2742899174236,
+      "low": 1803.230792335,
+      "clear": 129.11527627944363
+     },
+     "cycles": 3185,
+     "last_update": 7980,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 7982,
+     "vehicle_seconds_after_last_update": 1
+    },
+    "110": {
+     "state_link": 6247.81326179016,
+     "state_entry": 0.5612574448353356,
+     "state": 6248.374519234995,
+     "green_change": 1.20269999999998,
+     "red_delay": 14644.495251165836,
+     "total": 20894.07247040083,
+     "state_by_period": {
+      "medium": 1785.365604863091,
+      "high": 2782.994906467321,
+      "low": 1551.3260923146809,
+      "clear": 128.68791558990665
+     },
+     "cycles": 3185,
+     "last_update": 8100,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8114,
+     "vehicle_seconds_after_last_update": 13
+    },
+    "111": {
+     "state_link": 6384.701691747638,
+     "state_entry": 0.8595951110154424,
+     "state": 6385.561286858653,
+     "green_change": 1.25319999999998,
+     "red_delay": 14642.874721395536,
+     "total": 21029.68920825419,
+     "state_by_period": {
+      "medium": 1782.4518314085713,
+      "high": 2767.773462571558,
+      "low": 1719.0850829973988,
+      "clear": 116.25090988112903
+     },
+     "cycles": 3185,
+     "last_update": 8040,
+     "vehicles_at_last_update": 1,
+     "pending_at_last_update": 0,
+     "last_trace_second": 8091,
+     "vehicle_seconds_after_last_update": 50
+    }
+   }
+  }
+ },
+ "summary": {
+  "full": {
+   "Centralized": {
+    "total": {
+     "mean": 20969.308027141284,
+     "ci95": 103.06187262043855,
+     "sd": 144.07056360292538
+    },
+    "state": {
+     "mean": 6321.27368387279,
+     "ci95": 104.48440410414779,
+     "sd": 146.05912549676634
+    },
+    "state_link": {
+     "mean": 6320.4067721916845,
+     "ci95": 104.40477720220473,
+     "sd": 145.94781476323115
+    },
+    "state_entry": {
+     "mean": 0.866911681105323,
+     "ci95": 0.14967583982911473,
+     "sd": 0.2092323965559824
+    },
+    "green_change": {
+     "mean": 1.3267999999999778,
+     "ci95": 0.028763001903148892,
+     "sd": 0.0402079041427866
+    },
+    "red_delay": {
+     "mean": 14646.707543268494,
+     "ci95": 2.3372580899145836,
+     "sd": 3.267261517162777
+    },
+    "total_paired_diff": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "total_paired_diff_percent": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "total_paired_t_p": null,
+    "state_paired_diff": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "state_paired_diff_percent": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "state_paired_t_p": null,
+    "state_link_paired_diff": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "state_link_paired_diff_percent": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "state_link_paired_t_p": null,
+    "state_entry_paired_diff": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "state_entry_paired_diff_percent": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "state_entry_paired_t_p": null,
+    "green_change_paired_diff": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "green_change_paired_diff_percent": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "green_change_paired_t_p": null,
+    "red_delay_paired_diff": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "red_delay_paired_diff_percent": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "red_delay_paired_t_p": null,
+    "vehicles_at_last_update": {
+     "mean": 1.8,
+     "ci95": 0.8121392760872087,
+     "sd": 1.1352924243950935
+    },
+    "vehicles_at_last_update_max": 4,
+    "last_update_max": 8460
+   },
+   "IR-MPC": {
+    "total": {
+     "mean": 20974.20372574389,
+     "ci95": 120.62887716357989,
+     "sd": 168.62754263887211
+    },
+    "state": {
+     "mean": 6325.272723727231,
+     "ci95": 121.47338447291956,
+     "sd": 169.80808245374084
+    },
+    "state_link": {
+     "mean": 6324.3990026782585,
+     "ci95": 121.40330779438476,
+     "sd": 169.7101220119671
+    },
+    "state_entry": {
+     "mean": 0.8737210489729563,
+     "ci95": 0.14208509322959906,
+     "sd": 0.19862126449566378
+    },
+    "green_change": {
+     "mean": 1.300589999999979,
+     "ci95": 0.030432875223022276,
+     "sd": 0.04254222608185776
+    },
+    "red_delay": {
+     "mean": 14647.630412016664,
+     "ci95": 1.8226093727503667,
+     "sd": 2.5478322184885824
+    },
+    "total_paired_diff": {
+     "mean": 4.895698602609992,
+     "ci95": 24.070003342757296,
+     "sd": 33.64754452198489
+    },
+    "total_paired_diff_percent": {
+     "mean": 0.022686575878797216,
+     "ci95": 0.11388660720238049,
+     "sd": 0.1592024991327207
+    },
+    "total_paired_t_p": 0.6563513318023522,
+    "state_paired_diff": {
+     "mean": 3.9990398544415258,
+     "ci95": 23.77706268697026,
+     "sd": 33.23804172227466
+    },
+    "state_paired_diff_percent": {
+     "mean": 0.05638678603475278,
+     "ci95": 0.3673760057695964,
+     "sd": 0.5135562440277354
+    },
+    "state_paired_t_p": 0.7124209378021327,
+    "state_link_paired_diff": {
+     "mean": 3.9922304865738623,
+     "ci95": 23.795729974283446,
+     "sd": 33.264136790564876
+    },
+    "state_link_paired_diff_percent": {
+     "mean": 0.056288591979429,
+     "ci95": 0.36771729017751603,
+     "sd": 0.5140333267329852
+    },
+    "state_link_paired_t_p": 0.7130987992879266,
+    "state_entry_paired_diff": {
+     "mean": 0.006809367867633242,
+     "ci95": 0.021169861995107623,
+     "sd": 0.029593426467844512
+    },
+    "state_entry_paired_diff_percent": {
+     "mean": 1.284964199092757,
+     "ci95": 2.729515710658086,
+     "sd": 3.8155998605401282
+    },
+    "state_entry_paired_t_p": 0.48533665315612906,
+    "green_change_paired_diff": {
+     "mean": -0.026209999999998755,
+     "ci95": 0.017076962674593296,
+     "sd": 0.023871947739739285
+    },
+    "green_change_paired_diff_percent": {
+     "mean": -1.9669141233635787,
+     "ci95": 1.2831198276893145,
+     "sd": 1.793677836866976
+    },
+    "green_change_paired_t_p": 0.007026627986266833,
+    "red_delay_paired_diff": {
+     "mean": 0.9228687481692759,
+     "ci95": 1.1758905942980642,
+     "sd": 1.6437817046059036
+    },
+    "red_delay_paired_diff_percent": {
+     "mean": 0.0063023063677477955,
+     "ci95": 0.00802968776608097,
+     "sd": 0.01122472950084339
+    },
+    "red_delay_paired_t_p": 0.10956930523058771,
+    "vehicles_at_last_update": {
+     "mean": 1.4,
+     "ci95": 0.36940871778917994,
+     "sd": 0.5163977794943223
+    },
+    "vehicles_at_last_update_max": 2,
+    "last_update_max": 8460
+   },
+   "OSD-1-K1": {
+    "total": {
+     "mean": 21282.189012633833,
+     "ci95": 662.881071957436,
+     "sd": 926.64384229013
+    },
+    "state": {
+     "mean": 6629.207576060502,
+     "ci95": 660.7886513754878,
+     "sd": 923.7188400087738
+    },
+    "state_link": {
+     "mean": 6628.336613360478,
+     "ci95": 660.8521106154084,
+     "sd": 923.8075499092317
+    },
+    "state_entry": {
+     "mean": 0.8709627000239669,
+     "ci95": 0.13598572014332738,
+     "sd": 0.19009492885066784
+    },
+    "green_change": {
+     "mean": 1.3207199999999777,
+     "ci95": 0.025948120495014326,
+     "sd": 0.03627297126572845
+    },
+    "red_delay": {
+     "mean": 14651.660716573335,
+     "ci95": 2.335842470640931,
+     "sd": 3.2652826178723147
+    },
+    "total_paired_diff": {
+     "mean": 312.88098549255193,
+     "ci95": 665.1820327451521,
+     "sd": 929.8603636775822
+    },
+    "total_paired_diff_percent": {
+     "mean": 1.4948486531617422,
+     "ci95": 3.1806075839717947,
+     "sd": 4.446182817870532
+    },
+    "total_paired_t_p": 0.3150207526101812,
+    "state_paired_diff": {
+     "mean": 307.93389218771154,
+     "ci95": 663.913871725942,
+     "sd": 928.0875968130624
+    },
+    "state_paired_diff_percent": {
+     "mean": 4.905346260895253,
+     "ci95": 10.601734550578621,
+     "sd": 14.820202981326048
+    },
+    "state_paired_t_p": 0.32143176224995074,
+    "state_link_paired_diff": {
+     "mean": 307.9298411687931,
+     "ci95": 663.9084436642435,
+     "sd": 928.0800089060286
+    },
+    "state_link_paired_diff_percent": {
+     "mean": 4.905718207084689,
+     "ci95": 10.602581474733155,
+     "sd": 14.821386899657533
+    },
+    "state_link_paired_t_p": 0.321434039387323,
+    "state_entry_paired_diff": {
+     "mean": 0.004051018918643878,
+     "ci95": 0.03562265049680332,
+     "sd": 0.04979703166277133
+    },
+    "state_entry_paired_diff_percent": {
+     "mean": 1.1851270082361984,
+     "ci95": 3.870144063043475,
+     "sd": 5.410088349943436
+    },
+    "state_entry_paired_t_p": 0.8027682991725672,
+    "green_change_paired_diff": {
+     "mean": -0.006080000000000241,
+     "ci95": 0.01434753055952728,
+     "sd": 0.020056464737778938
+    },
+    "green_change_paired_diff_percent": {
+     "mean": -0.4407861060045981,
+     "ci95": 1.073523622425324,
+     "sd": 1.5006825452655197
+    },
+    "green_change_paired_t_p": 0.3627897158771962,
+    "red_delay_paired_diff": {
+     "mean": 4.95317330484013,
+     "ci95": 2.576579867718342,
+     "sd": 3.6018102938730867
+    },
+    "red_delay_paired_diff_percent": {
+     "mean": 0.03382038320054789,
+     "ci95": 0.01759600016165028,
+     "sd": 0.024597512115682094
+    },
+    "red_delay_paired_t_p": 0.001853680324190562,
+    "vehicles_at_last_update": {
+     "mean": 1.5,
+     "ci95": 0.5058337191804845,
+     "sd": 0.7071067811865476
+    },
+    "vehicles_at_last_update_max": 3,
+    "last_update_max": 8460
+   },
+   "OSD-1-K4": {
+    "total": {
+     "mean": 23422.11945287126,
+     "ci95": 4891.206697349475,
+     "sd": 6837.435490627741
+    },
+    "state": {
+     "mean": 8769.464542965487,
+     "ci95": 4886.646077074917,
+     "sd": 6831.060183090354
+    },
+    "state_link": {
+     "mean": 8768.590394105151,
+     "ci95": 4886.611380414716,
+     "sd": 6831.011680503867
+    },
+    "state_entry": {
+     "mean": 0.874148860335206,
+     "ci95": 0.1563149264943641,
+     "sd": 0.21851319976042036
+    },
+    "green_change": {
+     "mean": 1.3404199999999784,
+     "ci95": 0.05796279408363594,
+     "sd": 0.0810263989902865
+    },
+    "red_delay": {
+     "mean": 14651.314489905775,
+     "ci95": 6.394042010378473,
+     "sd": 8.93825439722627
+    },
+    "total_paired_diff": {
+     "mean": 2452.811425729976,
+     "ci95": 4906.192271800183,
+     "sd": 6858.383879223187
+    },
+    "total_paired_diff_percent": {
+     "mean": 11.728727926927773,
+     "ci95": 23.461353585055353,
+     "sd": 32.7967108295694
+    },
+    "total_paired_t_p": 0.2873127286399108,
+    "state_paired_diff": {
+     "mean": 2448.190859092697,
+     "ci95": 4901.642145807722,
+     "sd": 6852.023241680606
+    },
+    "state_paired_diff_percent": {
+     "mean": 39.079820312567236,
+     "ci95": 78.25110432705723,
+     "sd": 109.3875010836425
+    },
+    "state_paired_t_p": 0.2877453171326563,
+    "state_link_paired_diff": {
+     "mean": 2448.183621913467,
+     "ci95": 4901.628865720341,
+     "sd": 6852.004677398539
+    },
+    "state_link_paired_diff_percent": {
+     "mean": 39.08554572230711,
+     "ci95": 78.26317209112912,
+     "sd": 109.40437065458138
+    },
+    "state_link_paired_t_p": 0.2877454286326163,
+    "state_entry_paired_diff": {
+     "mean": 0.007237179229882906,
+     "ci95": 0.03846381389097773,
+     "sd": 0.053768704222944975
+    },
+    "state_entry_paired_diff_percent": {
+     "mean": 0.8109252996254881,
+     "ci95": 3.962104731092601,
+     "sd": 5.538640499620869
+    },
+    "state_entry_paired_t_p": 0.6803694025892605,
+    "green_change_paired_diff": {
+     "mean": 0.013620000000000765,
+     "ci95": 0.0428538765712108,
+     "sd": 0.05990558868382288
+    },
+    "green_change_paired_diff_percent": {
+     "mean": 0.9923355399667869,
+     "ci95": 3.263844064437697,
+     "sd": 4.56253939424685
+    },
+    "green_change_paired_t_p": 0.4904052467543107,
+    "red_delay_paired_diff": {
+     "mean": 4.6069466372793615,
+     "ci95": 5.538935248777323,
+     "sd": 7.742897569796388
+    },
+    "red_delay_paired_diff_percent": {
+     "mean": 0.03145186133160676,
+     "ci95": 0.03781366353861901,
+     "sd": 0.05285985669951674
+    },
+    "red_delay_paired_t_p": 0.09258090225621715,
+    "vehicles_at_last_update": {
+     "mean": 1.5,
+     "ci95": 0.5058337191804845,
+     "sd": 0.7071067811865476
+    },
+    "vehicles_at_last_update_max": 3,
+    "last_update_max": 10320
+   },
+   "OSD-2-K1": {
+    "total": {
+     "mean": 25326.923441913772,
+     "ci95": 7503.271184795052,
+     "sd": 10488.84986245278
+    },
+    "state": {
+     "mean": 10671.291140169355,
+     "ci95": 7500.622375005338,
+     "sd": 10485.14708169033
+    },
+    "state_link": {
+     "mean": 10526.607570301148,
+     "ci95": 7183.7520239806,
+     "sd": 10042.192874664428
+    },
+    "state_entry": {
+     "mean": 144.68356986820663,
+     "ci95": 325.38461411770635,
+     "sd": 454.85632612464036
+    },
+    "green_change": {
+     "mean": 1.3231899999999785,
+     "ci95": 0.04035047622551153,
+     "sd": 0.056406076307825875
+    },
+    "red_delay": {
+     "mean": 14654.309111744413,
+     "ci95": 3.186490392849195,
+     "sd": 4.454406417626542
+    },
+    "total_paired_diff": {
+     "mean": 4357.615414772486,
+     "ci95": 7520.3496325613905,
+     "sd": 10512.723886207628
+    },
+    "total_paired_diff_percent": {
+     "mean": 20.83453306460452,
+     "ci95": 35.96271693842098,
+     "sd": 50.27241176853298
+    },
+    "total_paired_t_p": 0.22238706222134008,
+    "state_paired_diff": {
+     "mean": 4350.017456296564,
+     "ci95": 7517.767510679847,
+     "sd": 10509.114328712632
+    },
+    "state_paired_diff_percent": {
+     "mean": 69.41260969949471,
+     "ci95": 120.02250529053022,
+     "sd": 167.7798932096311
+    },
+    "state_paired_t_p": 0.22298256821985282,
+    "state_link_paired_diff": {
+     "mean": 4206.200798109463,
+     "ci95": 7201.010745893546,
+     "sd": 10066.318904299284
+    },
+    "state_link_paired_diff_percent": {
+     "mean": 67.12624197917611,
+     "ci95": 114.98365744994602,
+     "sd": 160.73606963215823
+    },
+    "state_link_paired_t_p": 0.21898703500813113,
+    "state_entry_paired_diff": {
+     "mean": 143.81665818710135,
+     "ci95": 325.3554154876027,
+     "sd": 454.8155092542643
+    },
+    "state_entry_paired_diff_percent": {
+     "mean": 14631.223547380685,
+     "ci95": 33098.99221734347,
+     "sd": 46269.20064807592
+    },
+    "state_entry_paired_t_p": 0.3434639077437472,
+    "green_change_paired_diff": {
+     "mean": -0.003609999999999247,
+     "ci95": 0.02472757154987882,
+     "sd": 0.03456676149135107
+    },
+    "green_change_paired_diff_percent": {
+     "mean": -0.2820796129088272,
+     "ci95": 1.8917701220765855,
+     "sd": 2.644512279516825
+    },
+    "green_change_paired_t_p": 0.7487656001812958,
+    "red_delay_paired_diff": {
+     "mean": 7.601568475920795,
+     "ci95": 3.8821908194153223,
+     "sd": 5.426928554142627
+    },
+    "red_delay_paired_diff_percent": {
+     "mean": 0.05190376109693129,
+     "ci95": 0.02651135218506791,
+     "sd": 0.037060314877501284
+    },
+    "red_delay_paired_t_p": 0.0016484850099407395,
+    "vehicles_at_last_update": {
+     "mean": 1.6,
+     "ci95": 0.36940871778917994,
+     "sd": 0.5163977794943223
+    },
+    "vehicles_at_last_update_max": 2,
+    "last_update_max": 11280
+   },
+   "OSD-2-K4": {
+    "total": {
+     "mean": 20994.82373416913,
+     "ci95": 172.36619995639515,
+     "sd": 240.95133284903739
+    },
+    "state": {
+     "mean": 6346.90217295256,
+     "ci95": 173.81366353072062,
+     "sd": 242.97474740231053
+    },
+    "state_link": {
+     "mean": 6346.020323990402,
+     "ci95": 173.7541627381947,
+     "sd": 242.89157102974838
+    },
+    "state_entry": {
+     "mean": 0.8818489621579925,
+     "ci95": 0.14991433466370144,
+     "sd": 0.20956578934578585
+    },
+    "green_change": {
+     "mean": 1.3255299999999781,
+     "ci95": 0.024068474594474993,
+     "sd": 0.03364540747924504
+    },
+    "red_delay": {
+     "mean": 14646.596031216573,
+     "ci95": 2.352507894696948,
+     "sd": 3.288579274292237
+    },
+    "total_paired_diff": {
+     "mean": 25.515707027847746,
+     "ci95": 74.4809040939027,
+     "sd": 104.11712457411716
+    },
+    "total_paired_diff_percent": {
+     "mean": 0.11901509389664049,
+     "ci95": 0.3496868097072638,
+     "sd": 0.48882845302622097
+    },
+    "total_paired_t_p": 0.4582333115612691,
+    "state_paired_diff": {
+     "mean": 25.628489079770134,
+     "ci95": 74.33344700564857,
+     "sd": 103.9109937783935
+    },
+    "state_paired_diff_percent": {
+     "mean": 0.3766504092371573,
+     "ci95": 1.1167221652800454,
+     "sd": 1.5610699441906835
+    },
+    "state_paired_t_p": 0.45544672288285465,
+    "state_link_paired_diff": {
+     "mean": 25.613551798717435,
+     "ci95": 74.34853599733836,
+     "sd": 103.93208673432063
+    },
+    "state_link_paired_diff_percent": {
+     "mean": 0.3764740332137487,
+     "ci95": 1.1171378505591416,
+     "sd": 1.5616510321422035
+    },
+    "state_link_paired_t_p": 0.45578971853831385,
+    "state_entry_paired_diff": {
+     "mean": 0.014937281052669449,
+     "ci95": 0.018360021598672664,
+     "sd": 0.025665540439230167
+    },
+    "state_entry_paired_diff_percent": {
+     "mean": 1.8545037879292718,
+     "ci95": 1.9072021557540852,
+     "sd": 2.6660847750763113
+    },
+    "state_entry_paired_t_p": 0.09884280137841807,
+    "green_change_paired_diff": {
+     "mean": -0.0012699999999995937,
+     "ci95": 0.013642599959372887,
+     "sd": 0.019071039708299597
+    },
+    "green_change_paired_diff_percent": {
+     "mean": -0.07409833165540722,
+     "ci95": 1.021887503385121,
+     "sd": 1.4285002281462933
+    },
+    "green_change_paired_t_p": 0.8379009406868511,
+    "red_delay_paired_diff": {
+     "mean": -0.11151205192145426,
+     "ci95": 0.854311018817152,
+     "sd": 1.19424445572094
+    },
+    "red_delay_paired_diff_percent": {
+     "mean": -0.0007610756227508972,
+     "ci95": 0.0058324462432579076,
+     "sd": 0.008153197648024222
+    },
+    "red_delay_paired_t_p": 0.7744814164361872,
+    "vehicles_at_last_update": {
+     "mean": 1.3,
+     "ci95": 0.34555021441364375,
+     "sd": 0.4830458915396479
+    },
+    "vehicles_at_last_update_max": 2,
+    "last_update_max": 8460
+   },
+   "P-OSD-K1": {
+    "total": {
+     "mean": 22235.43364533821,
+     "ci95": 2785.4818061258957,
+     "sd": 3893.8350673308837
+    },
+    "state": {
+     "mean": 7580.736719209151,
+     "ci95": 2781.9203338401344,
+     "sd": 3888.8564723721493
+    },
+    "state_link": {
+     "mean": 7569.288137233685,
+     "ci95": 2757.9858557017765,
+     "sd": 3855.3983790223956
+    },
+    "state_entry": {
+     "mean": 11.448581975465073,
+     "ci95": 23.960772067869744,
+     "sd": 33.494849728692394
+    },
+    "green_change": {
+     "mean": 1.317439999999978,
+     "ci95": 0.03801398192209429,
+     "sd": 0.05313988249056363
+    },
+    "red_delay": {
+     "mean": 14653.37948612906,
+     "ci95": 3.808046289950257,
+     "sd": 5.323281648875866
+    },
+    "total_paired_diff": {
+     "mean": 1266.1256181969263,
+     "ci95": 2796.7627989703356,
+     "sd": 3909.6048079320913
+    },
+    "total_paired_diff_percent": {
+     "mean": 6.052779987543436,
+     "ci95": 13.374437870449416,
+     "sd": 18.69617495661372
+    },
+    "total_paired_t_p": 0.3325234944175935,
+    "state_paired_diff": {
+     "mean": 1259.4630353363611,
+     "ci95": 2793.1130447307146,
+     "sd": 3904.502803311518
+    },
+    "state_paired_diff_percent": {
+     "mean": 20.087943355386475,
+     "ci95": 44.59356615774917,
+     "sd": 62.337507033975385
+    },
+    "state_paired_t_p": 0.3343421065435107,
+    "state_link_paired_diff": {
+     "mean": 1248.8813650420016,
+     "ci95": 2769.184332747999,
+     "sd": 3871.0527704915426
+    },
+    "state_link_paired_diff_percent": {
+     "mean": 19.922146824023958,
+     "ci95": 44.21850078606217,
+     "sd": 61.81320179758701
+    },
+    "state_link_paired_t_p": 0.3342657312804956,
+    "state_entry_paired_diff": {
+     "mean": 10.58167029435975,
+     "ci95": 23.931133491017953,
+     "sd": 33.453417855169654
+    },
+    "state_entry_paired_diff_percent": {
+     "mean": 1076.452404332413,
+     "ci95": 2434.5765016172977,
+     "sd": 3403.303276025317
+    },
+    "state_entry_paired_t_p": 0.3433163894260871,
+    "green_change_paired_diff": {
+     "mean": -0.009359999999999636,
+     "ci95": 0.02677663705208374,
+     "sd": 0.0374311575503009
+    },
+    "green_change_paired_diff_percent": {
+     "mean": -0.7010055165755196,
+     "ci95": 2.0443153610674285,
+     "sd": 2.857755819514325
+    },
+    "green_change_paired_t_p": 0.4494208850187347,
+    "red_delay_paired_diff": {
+     "mean": 6.671942860565105,
+     "ci95": 4.012740113859704,
+     "sd": 5.609423883893082
+    },
+    "red_delay_paired_diff_percent": {
+     "mean": 0.04555540705880539,
+     "ci95": 0.027399622054953884,
+     "sd": 0.03830203053366132
+    },
+    "red_delay_paired_t_p": 0.00447626658910654,
+    "vehicles_at_last_update": {
+     "mean": 2.0,
+     "ci95": 0.9538092079608862,
+     "sd": 1.3333333333333333
+    },
+    "vehicles_at_last_update_max": 5,
+    "last_update_max": 8460
+   },
+   "P-OSD-K4": {
+    "total": {
+     "mean": 21035.60164187579,
+     "ci95": 165.96039304761413,
+     "sd": 231.99663225788422
+    },
+    "state": {
+     "mean": 6388.011902911139,
+     "ci95": 166.59770911999541,
+     "sd": 232.88753869502344
+    },
+    "state_link": {
+     "mean": 6387.159208017125,
+     "ci95": 166.52294674153364,
+     "sd": 232.78302809641488
+    },
+    "state_entry": {
+     "mean": 0.8526948940143406,
+     "ci95": 0.13879599917181473,
+     "sd": 0.19402342804461087
+    },
+    "green_change": {
+     "mean": 1.3248199999999781,
+     "ci95": 0.03245515058572732,
+     "sd": 0.045369172108136804
+    },
+    "red_delay": {
+     "mean": 14646.264918964653,
+     "ci95": 2.089734809331956,
+     "sd": 2.921247830125305
+    },
+    "total_paired_diff": {
+     "mean": 66.29361473450626,
+     "ci95": 122.72496156175721,
+     "sd": 171.5576665821549
+    },
+    "total_paired_diff_percent": {
+     "mean": 0.31580470036399644,
+     "ci95": 0.5875091183152473,
+     "sd": 0.8212811163373879
+    },
+    "total_paired_t_p": 0.2527563947932625,
+    "state_paired_diff": {
+     "mean": 66.73821903834941,
+     "ci95": 122.85661844027692,
+     "sd": 171.74171020768063
+    },
+    "state_paired_diff_percent": {
+     "mean": 1.0530584152192084,
+     "ci95": 1.9701417216108426,
+     "sd": 2.7540682212853818
+    },
+    "state_paired_t_p": 0.2502890599607402,
+    "state_link_paired_diff": {
+     "mean": 66.75243582544036,
+     "ci95": 122.86827388673053,
+     "sd": 171.7580033983332
+    },
+    "state_link_paired_diff_percent": {
+     "mean": 1.0534516108363516,
+     "ci95": 1.9706197957580094,
+     "sd": 2.754736522860689
+    },
+    "state_link_paired_t_p": 0.25023718594529687,
+    "state_entry_paired_diff": {
+     "mean": -0.01421678709098263,
+     "ci95": 0.01934144544551009,
+     "sd": 0.027037476375887874
+    },
+    "state_entry_paired_diff_percent": {
+     "mean": -1.2136603293979538,
+     "ci95": 2.1314567806433797,
+     "sd": 2.979571124362342
+    },
+    "state_entry_paired_t_p": 0.13071854401659716,
+    "green_change_paired_diff": {
+     "mean": -0.0019799999999997376,
+     "ci95": 0.014895800584663091,
+     "sd": 0.02082289338417869
+    },
+    "green_change_paired_diff_percent": {
+     "mean": -0.1499033813340461,
+     "ci95": 1.1056862244435104,
+     "sd": 1.5456427626755203
+    },
+    "green_change_paired_t_p": 0.7704786412230836,
+    "red_delay_paired_diff": {
+     "mean": -0.4426243038426037,
+     "ci95": 0.8857738761230088,
+     "sd": 1.238226497472763
+    },
+    "red_delay_paired_diff_percent": {
+     "mean": -0.0030212347450945367,
+     "ci95": 0.006047261267002035,
+     "sd": 0.00845348834480955
+    },
+    "red_delay_paired_t_p": 0.2875282244415899,
+    "vehicles_at_last_update": {
+     "mean": 1.5,
+     "ci95": 0.5058337191804845,
+     "sd": 0.7071067811865476
+    },
+    "vehicles_at_last_update_max": 3,
+    "last_update_max": 8940
+   }
+  },
+  "common": {
+   "Centralized": {
+    "total": {
+     "mean": 20963.335553414505,
+     "ci95": 103.49397389749498,
+     "sd": 144.67459953722604
+    },
+    "state": {
+     "mean": 6321.0743539812565,
+     "ci95": 104.54094001541036,
+     "sd": 146.1381572511126
+    },
+    "state_link": {
+     "mean": 6320.207442300152,
+     "ci95": 104.4613282505673,
+     "sd": 146.02686767778414
+    },
+    "state_entry": {
+     "mean": 0.866911681105323,
+     "ci95": 0.14967583982911473,
+     "sd": 0.2092323965559824
+    },
+    "green_change": {
+     "mean": 1.2885999999999789,
+     "ci95": 0.0306755703234544,
+     "sd": 0.042881490438441854
+    },
+    "red_delay": {
+     "mean": 14640.972599433246,
+     "ci95": 2.0746068606284003,
+     "sd": 2.900100416048092
+    },
+    "total_paired_diff": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "total_paired_diff_percent": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "total_paired_t_p": null,
+    "state_paired_diff": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "state_paired_diff_percent": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "state_paired_t_p": null,
+    "state_link_paired_diff": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "state_link_paired_diff_percent": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "state_link_paired_t_p": null,
+    "state_entry_paired_diff": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "state_entry_paired_diff_percent": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "state_entry_paired_t_p": null,
+    "green_change_paired_diff": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "green_change_paired_diff_percent": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "green_change_paired_t_p": null,
+    "red_delay_paired_diff": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "red_delay_paired_diff_percent": {
+     "mean": 0.0,
+     "ci95": 0.0,
+     "sd": 0.0
+    },
+    "red_delay_paired_t_p": null,
+    "vehicles_at_last_update": {
+     "mean": 1.8,
+     "ci95": 0.8121392760872087,
+     "sd": 1.1352924243950935
+    },
+    "vehicles_at_last_update_max": 4,
+    "last_update_max": 8460
+   },
+   "IR-MPC": {
+    "total": {
+     "mean": 20968.0781211792,
+     "ci95": 120.74781946581095,
+     "sd": 168.79381251232735
+    },
+    "state": {
+     "mean": 6325.0696433800995,
+     "ci95": 121.52269451024738,
+     "sd": 169.8770131328414
+    },
+    "state_link": {
+     "mean": 6324.195922331126,
+     "ci95": 121.45262564646649,
+     "sd": 169.7790636153403
+    },
+    "state_entry": {
+     "mean": 0.8737210489729563,
+     "ci95": 0.14208509322959906,
+     "sd": 0.19862126449566378
+    },
+    "green_change": {
+     "mean": 1.2611999999999803,
+     "ci95": 0.030980543110579222,
+     "sd": 0.04330781299796339
+    },
+    "red_delay": {
+     "mean": 14641.747277799097,
+     "ci95": 1.7445794026576398,
+     "sd": 2.4387538417490044
+    },
+    "total_paired_diff": {
+     "mean": 4.742567764692285,
+     "ci95": 23.79585947474985,
+     "sd": 33.264317819734124
+    },
+    "total_paired_diff_percent": {
+     "mean": 0.02197175628800993,
+     "ci95": 0.11263902979993663,
+     "sd": 0.15745850618034815
+    },
+    "total_paired_t_p": 0.6627614451304248,
+    "state_paired_diff": {
+     "mean": 3.9952893988423965,
+     "ci95": 23.769034609405857,
+     "sd": 33.226819243680545
+    },
+    "state_paired_diff_percent": {
+     "mean": 0.05632794251131985,
+     "ci95": 0.3672660734760676,
+     "sd": 0.5134025692779549
+    },
+    "state_paired_t_p": 0.7125846328674563,
+    "state_link_paired_diff": {
+     "mean": 3.9884800309747335,
+     "ci95": 23.787701883649465,
+     "sd": 33.25291429370076
+    },
+    "state_link_paired_diff_percent": {
+     "mean": 0.05622973506447326,
+     "ci95": 0.36760734211934804,
+     "sd": 0.5138796299457586
+    },
+    "state_link_paired_t_p": 0.7132626588568354,
+    "state_entry_paired_diff": {
+     "mean": 0.006809367867633242,
+     "ci95": 0.021169861995107623,
+     "sd": 0.029593426467844512
+    },
+    "state_entry_paired_diff_percent": {
+     "mean": 1.284964199092757,
+     "ci95": 2.729515710658086,
+     "sd": 3.8155998605401282
+    },
+    "state_entry_paired_t_p": 0.48533665315612906,
+    "green_change_paired_diff": {
+     "mean": -0.02739999999999876,
+     "ci95": 0.016336993521847202,
+     "sd": 0.022837542191166252
+    },
+    "green_change_paired_diff_percent": {
+     "mean": -2.1146639741153095,
+     "ci95": 1.266077244594401,
+     "sd": 1.7698539484657192
+    },
+    "green_change_paired_t_p": 0.004256191221458451,
+    "red_delay_paired_diff": {
+     "mean": 0.7746783658498316,
+     "ci95": 1.0203332105480514,
+     "sd": 1.42632747658117
+    },
+    "red_delay_paired_diff_percent": {
+     "mean": 0.005292111832762713,
+     "ci95": 0.006969516444753721,
+     "sd": 0.009742712185460507
+    },
+    "red_delay_paired_t_p": 0.12001080973418637,
+    "vehicles_at_last_update": {
+     "mean": 1.4,
+     "ci95": 0.36940871778917994,
+     "sd": 0.5163977794943223
+    },
+    "vehicles_at_last_update_max": 2,
+    "last_update_max": 8460
+   },
+   "OSD-1-K1": {
+    "total": {
+     "mean": 21276.06932926704,
+     "ci95": 662.9083018874143,
+     "sd": 926.6819071074975
+    },
+    "state": {
+     "mean": 6629.008825155892,
+     "ci95": 660.824055015338,
+     "sd": 923.7683308846636
+    },
+    "state_link": {
+     "mean": 6628.137862455868,
+     "ci95": 660.8875102223702,
+     "sd": 923.8570351475321
+    },
+    "state_entry": {
+     "mean": 0.8709627000239669,
+     "ci95": 0.13598572014332738,
+     "sd": 0.19009492885066784
+    },
+    "green_change": {
+     "mean": 1.2841599999999789,
+     "ci95": 0.02623777699550843,
+     "sd": 0.036677883132904834
+    },
+    "red_delay": {
+     "mean": 14645.776344111146,
+     "ci95": 2.3272115388331143,
+     "sd": 3.253217407156126
+    },
+    "total_paired_diff": {
+     "mean": 312.7337758525333,
+     "ci95": 665.2080505715966,
+     "sd": 929.8967340910461
+    },
+    "total_paired_diff_percent": {
+     "mean": 1.4945906332998768,
+     "ci95": 3.181660480871566,
+     "sd": 4.447654666245774
+    },
+    "total_paired_t_p": 0.3152535090374109,
+    "state_paired_diff": {
+     "mean": 307.93447117463467,
+     "ci95": 663.9137660608777,
+     "sd": 928.0874491034878
+    },
+    "state_paired_diff_percent": {
+     "mean": 4.905432771938644,
+     "ci95": 10.601902217684659,
+     "sd": 14.820437363778554
+    },
+    "state_paired_t_p": 0.3214308296692394,
+    "state_link_paired_diff": {
+     "mean": 307.9304201557162,
+     "ci95": 663.9083376615732,
+     "sd": 928.0798607245134
+    },
+    "state_link_paired_diff_percent": {
+     "mean": 4.905804719084966,
+     "ci95": 10.602749168015052,
+     "sd": 14.821621318701368
+    },
+    "state_link_paired_t_p": 0.3214331065617524,
+    "state_entry_paired_diff": {
+     "mean": 0.004051018918643878,
+     "ci95": 0.03562265049680332,
+     "sd": 0.04979703166277133
+    },
+    "state_entry_paired_diff_percent": {
+     "mean": 1.1851270082361984,
+     "ci95": 3.870144063043475,
+     "sd": 5.410088349943436
+    },
+    "state_entry_paired_t_p": 0.8027682991725672,
+    "green_change_paired_diff": {
+     "mean": -0.004440000000000377,
+     "ci95": 0.015889270529780907,
+     "sd": 0.02221166860508717
+    },
+    "green_change_paired_diff_percent": {
+     "mean": -0.3186638721594982,
+     "ci95": 1.2134430088392738,
+     "sd": 1.6962763603893056
+    },
+    "green_change_paired_t_p": 0.5430284441066551,
+    "red_delay_paired_diff": {
+     "mean": 4.803744677898067,
+     "ci95": 2.340732731424853,
+     "sd": 3.2721187310671493
+    },
+    "red_delay_paired_diff_percent": {
+     "mean": 0.03281207696778595,
+     "ci95": 0.015989654667082055,
+     "sd": 0.02235199595282548
+    },
+    "red_delay_paired_t_p": 0.0012149711235057278,
+    "vehicles_at_last_update": {
+     "mean": 1.5,
+     "ci95": 0.5058337191804845,
+     "sd": 0.7071067811865476
+    },
+    "vehicles_at_last_update_max": 3,
+    "last_update_max": 8460
+   },
+   "OSD-1-K4": {
+    "total": {
+     "mean": 22816.633431765957,
+     "ci95": 3548.2395597266463,
+     "sd": 4960.096883264244
+    },
+    "state": {
+     "mean": 8169.90461580539,
+     "ci95": 3543.5822606231045,
+     "sd": 4953.586428042982
+    },
+    "state_link": {
+     "mean": 8169.030466945053,
+     "ci95": 3543.5507601219315,
+     "sd": 4953.542393378733
+    },
+    "state_entry": {
+     "mean": 0.874148860335206,
+     "ci95": 0.1563149264943641,
+     "sd": 0.21851319976042036
+    },
+    "green_change": {
+     "mean": 1.3017299999999796,
+     "ci95": 0.05845024861883192,
+     "sd": 0.08170781344386552
+    },
+    "red_delay": {
+     "mean": 14645.427085960566,
+     "ci95": 6.313285269210541,
+     "sd": 8.825364257361954
+    },
+    "total_paired_diff": {
+     "mean": 1853.29787835145,
+     "ci95": 3563.5058235101565,
+     "sd": 4981.4376484907925
+    },
+    "total_paired_diff_percent": {
+     "mean": 8.864602443489076,
+     "ci95": 17.045912538225664,
+     "sd": 23.82854264207618
+    },
+    "total_paired_t_p": 0.2695755842949401,
+    "state_paired_diff": {
+     "mean": 1848.8302618241323,
+     "ci95": 3558.790347538518,
+     "sd": 4974.845867615705
+    },
+    "state_paired_diff_percent": {
+     "mean": 29.51304244696208,
+     "ci95": 56.816885876863104,
+     "sd": 79.42452977338426
+    },
+    "state_paired_t_p": 0.27006212003368557,
+    "state_link_paired_diff": {
+     "mean": 1848.8230246449027,
+     "ci95": 3558.777219842075,
+     "sd": 4974.827516361481
+    },
+    "state_link_paired_diff_percent": {
+     "mean": 29.51726659417335,
+     "ci95": 56.8255639420451,
+     "sd": 79.43666087201429
+    },
+    "state_link_paired_t_p": 0.27006222083229503,
+    "state_entry_paired_diff": {
+     "mean": 0.007237179229882906,
+     "ci95": 0.03846381389097773,
+     "sd": 0.053768704222944975
+    },
+    "state_entry_paired_diff_percent": {
+     "mean": 0.8109252996254881,
+     "ci95": 3.962104731092601,
+     "sd": 5.538640499620869
+    },
+    "state_entry_paired_t_p": 0.6803694025892605,
+    "green_change_paired_diff": {
+     "mean": 0.013130000000000752,
+     "ci95": 0.04158673843627988,
+     "sd": 0.058134251712927854
+    },
+    "green_change_paired_diff_percent": {
+     "mean": 0.9800990234806155,
+     "ci95": 3.2747346449420753,
+     "sd": 4.577763376029203
+    },
+    "green_change_paired_t_p": 0.4931968688240908,
+    "red_delay_paired_diff": {
+     "mean": 4.454486527317203,
+     "ci95": 5.583104696946646,
+     "sd": 7.804642200764044
+    },
+    "red_delay_paired_diff_percent": {
+     "mean": 0.030423002292960695,
+     "ci95": 0.03813104093537701,
+     "sd": 0.05330351970760269
+    },
+    "red_delay_paired_t_p": 0.10458211681361491,
+    "vehicles_at_last_update": {
+     "mean": 1.5,
+     "ci95": 0.5058337191804845,
+     "sd": 0.7071067811865476
+    },
+    "vehicles_at_last_update_max": 3,
+    "last_update_max": 10320
+   },
+   "OSD-2-K1": {
+    "total": {
+     "mean": 24196.303511678725,
+     "ci95": 5066.200698762442,
+     "sd": 7082.060236614528
+    },
+    "state": {
+     "mean": 9546.613388655129,
+     "ci95": 5063.545199551988,
+     "sd": 7078.348104686689
+    },
+    "state_link": {
+     "mean": 9401.929818786919,
+     "ci95": 4757.173707716697,
+     "sd": 6650.070290803594
+    },
+    "state_entry": {
+     "mean": 144.68356986820663,
+     "ci95": 325.38461411770635,
+     "sd": 454.85632612464036
+    },
+    "green_change": {
+     "mean": 1.2846599999999797,
+     "ci95": 0.0434957287719474,
+     "sd": 0.06080283619115725
+    },
+    "red_delay": {
+     "mean": 14648.4054630236,
+     "ci95": 3.137413167477136,
+     "sd": 4.385801187198989
+    },
+    "total_paired_diff": {
+     "mean": 3232.9679582642216,
+     "ci95": 5084.374322924837,
+     "sd": 7107.465211405028
+    },
+    "total_paired_diff_percent": {
+     "mean": 15.461203921281722,
+     "ci95": 24.321324663965218,
+     "sd": 33.99886750371651
+    },
+    "total_paired_t_p": 0.1841649023520598,
+    "state_paired_diff": {
+     "mean": 3225.53903467387,
+     "ci95": 5081.74126218898,
+     "sd": 7103.784446301791
+    },
+    "state_paired_diff_percent": {
+     "mean": 51.46361552802055,
+     "ci95": 81.13794614909027,
+     "sd": 113.42302768293618
+    },
+    "state_paired_t_p": 0.184872541486956,
+    "state_link_paired_diff": {
+     "mean": 3081.7223764867676,
+     "ci95": 4775.55313656306,
+     "sd": 6675.762960704396
+    },
+    "state_link_paired_diff_percent": {
+     "mean": 49.174312992925636,
+     "ci95": 76.26122892949572,
+     "sd": 106.60584708554283
+    },
+    "state_link_paired_t_p": 0.17835169260011965,
+    "state_entry_paired_diff": {
+     "mean": 143.81665818710135,
+     "ci95": 325.3554154876027,
+     "sd": 454.8155092542643
+    },
+    "state_entry_paired_diff_percent": {
+     "mean": 14631.223547380685,
+     "ci95": 33098.99221734347,
+     "sd": 46269.20064807592
+    },
+    "state_entry_paired_t_p": 0.3434639077437472,
+    "green_change_paired_diff": {
+     "mean": -0.003939999999999366,
+     "ci95": 0.02779266073238426,
+     "sd": 0.03885146071899945
+    },
+    "green_change_paired_diff_percent": {
+     "mean": -0.31618842662312663,
+     "ci95": 2.192235362358069,
+     "sd": 3.064533723041975
+    },
+    "green_change_paired_t_p": 0.7557644700156264,
+    "red_delay_paired_diff": {
+     "mean": 7.432863590351917,
+     "ci95": 3.7764565635203637,
+     "sd": 5.279122256317784
+    },
+    "red_delay_paired_diff_percent": {
+     "mean": 0.05077113349444168,
+     "ci95": 0.025798757708128173,
+     "sd": 0.036064176487010983
+    },
+    "red_delay_paired_t_p": 0.0015946520155862573,
+    "vehicles_at_last_update": {
+     "mean": 1.6,
+     "ci95": 0.36940871778917994,
+     "sd": 0.5163977794943223
+    },
+    "vehicles_at_last_update_max": 2,
+    "last_update_max": 11280
+   },
+   "OSD-2-K4": {
+    "total": {
+     "mean": 20988.668947992075,
+     "ci95": 172.48879287794887,
+     "sd": 241.12270593641588
+    },
+    "state": {
+     "mean": 6346.695093928708,
+     "ci95": 173.8589806490237,
+     "sd": 243.03809636549911
+    },
+    "state_link": {
+     "mean": 6345.81324496655,
+     "ci95": 173.79948750376872,
+     "sd": 242.95493068308463
+    },
+    "state_entry": {
+     "mean": 0.8818489621579925,
+     "ci95": 0.14991433466370144,
+     "sd": 0.20956578934578585
+    },
+    "green_change": {
+     "mean": 1.2859599999999793,
+     "ci95": 0.02498985130530587,
+     "sd": 0.034933403307817724
+    },
+    "red_delay": {
+     "mean": 14640.687894063365,
+     "ci95": 2.3046369311918062,
+     "sd": 3.221660281680869
+    },
+    "total_paired_diff": {
+     "mean": 25.333394577569926,
+     "ci95": 74.12372203133015,
+     "sd": 103.61781848006625
+    },
+    "total_paired_diff_percent": {
+     "mean": 0.11817759145546361,
+     "ci95": 0.34808229108820676,
+     "sd": 0.4865854906592332
+    },
+    "total_paired_t_p": 0.4592620211276396,
+    "state_paired_diff": {
+     "mean": 25.620739947451785,
+     "ci95": 74.32327483130736,
+     "sd": 103.8967740591788
+    },
+    "state_paired_diff_percent": {
+     "mean": 0.376528223810968,
+     "ci95": 1.116570258073015,
+     "sd": 1.5608575925578656
+    },
+    "state_paired_t_p": 0.45551897822680126,
+    "state_link_paired_diff": {
+     "mean": 25.605802666399086,
+     "ci95": 74.33836304568615,
+     "sd": 103.91786592850005
+    },
+    "state_link_paired_diff_percent": {
+     "mean": 0.3763518159828948,
+     "ci95": 1.1169859147870473,
+     "sd": 1.5614386405781797
+    },
+    "state_link_paired_t_p": 0.4558620375313212,
+    "state_entry_paired_diff": {
+     "mean": 0.014937281052669449,
+     "ci95": 0.018360021598672664,
+     "sd": 0.025665540439230167
+    },
+    "state_entry_paired_diff_percent": {
+     "mean": 1.8545037879292718,
+     "ci95": 1.9072021557540852,
+     "sd": 2.6660847750763113
+    },
+    "state_entry_paired_t_p": 0.09884280137841807,
+    "green_change_paired_diff": {
+     "mean": -0.0026399999999995316,
+     "ci95": 0.014204201533321671,
+     "sd": 0.019856104574887765
+    },
+    "green_change_paired_diff_percent": {
+     "mean": -0.1778035177356098,
+     "ci95": 1.0941023801429457,
+     "sd": 1.52944966493105
+    },
+    "green_change_paired_t_p": 0.6840207689610124,
+    "red_delay_paired_diff": {
+     "mean": -0.284705369882613,
+     "ci95": 0.9144115553068537,
+     "sd": 1.2782592125340464
+    },
+    "red_delay_paired_diff_percent": {
+     "mean": -0.0019446498921841734,
+     "ci95": 0.006245627510518549,
+     "sd": 0.008730785232364376
+    },
+    "red_delay_paired_t_p": 0.49904471497443426,
+    "vehicles_at_last_update": {
+     "mean": 1.3,
+     "ci95": 0.34555021441364375,
+     "sd": 0.4830458915396479
+    },
+    "vehicles_at_last_update_max": 2,
+    "last_update_max": 8460
+   },
+   "P-OSD-K1": {
+    "total": {
+     "mean": 22229.46960160266,
+     "ci95": 2785.370758110342,
+     "sd": 3893.6798329092594
+    },
+    "state": {
+     "mean": 7580.534621273029,
+     "ci95": 2781.878479157929,
+     "sd": 3888.7979635608754
+    },
+    "state_link": {
+     "mean": 7569.086039297565,
+     "ci95": 2757.944022194235,
+     "sd": 3855.3398998112593
+    },
+    "state_entry": {
+     "mean": 11.448581975465073,
+     "ci95": 23.960772067869744,
+     "sd": 33.494849728692394
+    },
+    "green_change": {
+     "mean": 1.281039999999979,
+     "ci95": 0.03972800269046537,
+     "sd": 0.05553591830718208
+    },
+    "red_delay": {
+     "mean": 14647.653940329628,
+     "ci95": 3.7315914506559027,
+     "sd": 5.216405153162704
+    },
+    "total_paired_diff": {
+     "mean": 1266.1340481881555,
+     "ci95": 2796.7521799840188,
+     "sd": 3909.589963612804
+    },
+    "total_paired_diff_percent": {
+     "mean": 6.05467964356408,
+     "ci95": 13.378522725874738,
+     "sd": 18.701885190751714
+    },
+    "total_paired_t_p": 0.33251870578554393,
+    "state_paired_diff": {
+     "mean": 1259.460267291773,
+     "ci95": 2793.104491543349,
+     "sd": 3904.4908467800387
+    },
+    "state_paired_diff_percent": {
+     "mean": 20.088980478611003,
+     "ci95": 44.59587175187923,
+     "sd": 62.340730032328814
+    },
+    "state_paired_t_p": 0.33434171054285816,
+    "state_link_paired_diff": {
+     "mean": 1248.878596997413,
+     "ci95": 2769.1757788113005,
+     "sd": 3871.0408129125667
+    },
+    "state_link_paired_diff_percent": {
+     "mean": 19.92317504529333,
+     "ci95": 44.220786216811256,
+     "sd": 61.81639660947743
+    },
+    "state_link_paired_t_p": 0.3342653315671397,
+    "state_entry_paired_diff": {
+     "mean": 10.58167029435975,
+     "ci95": 23.931133491017953,
+     "sd": 33.453417855169654
+    },
+    "state_entry_paired_diff_percent": {
+     "mean": 1076.452404332413,
+     "ci95": 2434.5765016172977,
+     "sd": 3403.303276025317
+    },
+    "state_entry_paired_t_p": 0.3433163894260871,
+    "green_change_paired_diff": {
+     "mean": -0.0075599999999997666,
+     "ci95": 0.026113394871002,
+     "sd": 0.036504008912262964
+    },
+    "green_change_paired_diff_percent": {
+     "mean": -0.5848737220101862,
+     "ci95": 2.0584019677111414,
+     "sd": 2.8774475377687234
+    },
+    "green_change_paired_t_p": 0.5289068999253727,
+    "red_delay_paired_diff": {
+     "mean": 6.68134089638188,
+     "ci95": 4.010955650446133,
+     "sd": 5.6069293760485674
+    },
+    "red_delay_paired_diff_percent": {
+     "mean": 0.045637197102324015,
+     "ci95": 0.02739829775730336,
+     "sd": 0.03830017929319733
+    },
+    "red_delay_paired_t_p": 0.0044284431452773915,
+    "vehicles_at_last_update": {
+     "mean": 2.0,
+     "ci95": 0.9538092079608862,
+     "sd": 1.3333333333333333
+    },
+    "vehicles_at_last_update_max": 5,
+    "last_update_max": 8460
+   },
+   "P-OSD-K4": {
+    "total": {
+     "mean": 21009.06544348097,
+     "ci95": 147.3761714753424,
+     "sd": 206.0176818666038
+    },
+    "state": {
+     "mean": 6367.404399640088,
+     "ci95": 148.15185539656858,
+     "sd": 207.10201321890082
+    },
+    "state_link": {
+     "mean": 6366.551704746073,
+     "ci95": 148.06984111264083,
+     "sd": 206.98736515547512
+    },
+    "state_entry": {
+     "mean": 0.8526948940143406,
+     "ci95": 0.13879599917181473,
+     "sd": 0.19402342804461087
+    },
+    "green_change": {
+     "mean": 1.2852199999999792,
+     "ci95": 0.03330581706461237,
+     "sd": 0.04655832184833647
+    },
+    "red_delay": {
+     "mean": 14640.375823840883,
+     "ci95": 2.0436053927469082,
+     "sd": 2.8567633522373685
+    },
+    "total_paired_diff": {
+     "mean": 45.729890066466034,
+     "ci95": 81.17271126577202,
+     "sd": 113.47162596498474
+    },
+    "total_paired_diff_percent": {
+     "mean": 0.21728581271084518,
+     "ci95": 0.3876764392475042,
+     "sd": 0.5419342932343231
+    },
+    "total_paired_t_p": 0.2344344645263897,
+    "state_paired_diff": {
+     "mean": 46.33004565883057,
+     "ci95": 81.35353787180529,
+     "sd": 113.72440413001539
+    },
+    "state_paired_diff_percent": {
+     "mean": 0.7242760648756061,
+     "ci95": 1.2935308755476072,
+     "sd": 1.8082314782331215
+    },
+    "state_paired_t_p": 0.229782322448886,
+    "state_link_paired_diff": {
+     "mean": 46.3442624459215,
+     "ci95": 81.36605086823033,
+     "sd": 113.74189609286722
+    },
+    "state_link_paired_diff_percent": {
+     "mean": 0.7246200464899777,
+     "ci95": 1.2939212808581613,
+     "sd": 1.808777227225402
+    },
+    "state_link_paired_t_p": 0.22971669012020987,
+    "state_entry_paired_diff": {
+     "mean": -0.01421678709098263,
+     "ci95": 0.01934144544551009,
+     "sd": 0.027037476375887874
+    },
+    "state_entry_paired_diff_percent": {
+     "mean": -1.2136603293979538,
+     "ci95": 2.1314567806433797,
+     "sd": 2.979571124362342
+    },
+    "state_entry_paired_t_p": 0.13071854401659716,
+    "green_change_paired_diff": {
+     "mean": -0.0033799999999997387,
+     "ci95": 0.016030905481549017,
+     "sd": 0.022409660615209624
+    },
+    "green_change_paired_diff_percent": {
+     "mean": -0.25839812368539816,
+     "ci95": 1.2230039265063029,
+     "sd": 1.7096416016936526
+    },
+    "green_change_paired_t_p": 0.6447592439243242,
+    "red_delay_paired_diff": {
+     "mean": -0.5967755923642472,
+     "ci95": 0.8364368739644652,
+     "sd": 1.169258124138059
+    },
+    "red_delay_paired_diff_percent": {
+     "mean": -0.004075726002607133,
+     "ci95": 0.005712598085600603,
+     "sd": 0.007985661476000156
+    },
+    "red_delay_paired_t_p": 0.14098729494558465,
+    "vehicles_at_last_update": {
+     "mean": 1.5,
+     "ci95": 0.5058337191804845,
+     "sd": 0.7071067811865476
+    },
+    "vehicles_at_last_update_max": 3,
+    "last_update_max": 8940
+   }
+  }
+ },
+ "snapshot_check_max_abs_error_t3000": {
+  "Centralized": 0.0,
+  "IR-MPC": 0.0,
+  "OSD-1-K1": 0.0,
+  "OSD-1-K4": 0.0,
+  "OSD-2-K1": 0.0,
+  "OSD-2-K4": 0.0,
+  "P-OSD-K1": 0.0,
+  "P-OSD-K4": 0.0
+ }
+}
